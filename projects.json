@@ -1,0 +1,52 @@
+{
+  "cardano-foundation": {
+    "cardano-wallet": {
+      "packages": [
+        "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
+        "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet"
+      ],
+      "type": "git_tags",
+      "pattern": "v\\d{4}-\\d{2}-\\d{2}$"
+    }
+  },
+  "input-output-hk": {
+    "cardano-db-sync": {
+      "packages": [
+        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
+        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool"
+      ],
+      "type": "github_releases"
+    },
+    "cardano-faucet": {
+      "packages": [
+        "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\""
+      ],
+      "type": "git_branches",
+      "branches": ["master"]
+    },
+    "cardano-node": {
+      "packages": [
+        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
+        "github:input-output-hk/cardano-node/${tag}#packages.${system}.bech32",
+        "github:input-output-hk/cardano-node/${tag}#packages.${system}.cardano-cli",
+        "github:input-output-hk/cardano-node/${tag}#packages.${system}.cardano-node",
+        "github:input-output-hk/cardano-node/${tag}#packages.${system}.cardano-submit-api",
+        "github:input-output-hk/cardano-node/${tag}#packages.${system}.cardano-tracer",
+        "github:input-output-hk/cardano-node/${tag}#packages.${system}.db-analyser",
+        "github:input-output-hk/cardano-node/${tag}#packages.${system}.db-synthesizer",
+        "github:input-output-hk/cardano-node/${tag}#packages.${system}.db-truncater"
+      ],
+      "type": "github_releases"
+    },
+    "offchain-metadata-tools": {
+      "packages": [
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-server",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-sync",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-validator-github",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-webhook",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.token-metadata-creator"
+      ],
+      "type": "github_releases"
+    }
+  }
+}
