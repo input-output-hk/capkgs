@@ -1,10 +1,4 @@
 {
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
-    nix.url = "github:nixos/nix/2.17-maintenance";
-  };
-
   outputs = inputs: let
     inherit (builtins) fromJSON readFile fetchClosure;
     inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs;
@@ -30,10 +24,14 @@
   in
     {
       devShells.${devShellSystem}.default = let
-        # These inputs are purely used for the devShell to avoid any evaluation of
+        # These inputs are purely used for the devShell to avoid any evaluation and download of
         # nixpkgs for just building a package.
-        inherit (inputs.nixpkgs.legacyPackages.${devShellSystem}) mkShell nushell just ruby treefmt;
-        inherit (inputs.nix.packages.${devShellSystem}) nix;
+        nixpkgsFlake = builtins.getFlake "github:nixos/nixpkgs?rev=04a75b2eecc0acf6239acf9dd04485ff8d14f425";
+        inherit (nixpkgsFlake.legacyPackages.${devShellSystem}) mkShell nushell just ruby treefmt;
+
+        # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
+        nixFlake = builtins.getFlake "github:nixos/nix?rev=8fbb4598c24b89c73db318ca7de7f78029cd61f4";
+        inherit (nixFlake.packages.${devShellSystem}) nix;
       in
         mkShell {
           nativeBuildInputs = [
