@@ -26,7 +26,7 @@
       devShells.${devShellSystem}.default = let
         # These inputs are purely used for the devShell to avoid any evaluation and download of
         # nixpkgs for just building a package.
-        nixpkgsFlake = builtins.getFlake "github:nixos/nixpkgs?rev=04a75b2eecc0acf6239acf9dd04485ff8d14f425";
+        nixpkgsFlake = builtins.getFlake "github:nixos/nixpkgs?rev=bfb7dfec93f3b5d7274db109f2990bc889861caf";
         inherit (nixpkgsFlake.legacyPackages.${devShellSystem}) mkShell nushell just ruby treefmt;
 
         # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
