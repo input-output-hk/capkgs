@@ -1,33 +1,14 @@
-help:
+# List available just tasks
+list:
   just -l
 
-# Iterate projects and fetch the release data from GitHub:
+# Update everything 
+update: releases run
+
+# Fetch releases, branches and tags specified in projects.json
 releases:
-  #!/usr/bin/env nu
+  ./releases.nu
 
-  let orgs = (open projects.json | transpose org repos)
-
-  $orgs | each {|o|
-    $o.repos | transpose repo attrs | each {|r|
-      let dir = $"releases/($o.org)"
-
-      match $r.tags_from {
-      "git" => {
-      },
-      "github-releases" => {
-      }
-      let url = $"https://api.github.com/repos/($o.org)/($r.repo)/releases"
-      mkdir $dir
-      print $"Fetching releases for ($r.repo) from ($url) ..."
-
-      (
-        curl --fail-with-body $url
-        | from json
-        | each {|release| $release | select tag_name }
-        | values
-        | flatten
-        | to json
-        | save -f $"($dir)/($r.repo).json"
-      )
-    }
-  }
+# Based on releases.json, upload the CA contents and update packages.json
+run:
+  ./run.rb --from https://cache.iog.io --to "s3://devx?secret-key=/run/agenix/nix&endpoint=fc0e8a9d61fc1f44f378bdc5fdc0f638.r2.cloudflarestorage.com&region=auto&compression=zstd" --systems x86_64-linux 

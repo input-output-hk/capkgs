@@ -1,13 +1,46 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'English'
 require 'json'
 require 'open3'
+require 'optparse'
 
-KEY = '/run/agenix/nix'
-ENDPOINT = 'fc0e8a9d61fc1f44f378bdc5fdc0f638.r2.cloudflarestorage.com'
-SYSTEMS = %w[x86_64-linux].freeze
+OPTIONS = {systems: "x86-64_linux"}
+
+op = OptionParser.new do |parser|
+  parser.banner = "Usage: capkgs [options]"
+
+  parser.on '--from URL', 'Nix store URL to fetch inputs from' do |v|
+    OPTIONS[:from] = v
+  end
+
+  parser.on :REQUIRED, '--to URL', 'Nix store URL to copy CA outputs to' do |v|
+    OPTIONS[:to] = v
+  end
+
+  parser.on '--systems A,B', Array, "systems to process" do |v|
+    OPTIONS[:systems] = v
+  end
+
+  parser.on '-h', '--help' do
+    puts parser
+    exit
+  end
+end
+
+op.parse!
+
+unless OPTIONS[:from]
+  STDERR.puts "Missing required flag: --from"
+  puts op
+  exit 1
+end
+
+unless OPTIONS[:to]
+  STDERR.puts "Missing required flag: --to"
+  puts op
+  exit 1
+end
 
 def sh(*args)
   pp args
@@ -20,19 +53,14 @@ end
 def process(pkg, flake_url, org, repo, tag, rev)
   pkg.merge!('org' => org, 'repo' => repo, 'tag' => tag, 'rev' => rev)
 
-  clean(pkg)
-
   return if pkg['fail']
+
+  puts "Processing #{flake_url}"
 
   (merge(pkg) { process_eval(flake_url) }) &&
     (set(pkg, 'closure') { process_closure(flake_url) })
 
   puts "Marked #{flake_url} as failed" if pkg['fail']
-end
-
-def clean(pkg)
-  pkg.delete('closure') if pkg['closure'] == {}
-  pkg.delete('closure') if pkg['closure'].instance_of?(Array)
 end
 
 def set(pkg, key)
@@ -72,15 +100,6 @@ def process_eval(flake_url)
   JSON.parse(result)
 end
 
-def process_revision(org, repo, tag)
-  puts "revision #{org} #{repo} #{tag}"
-  lines, status = sh 'git', 'ls-remote', '--quiet', '--tags', '--exit-code',
-                     "https://github.com/#{org}/#{repo}", "refs/tags/#{tag}"
-  return unless status.success?
-
-  pp lines.each_line.first.split.first
-end
-
 def process_closure(flake_url)
   puts "closure #{flake_url}"
 
@@ -92,7 +111,7 @@ def process_closure(flake_url)
   raise "Encountered more than one rewrite object: #{rewrites.inspect}" if rewrites.size > 1
 
   from_path, to_path = rewrites.first
-  { fromPath: from_path, toPath: to_path, fromStore: 'https://cache.iog.io' }
+  { fromPath: from_path, toPath: to_path, fromStore: OPTIONS.fetch(:from) }
 end
 
 def nix_build(flake_url)
@@ -104,50 +123,27 @@ def nix_make_content_addressed(out_path)
   content_addressed, status =
     sh 'nix', 'store', 'make-content-addressed', out_path,
        '--json',
-       '--from', 'https://cache.iog.io',
-       '--to', "s3://devx?secret-key=#{KEY}&endpoint=#{ENDPOINT}&region=auto&compression=zstd"
+       '--from', OPTIONS.fetch(:from),
+       '--to', OPTIONS.fetch(:to)
   content_addressed if status.success?
 end
 
-def update_from_github_releases(store, org, repo, flake_urls)
+def update_from_release(store, org, repo, flake_url, tag, commit)
+  store[flake_url] ||= {}
+  process(store[flake_url], flake_url, org, repo, tag, commit)
+  File.write('packages.json', JSON.pretty_generate(store))
+end
+
+def prepare(store, org, repo, packages)
   JSON.parse(File.read("releases/#{org}/#{repo}.json")).each do |tag, commit|
-    flake_urls.each do |flake_url|
-      SYSTEMS.each do |system|
-        flake_url = flake_url.gsub('${tag}', tag).gsub('${system}', system)
-        update_from_github_release(store, org, repo, flake_url, tag)
+    packages.each do |package|
+      OPTIONS.fetch(:systems).each do |system|
+        flake_url = package.gsub('${tag}', tag).gsub('${system}', system)
+        update_from_release(store, org, repo, flake_url, tag, commit)
       end
     end
   end
 end
-
-def update_from_github_release(store, org, repo, flake_url, tag)
-  store[flake_url] ||= {}
-  puts "Processing #{flake_url}"
-  process(store[flake_url], flake_url, org, repo, tag)
-  File.write('packages.json', JSON.pretty_generate(store))
-end
-
-def update_from_git(store, org, repo, flake_urls)
-
-end
-
-# Output should look like this:
-# {
-#   "github:input-output-hk/cardano-node/8.2.1-pre#packages.x86_64-linux.bech32": {
-#     tag: '8.2.1-pre',
-#     rev: '',
-#     name: 'bech32',
-#     system: 'x86_64-linux',
-#     repo: 'cardano-node',
-#     org: 'input-output-hk',
-#     meta: {},
-#     closure: {
-#       fromPath: '',
-#       toPath: '',
-#       fromStore: ''
-#     }
-#   }
-# }
 
 File.file?('packages.json') || File.write('packages.json', '{}')
 
@@ -155,11 +151,6 @@ store = JSON.parse(File.read('packages.json'))
 
 JSON.parse(File.read('projects.json')).each do |org, repos|
   repos.each do |repo, repo_config|
-    case repo_config.fetch('tags_from')
-    when 'git'
-      update_from_git(store, org, repo, repo_config.fetch('packages'))
-    when 'github-releases'
-      update_from_github_releases(store, org, repo, repo_config.fetch('packages'))
-    end
+    prepare(store, org, repo, repo_config.fetch('packages'))
   end
 end

@@ -13,6 +13,7 @@ def fetch-repo [org: string] {
       git_branches    => { fetch-git-branches    $org $r.repo $dst $r.repo_config.branches },
       git_tags        => { fetch-git-tags        $org $r.repo $dst $r.repo_config.pattern },
       github_releases => { fetch-github-releases $org $r.repo $dst }
+      _ => { error make {msg: $"Invalid type: ($r.repo_config.type)"}}
     }
   }
 }
@@ -29,15 +30,13 @@ def fetch-github-releases [org: string, repo: string, dst: string] {
       | flatten
       | each {|tag|
         (
-          git-ls-remote --tags $"https://github.com/($org)/($repo)" $tag
-          | from tsv --noheaders
-          | rename commit tag 
-          | where tag =~ $tag
+          git ls-remote --exit-code --tags $"https://github.com/($org)/($repo)" $tag
+          | from git ls-remote
+          | where ref =~ $tag
           | first
         )
       }
-      | reduce -f {} {|v,s| $s | merge {($v.tag | rename-ref): $v.commit} }
-      | to json
+      | refs-to-json
       | save -f $dst
     )
 }
@@ -47,12 +46,10 @@ def fetch-git-tags [org: string, repo: string, dst: string, pattern: string] {
   print $"Fetching tags from ($url) ..."
 
   (
-    git-ls-remote $url
-    | rename commit tag 
-    | where tag =~ $pattern
-    | each {|e| {($e.tag | rename-ref): $e.commit}}
-    | reduce {|s,v| $s | merge $v }
-    | to json
+    git ls-remote --exit-code $url 'refs/tags/*'
+    | from git ls-remote
+    | where ref =~ $pattern
+    | refs-to-json
     | save -f $dst
   )
 }
@@ -63,21 +60,24 @@ def fetch-git-branches [org: string, repo: string, dst: string, branches: table]
 
   $branches | each {|branch|
     (
-      git-ls-remote $url $branch
-      | first
-      | rename commit tag 
-      | each {|e| {($e.tag | rename-ref): $e.commit}}
-      | reduce {|s,v| $s | merge $v }
-      | to json
+      git ls-remote --exit-code $url $"refs/heads/($branch)"
+      | from git ls-remote
+      | refs-to-json
       | save -f $dst
     )
   }
 }
 
-def rename-ref [] {
-  str replace 'refs/(tags|heads)/' ''
+def refs-to-json [] {
+  reduce -f {} {|value, sum|
+    $sum | merge {($value.ref | str replace -r 'refs/(tags|heads)/' ''): $value.rev}
+  } | to json
 }
 
-def "git ls-remote" [...args: string] { ^git ls-remote $args | from tsv --noheaders | rename rev ref }
+def "from git ls-remote" [] {
+  from tsv --noheaders
+  | rename rev ref
+  | where ref =~ 'refs/(tags|heads)'
+}
 
 open projects.json | transpose org repos | fetch-orgs | to json

@@ -1,1 +1,16 @@
-[]
+{
+  "cardano-cli-7.0.0.0": "a05c6260b030a115b46feaad1d4317c6d1636970",
+  "cardano-cli-7.1.1.0": "ce0ae2641af406c51ab996f54e43acaf709bf94b",
+  "cardano-cli-7.1.2.0": "6f2ee5663c5f46b6225bd6437c492def57fdd228",
+  "cardano-cli-8.3.0.0": "9412b4f6a772f61b3fa29f7b41d744da2e51169b",
+  "cardano-cli-8.3.1.0": "2288dc0fc8b7eadba6ff1e7ebf7f2946bd27dcff",
+  "cardano-cli-8.3.2.0": "34d985d17234910accbde0b19941bd8c028d4e2f",
+  "cardano-cli-8.3.3.0": "51d5a006b27e6ff6667eb180ccd5540a943adcac",
+  "cardano-cli-8.3.4.0": "82897fc3ab538731daafbfadf5235ba067422fc4",
+  "cardano-cli-8.4.0.0": "f5e4259569d705d13e05b9c2e17224d4dc301be0",
+  "cardano-cli-8.4.1.0": "b2bb5da397077e63badc1d093105cd72db2f3d16",
+  "cardano-cli-8.5.0.0": "6c050409935cb91f72d2dad099051f107c22ce9c",
+  "cardano-cli-8.6.0.0": "e198717d59768cee7a0283d2dc4b673f943576d7",
+  "cardano-cli-8.6.1.0": "897cc074ebe38b96999aa22370974154332c3e3a",
+  "cardano-cli-8.7.0.0": "59d9717b010340837bcf1d5eb6b678d6ba5df36f"
+}

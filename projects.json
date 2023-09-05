@@ -5,11 +5,18 @@
         "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
         "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet"
       ],
-      "type": "git_tags",
-      "pattern": "v\\d{4}-\\d{2}-\\d{2}$"
+      "pattern": "refs/tags/v\\d{4}-\\d{2}-\\d{2}$",
+      "type": "git_tags"
     }
   },
   "input-output-hk": {
+    "cardano-cli": {
+      "packages": [
+        "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\""
+      ],
+      "pattern": "refs/tags/cardano-cli-\\d+\\.\\d+\\.\\d+\\.\\d+$",
+      "type": "git_tags"
+    },
     "cardano-db-sync": {
       "packages": [
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -18,11 +25,13 @@
       "type": "github_releases"
     },
     "cardano-faucet": {
-      "packages": [
-        "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\""
+      "branches": [
+        "master"
       ],
-      "type": "git_branches",
-      "branches": ["master"]
+      "packages": [
+        "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.cardano-faucet:exe:cardano-faucet"
+      ],
+      "type": "git_branches"
     },
     "cardano-node": {
       "packages": [
