@@ -29,7 +29,7 @@
         "master"
       ],
       "packages": [
-        "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.cardano-faucet:exe:cardano-faucet"
+        "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\""
       ],
       "type": "git_branches"
     },

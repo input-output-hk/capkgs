@@ -1529,13 +1529,6 @@
     "rev": "ba0f96b1a9fc9232ed211e57835fd5018093069d",
     "fail": true
   },
-  "github:input-output-hk/offchain-metadata-tools/v0.4.0.0#x86_64-linux.app.packages.metadata-server": {
-    "org": "input-output-hk",
-    "repo": "offchain-metadata-tools",
-    "tag": "v0.4.0.0",
-    "rev": "cace73767315eea244b8596abdf7c7e394273a8a",
-    "fail": true
-  },
   "github:input-output-hk/offchain-metadata-tools/v0.4.0.0#x86_64-linux.app.packages.metadata-sync": {
     "org": "input-output-hk",
     "repo": "offchain-metadata-tools",
@@ -19019,6 +19012,13 @@
     "pname": "cardano-faucet-exe-cardano-faucet",
     "system": "x86_64-linux",
     "version": "8.2",
+    "fail": true
+  },
+  "github:input-output-hk/offchain-metadata-tools/v0.4.0.0#x86_64-linux.app.packages.metadata-server": {
+    "org": "input-output-hk",
+    "repo": "offchain-metadata-tools",
+    "tag": "v0.4.0.0",
+    "rev": "cace73767315eea244b8596abdf7c7e394273a8a",
     "fail": true
   }
 }

@@ -1,10 +1,10 @@
 {
   outputs = inputs: let
-    inherit (builtins) fromJSON readFile fetchClosure;
-    inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs;
+    inherit (builtins) fromJSON readFile fetchClosure attrValues;
+    inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate;
 
     # This is a really verbose name, but it ensures we don't get collisions
-    nameOf = pkg: sane "${pkg.org}-${pkg.repo}-${pkg.tag}-${pkg.meta.name}";
+    nameOf = pkg: sane "${pkg.meta.name}-${pkg.org}-${pkg.repo}-${pkg.tag}";
 
     packagesJson = fromJSON (readFile ./packages.json);
     validPackages = filterAttrs (flakeUrl: pkg: pkg ? system && !(pkg ? fail)) packagesJson;
@@ -20,28 +20,34 @@
       )
       validPackages;
 
-    devShellSystem = "x86_64-linux";
+    system = "x86_64-linux";
+    flakes = {
+      nixpkgs = builtins.getFlake "github:nixos/nixpkgs?rev=bfb7dfec93f3b5d7274db109f2990bc889861caf";
+      nix = builtins.getFlake "github:nixos/nix?rev=8fbb4598c24b89c73db318ca7de7f78029cd61f4";
+    };
+
+    # These inputs are purely used for the devShell and hydra to avoid any
+    # evaluation and download of nixpkgs for just building a package.
+    inherit (flakes.nixpkgs.legacyPackages.${system}) mkShell nushell just ruby treefmt;
+
+    # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
+    inherit (flakes.nix.packages.${system}) nix;
   in
     {
-      devShells.${devShellSystem}.default = let
-        # These inputs are purely used for the devShell to avoid any evaluation and download of
-        # nixpkgs for just building a package.
-        nixpkgsFlake = builtins.getFlake "github:nixos/nixpkgs?rev=bfb7dfec93f3b5d7274db109f2990bc889861caf";
-        inherit (nixpkgsFlake.legacyPackages.${devShellSystem}) mkShell nushell just ruby treefmt;
+      hydraJobs.required = aggregate {
+        name = "required";
+        constituents = attrValues inputs.self.packages.x86_64-linux;
+      };
 
-        # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
-        nixFlake = builtins.getFlake "github:nixos/nix?rev=8fbb4598c24b89c73db318ca7de7f78029cd61f4";
-        inherit (nixFlake.packages.${devShellSystem}) nix;
-      in
-        mkShell {
-          nativeBuildInputs = [
-            nushell
-            just
-            ruby
-            nix
-            treefmt
-          ];
-        };
+      devShells.${system}.default = mkShell {
+        nativeBuildInputs = [
+          nushell
+          just
+          ruby
+          nix
+          treefmt
+        ];
+      };
     }
     // packages;
 }

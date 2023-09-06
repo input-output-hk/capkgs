@@ -14,8 +14,12 @@ op = OptionParser.new do |parser|
     OPTIONS[:from] = v
   end
 
-  parser.on :REQUIRED, '--to URL', 'Nix store URL to copy CA outputs to' do |v|
+  parser.on '--to URL', 'Nix store URL to copy CA outputs to' do |v|
     OPTIONS[:to] = v
+  end
+
+  parser.on '--only org/repo', 'Only update the given org/repo' do |v|
+    OPTIONS[:only] = v
   end
 
   parser.on '--systems A,B', Array, "systems to process" do |v|
@@ -53,7 +57,7 @@ end
 def process(pkg, flake_url, org, repo, tag, rev)
   pkg.merge!('org' => org, 'repo' => repo, 'tag' => tag, 'rev' => rev)
 
-  return if pkg['fail']
+  # return if pkg['fail']
 
   puts "Processing #{flake_url}"
 
@@ -151,6 +155,10 @@ store = JSON.parse(File.read('packages.json'))
 
 JSON.parse(File.read('projects.json')).each do |org, repos|
   repos.each do |repo, repo_config|
+    if (OPTIONS[:only] && "#{org}/#{repo}" != OPTIONS[:only])
+      pp org => repo
+      next
+    end
     prepare(store, org, repo, repo_config.fetch('packages'))
   end
 end
