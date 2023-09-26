@@ -2,20 +2,21 @@
 list:
     just -l
 
-# Update everything
-update: releases packages
-
-# Fetch versions specified in projects.json and update JSON in releases
-releases:
-    ./releases.nu
-
 # Based on releases.json, upload the CA contents and update packages.json
 packages *ARGS:
     ./packages.rb \
-    --from https://cache.iog.io \
-    --to "s3://devx?secret-key=/run/agenix/nix&endpoint=fc0e8a9d61fc1f44f378bdc5fdc0f638.r2.cloudflarestorage.com&region=auto&compression=zstd" \
+    --from "s3://devx?profile=r2&secret-key=hydra_key&endpoint=fc0e8a9d61fc1f44f378bdc5fdc0f638.r2.cloudflarestorage.com&region=auto&compression=zstd" \
+    --to "s3://devx?profile=r2&secret-key=hydra_key&endpoint=fc0e8a9d61fc1f44f378bdc5fdc0f638.r2.cloudflarestorage.com&region=auto&compression=zstd" \
     --systems x86_64-linux {{ARGS}}
 
 # Attempt to build all packages from this flake
 check:
-    ./check.nu
+    #!/usr/bin/env nu
+    (
+        nix eval .#packages.x86_64-linux --apply builtins.attrNames --json
+        | from json
+        | par-each {|p|
+            nix build --no-link --print-out-paths $".#packages.x86_64-linux.($p)"
+            | complete
+        }
+    )

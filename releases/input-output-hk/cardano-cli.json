@@ -12,5 +12,7 @@
   "cardano-cli-8.5.0.0": "6c050409935cb91f72d2dad099051f107c22ce9c",
   "cardano-cli-8.6.0.0": "e198717d59768cee7a0283d2dc4b673f943576d7",
   "cardano-cli-8.6.1.0": "897cc074ebe38b96999aa22370974154332c3e3a",
-  "cardano-cli-8.7.0.0": "59d9717b010340837bcf1d5eb6b678d6ba5df36f"
+  "cardano-cli-8.7.0.0": "59d9717b010340837bcf1d5eb6b678d6ba5df36f",
+  "cardano-cli-8.8.0.0": "a38c1c6db06f65fdb95271e7549c97960fcabc74",
+  "cardano-cli-8.9.0.0": "79264057deda984ca955c36e56c15a5c28e9307a"
 }

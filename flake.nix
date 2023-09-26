@@ -4,7 +4,8 @@
     inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate;
 
     # This is a really verbose name, but it ensures we don't get collisions
-    nameOf = pkg: sane "${pkg.meta.name}-${pkg.org}-${pkg.repo}-${pkg.tag}";
+    nameOf = pkg: sane "${pkg.meta.name or pkg.meta.pname}-${pkg.org}-${pkg.repo}-${pkg.tag}";
+    pp = v: builtins.trace (builtins.toJSON v) v;
 
     packagesJson = fromJSON (readFile ./packages.json);
     validPackages = filterAttrs (flakeUrl: pkg: pkg ? system && !(pkg ? fail)) packagesJson;
@@ -28,7 +29,7 @@
 
     # These inputs are purely used for the devShell and hydra to avoid any
     # evaluation and download of nixpkgs for just building a package.
-    inherit (flakes.nixpkgs.legacyPackages.${system}) mkShell nushell just ruby treefmt;
+    inherit (flakes.nixpkgs.legacyPackages.${system}) mkShell nushell just ruby solargraph treefmt curl;
 
     # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
     inherit (flakes.nix.packages.${system}) nix;
@@ -44,8 +45,10 @@
           nushell
           just
           ruby
+          solargraph
           nix
           treefmt
+          curl
         ];
       };
     }
