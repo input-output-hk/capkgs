@@ -4,7 +4,7 @@
     inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate;
 
     # This is a really verbose name, but it ensures we don't get collisions
-    nameOf = pkg: sane "${pkg.meta.name or pkg.meta.pname}-${pkg.org}-${pkg.repo}-${pkg.tag}";
+    nameOf = pkg: sane "${pkg.meta.name or pkg.meta.pname}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}";
     pp = v: builtins.trace (builtins.toJSON v) v;
 
     packagesJson = fromJSON (readFile ./packages.json);
@@ -22,14 +22,13 @@
       validPackages;
 
     system = "x86_64-linux";
+
+    # These inputs are purely used for the devShell and hydra to avoid any
+    # evaluation and download of nixpkgs for just building a package.
     flakes = {
       nixpkgs = builtins.getFlake "github:nixos/nixpkgs?rev=bfb7dfec93f3b5d7274db109f2990bc889861caf";
       nix = builtins.getFlake "github:nixos/nix?rev=8fbb4598c24b89c73db318ca7de7f78029cd61f4";
     };
-
-    # These inputs are purely used for the devShell and hydra to avoid any
-    # evaluation and download of nixpkgs for just building a package.
-    inherit (flakes.nixpkgs.legacyPackages.${system}) mkShell nushell just ruby solargraph treefmt curl;
 
     # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
     inherit (flakes.nix.packages.${system}) nix;
@@ -40,17 +39,21 @@
         constituents = attrValues inputs.self.packages.x86_64-linux;
       };
 
-      devShells.${system}.default = mkShell {
-        nativeBuildInputs = [
-          nushell
-          just
-          ruby
-          solargraph
-          nix
-          treefmt
-          curl
-        ];
-      };
+      devShells.${system}.default = with (flakes.nixpkgs.legacyPackages.${system});
+        mkShell {
+          nativeBuildInputs = [
+            crystal
+            crystalline
+            curl
+            gitMinimal
+            just
+            nix
+            nushell
+            pcre
+            treefmt
+            watchexec
+          ];
+        };
     }
     // packages;
 }
