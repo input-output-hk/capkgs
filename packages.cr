@@ -5,7 +5,7 @@ require "option_parser"
 require "file_utils"
 
 class Config
-  property from : String?
+  property from_store : String?
   property to : String?
   property nix_store : String?
   property systems : Array(String)?
@@ -14,7 +14,7 @@ class Config
     OptionParser.parse do |parser|
       parser.banner = "Usage: capkgs [options]"
 
-      parser.on "--from=URL", "Nix store URL to fetch inputs from" { |v| @from = v }
+      parser.on "--from-store=URL", "Public cache URL that users fetch closures from" { |v| @from_store = v }
       parser.on "--to=URL", "Nix store URL to copy CA outputs to" { |v| @to = v }
       parser.on "--systems=A,B", "systems to process" { |v| @systems = v.split.map(&.strip) }
       parser.on "--nix-store=STORE", "store URI" { |v| @nix_store = v }
@@ -25,21 +25,21 @@ class Config
       end
     end
 
-    raise "Missing required flag: --from" unless from_value = @from
+    raise "Missing required flag: --from-store" unless from_store_value = @from_store
     raise "Missing required flag: --to" unless to_value = @to
     raise "Missing required flag: --systems" unless systems_value = @systems
     raise "Missing required flag: --nix-store" unless nix_store_value = @nix_store
 
-    Valid.new(from_value, to_value, systems_value, nix_store_value)
+    Valid.new(from_store_value, to_value, systems_value, nix_store_value)
   end
 
   struct Valid
-    property from : String
+    property from_store : String
     property to : String
     property systems : Array(String)
     property nix_store : String
 
-    def initialize(@from, @to, @systems, @nix_store)
+    def initialize(@from_store, @to, @systems, @nix_store)
     end
   end
 end
@@ -56,43 +56,30 @@ def sh(command : String, *args : String)
   Result.new([command, *args], output.to_s, error.to_s, status.exit_code).tap do |result|
     puts result.status.inspect
 
-    puts "STDOUT:"
-    puts result.stdout
+    # puts "STDOUT:"
+    # puts result.stdout
 
-    puts "STDERR:"
-    puts result.stderr
+    # puts "STDERR:"
+    # puts result.stderr
   end
 end
 
-def fetch_git_branches(org_name, repo_name, branches, dest)
+def fetch_git_refs(org_name, repo_name, ref_patterns, dest)
   url = "https://github.com/#{org_name}/#{repo_name}"
+  result = sh("git", "ls-remote", "--exit-code", url)
+  return unless result.success?
 
-  refs_branches = branches.map do |branch|
-    if File.file?(dest) && (found = JSON.parse(File.read(dest))[branch])
-      next [branch, found.as_s]
-    end
-
-    result = sh("git", "ls-remote", "--exit-code", url, "refs/heads/#{branch}")
-    raise "failed to fetch branch '#{branch}' from #{url}" unless result.success?
-
-    rev, _ = result.stdout.lines.first.strip.split
-    [branch, rev]
+  refs_tags = ref_patterns.flat_map do |ref_pattern|
+    regex = Regex.new(ref_pattern)
+    result.stdout.lines
+      .map { |line| line.strip.split }
+      .select { |(rev, ref)| ref =~ regex }
+      .map do |(rev, ref)|
+        [ref.sub(%r(^refs/[^/]+/), ""), rev]
+      end
   end
 
-  puts "writing #{dest}"
-  File.write(dest, refs_branches.to_h.to_pretty_json)
-end
-
-def fetch_git_tags(org_name, repo_name, pattern, dest)
-  url = "https://github.com/#{org_name}/#{repo_name}"
-  result = sh("git", "ls-remote", "--exit-code", url, "refs/tags/*")
-  return {} of String => String unless result.success?
-
-  rpattern = Regex.new(pattern)
-  refs_tags = result.stdout.lines.select { |line| line =~ rpattern }.map do |line|
-    rev, ref = line.strip.split
-    [ref.sub(/^refs\/(tags|heads)\//, ""), rev]
-  end
+  pp! org_name, repo_name, ref_patterns, refs_tags
 
   puts "writing #{dest}"
   File.write(dest, refs_tags.to_h.to_pretty_json)
@@ -102,7 +89,7 @@ def fetch_github_releases(org_name, repo_name, dest)
   releases_url = "https://api.github.com/repos/#{org_name}/#{repo_name}/releases"
   # Use curl here to take advantage of netrc for the token without having to parse it
   curl_result = sh("curl", "-s", "--fail-with-body", releases_url)
-  return {} of String => String unless curl_result.success?
+  return unless curl_result.success?
 
   tag_names = Array(GithubRelease).from_json(curl_result.stdout).map { |release| release.tag_name }
   refs_tags = tag_names.map do |tag_name|
@@ -127,18 +114,16 @@ end
 def update_releases
   Projects.from_json(File.read("projects.json")).each do |org_name, repos|
     repos.flat_map do |repo_name, repo|
-      dest = "releases/#{org_name}/#{repo_name}.json"
-      FileUtils.mkdir_p(File.dirname(dest))
+      if refs = repo.refs
+        dest = "cache/refs/#{org_name}/#{repo_name}.json"
+        FileUtils.mkdir_p(File.dirname(dest))
+        fetch_git_refs(org_name, repo_name, refs, dest)
+      end
 
-      case repo
-      when Repo::GitBranches
-        fetch_git_branches(org_name, repo_name, repo.branches, dest)
-      when Repo::GitTags
-        fetch_git_tags(org_name, repo_name, repo.pattern, dest)
-      when Repo::GithubReleases
+      if repo.github_releases
+        dest = "cache/releases/#{org_name}/#{repo_name}.json"
+        FileUtils.mkdir_p(File.dirname(dest))
         fetch_github_releases(org_name, repo_name, dest)
-      else
-        raise "Invalid project type: #{repo.type}"
       end
     end
   end
@@ -166,32 +151,12 @@ end
 
 struct Repo
   include JSON::Serializable
-
-  use_json_discriminator "type", {
-    git_branches:    GitBranches,
-    git_tags:        GitTags,
-    github_releases: GithubReleases,
-  }
-
-  struct GitBranches
-    include JSON::Serializable
-    property packages : Array(String)
-    property branches : Array(String)
-  end
-
-  struct GithubReleases
-    include JSON::Serializable
-    property packages : Array(String)
-  end
-
-  struct GitTags
-    include JSON::Serializable
-    property packages : Array(String)
-    property pattern : String
-  end
+  property packages : Array(String)
+  property refs : Array(String)?
+  property github_releases : Bool = false
 end
 
-alias Repos = Hash(String, Repo::GitBranches | Repo::GithubReleases | Repo::GitTags)
+alias Repos = Hash(String, Repo)
 alias Projects = Hash(String, Repos)
 alias Releases = Hash(String, String)
 
@@ -246,8 +211,6 @@ struct Package
   def nix_eval
     process(eval_file_path,
       "nix", "eval", flake_url,
-      "--eval-store", "auto",
-      "--store", config.nix_store,
       "--accept-flake-config",
       "--no-write-lock-file",
       "--json",
@@ -255,15 +218,13 @@ struct Package
     ) do |stdout|
       @meta = stdout["meta"].as_h
       @pname = stdout["pname"].as_s
-      @version = stdout["version"].as_s
+      # @version = stdout["version"].as_s
     end
   end
 
   def nix_build
     process(build_file_path,
       "nix", "build", flake_url,
-      "--eval-store", "auto",
-      "--store", config.nix_store,
       "--accept-flake-config",
       "--no-write-lock-file",
       "--no-link",
@@ -276,14 +237,14 @@ struct Package
   def nix_store_make_content_addressed(config)
     path = output.not_nil!
     process(closure_file_path,
-      "nix", "store", "make-content-addressed", path, "--json",
-      "--eval-store", "auto",
-      "--store", config.nix_store,
-      "--from", config.from,
+      "nix", "store", "make-content-addressed", flake_url, "--json",
+      "--accept-flake-config",
+      "--no-write-lock-file",
+      # "--from", config.from,
       "--to", config.to,
     ) do |stdout|
       stdout.dig?("rewrites", path).try { |to_path|
-        @closure = {fromPath: path, toPath: to_path.as_s, fromStore: config.from}
+        @closure = {fromPath: path, toPath: to_path.as_s, fromStore: config.from_store}
       }
     end
   end
@@ -312,16 +273,21 @@ def each_package(config, &block : Package -> Nil)
     config.systems.map do |system|
       Projects.from_json(File.read("projects.json")).map do |org_name, repos|
         repos.map do |repo_name, repo|
-          Releases.from_json(File.read("releases/#{org_name}/#{repo_name}.json")).map do |version, commit|
-            repo.packages.map do |package|
-              Package.new(config, system, package, version, commit, org_name, repo_name)
+          %w[releases refs].map do |kind|
+            src = "cache/#{kind}/#{org_name}/#{repo_name}.json"
+            pp! src
+            next unless File.file?(src)
+            Releases.from_json(File.read(src)).map do |version, commit|
+              repo.packages.map do |package|
+                Package.new(config, system, package, version, commit, org_name, repo_name)
+              end
             end
           end
         end
       end
     end
 
-  packages.flatten.sort.each(&block)
+  packages.flatten.compact.sort.each(&block)
 end
 
 Signal::INT.trap { exit }

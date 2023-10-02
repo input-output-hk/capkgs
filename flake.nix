@@ -5,7 +5,6 @@
 
     # This is a really verbose name, but it ensures we don't get collisions
     nameOf = pkg: sane "${pkg.meta.name or pkg.meta.pname}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}";
-    pp = v: builtins.trace (builtins.toJSON v) v;
 
     packagesJson = fromJSON (readFile ./packages.json);
     validPackages = filterAttrs (flakeUrl: pkg: pkg ? system && !(pkg ? fail)) packagesJson;
@@ -27,7 +26,7 @@
     # evaluation and download of nixpkgs for just building a package.
     flakes = {
       nixpkgs = builtins.getFlake "github:nixos/nixpkgs?rev=bfb7dfec93f3b5d7274db109f2990bc889861caf";
-      nix = builtins.getFlake "github:nixos/nix?rev=8fbb4598c24b89c73db318ca7de7f78029cd61f4";
+      nix = builtins.getFlake "github:nixos/nix?rev=9e212344f948e3f362807581bfe3e3d535372618";
     };
 
     # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
@@ -50,6 +49,7 @@
             nix
             nushell
             pcre
+            rclone
             treefmt
             watchexec
           ];

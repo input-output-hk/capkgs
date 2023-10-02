@@ -1,39 +1,47 @@
 {
   "cardano-foundation": {
     "cardano-wallet": {
+      "github_releases": true,
       "packages": [
         "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
         "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet"
       ],
-      "pattern": "refs/tags/v\\d{4}-\\d{2}-\\d{2}$",
-      "type": "git_tags"
+      "refs": [
+        "^refs/tags/v\\d{4}-\\d{2}-\\d{2}$"
+      ]
     }
   },
   "input-output-hk": {
     "cardano-cli": {
+      "github_releases": true,
       "packages": [
         "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\""
       ],
-      "pattern": "refs/tags/cardano-cli-\\d+\\.\\d+\\.\\d+\\.\\d+$",
-      "type": "git_tags"
+      "refs": [
+        "^refs/tags/cardano-cli-\\d+\\.\\d+\\.\\d+\\.\\d+$"
+      ]
     },
     "cardano-db-sync": {
+      "github_releases": true,
       "packages": [
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool"
       ],
-      "type": "github_releases"
+      "refs": [
+        "^refs/tags/sancho-1-1-0$"
+      ]
     },
     "cardano-faucet": {
-      "branches": [
-        "master"
-      ],
+      "github_releases": true,
       "packages": [
         "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\""
       ],
-      "type": "git_branches"
+      "refs": [
+        "^refs/heads/master$"
+      ]
     },
     "cardano-node": {
+      "github_releases": true,
       "packages": [
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -43,18 +51,17 @@
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-truncater"
-      ],
-      "type": "github_releases"
+      ]
     },
     "offchain-metadata-tools": {
+      "github_releases": true,
       "packages": [
         "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-server",
         "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-sync",
         "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-validator-github",
         "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-webhook",
         "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.token-metadata-creator"
-      ],
-      "type": "github_releases"
+      ]
     }
   }
 }
