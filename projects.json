@@ -25,7 +25,8 @@
       "github_releases": true,
       "packages": [
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
-        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool"
+        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
+        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server"
       ],
       "refs": [
         "^refs/tags/sancho-1-1-0$"
@@ -61,6 +62,9 @@
         "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-validator-github",
         "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-webhook",
         "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.token-metadata-creator"
+      ],
+      "refs": [
+        "^refs/heads/master$"
       ]
     }
   }
