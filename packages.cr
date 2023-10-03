@@ -260,13 +260,13 @@ struct Package
     end
   end
 
-  def nix_store_make_content_addressed(config)
+  def nix_store_make_content_addressed
     path = output.not_nil!
     process(closure_file_path, true,
       "nix", "store", "make-content-addressed", flake_url, "--json",
+      "--to", config.to,
       "--accept-flake-config",
       "--no-write-lock-file",
-      "--to", config.to,
     ) do |stdout|
       stdout.dig?("rewrites", path).try { |to_path|
         @closure = {fromPath: path, toPath: to_path.as_s, fromStore: config.from_store}
@@ -331,7 +331,7 @@ each_package(config) do |pkg|
   pkg.nix_eval &&
     pkg.nix_build &&
     pkg.nix_copy_original &&
-    pkg.nix_store_make_content_addressed(config) &&
+    pkg.nix_store_make_content_addressed &&
     pkg.nix_copy_closure
   valid[pkg.flake_url] = pkg if pkg.closure
 end
