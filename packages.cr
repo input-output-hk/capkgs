@@ -50,17 +50,13 @@ pp! config
 def sh(command : String, *args : String)
   output = IO::Memory.new
   error = IO::Memory.new
+  multi_output = IO::MultiWriter.new(output, STDOUT)
+  multi_error = IO::MultiWriter.new(error, STDERR)
   puts Process.quote_posix([command, *args])
-  status = Process.run(command, args, output: output, error: error)
+  status = Process.run(command, args, output: multi_output, error: multi_error)
 
   Result.new([command, *args], output.to_s, error.to_s, status.exit_code).tap do |result|
     puts result.status.inspect
-
-    # puts "STDOUT:"
-    # puts result.stdout
-
-    # puts "STDERR:"
-    # puts result.stderr
   end
 end
 
@@ -200,6 +196,14 @@ struct Package
     "cache/closures/#{flake_url}.json"
   end
 
+  def copy_original_file_path
+    "cache/original_copies/#{flake_url}.json"
+  end
+
+  def copy_closure_file_path
+    "cache/closure_copies/#{flake_url}.json"
+  end
+
   CODE = <<-CODE.gsub(/\s+/, ' ').strip
     d: {
       pname = d.pname or d.name or null;
@@ -209,7 +213,7 @@ struct Package
   CODE
 
   def nix_eval
-    process(eval_file_path,
+    process(eval_file_path, true,
       "nix", "eval", flake_url,
       "--accept-flake-config",
       "--no-write-lock-file",
@@ -223,7 +227,7 @@ struct Package
   end
 
   def nix_build
-    process(build_file_path,
+    process(build_file_path, true,
       "nix", "build", flake_url,
       "--accept-flake-config",
       "--no-write-lock-file",
@@ -234,13 +238,34 @@ struct Package
     end
   end
 
+  def nix_copy_original
+    process(copy_original_file_path, false,
+      "nix", "copy", flake_url,
+      "--to", config.to,
+      "--accept-flake-config",
+      "--no-write-lock-file",
+    ) do |stdout|
+      pp! stdout
+    end
+  end
+
+  def nix_copy_closure
+    process(copy_closure_file_path, false,
+      "nix", "copy", closure.not_nil![:toPath],
+      "--to", config.to,
+      "--accept-flake-config",
+      "--no-write-lock-file",
+    ) do |stdout|
+      pp! stdout
+    end
+  end
+
   def nix_store_make_content_addressed(config)
     path = output.not_nil!
-    process(closure_file_path,
+    process(closure_file_path, true,
       "nix", "store", "make-content-addressed", flake_url, "--json",
       "--accept-flake-config",
       "--no-write-lock-file",
-      # "--from", config.from,
       "--to", config.to,
     ) do |stdout|
       stdout.dig?("rewrites", path).try { |to_path|
@@ -250,20 +275,26 @@ struct Package
   end
 
   def mkdirs
-    [eval_file_path, build_file_path, closure_file_path].each do |path|
+    [eval_file_path, build_file_path, copy_original_file_path, copy_closure_file_path, closure_file_path].each do |path|
       FileUtils.mkdir_p(File.dirname(path))
     end
   end
 
-  def process(path, command : String, *args)
-    if File.file?(path)
-      puts "Skipping #{path}"
-      result = Result.from_json(File.read(path))
-      (result.status == 0) && yield(JSON.parse(result.stdout))
+  def process(path, expect_json, command : String, *args)
+    result =
+      if File.file?(path)
+        puts "Skipping #{path}"
+        Result.from_json(File.read(path))
+      else
+        sh(command, *args).tap { |r|
+          File.write(path, r.to_pretty_json)
+        }
+      end
+
+    if result.success? && expect_json
+      yield(JSON.parse(result.stdout))
     else
-      result = sh(command, *args)
-      File.write(path, result.to_pretty_json)
-      yield(JSON.parse(result.stdout)) if result.success?
+      result.success?
     end
   end
 end
@@ -275,7 +306,6 @@ def each_package(config, &block : Package -> Nil)
         repos.map do |repo_name, repo|
           %w[releases refs].map do |kind|
             src = "cache/#{kind}/#{org_name}/#{repo_name}.json"
-            pp! src
             next unless File.file?(src)
             Releases.from_json(File.read(src)).map do |version, commit|
               repo.packages.map do |package|
@@ -300,7 +330,9 @@ each_package(config) do |pkg|
   pkg.mkdirs
   pkg.nix_eval &&
     pkg.nix_build &&
-    pkg.nix_store_make_content_addressed(config)
+    pkg.nix_copy_original &&
+    pkg.nix_store_make_content_addressed(config) &&
+    pkg.nix_copy_closure
   valid[pkg.flake_url] = pkg if pkg.closure
 end
 
