@@ -48,7 +48,7 @@
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
-        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-tracer",
+        "github:input-output-hk/cardano-node/${tag}#cardano-tracer",
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
         "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-truncater"
