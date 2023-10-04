@@ -102,7 +102,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-addresses-cli-exe-cardano-address",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
   },
   "github:cardano-foundation/cardano-wallet/211c357a91d48b30fdf77a3a169499b38822f9cd#packages.x86_64-linux.cardano-wallet": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
@@ -298,7 +299,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-addresses-cli-exe-cardano-address",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
   },
   "github:cardano-foundation/cardano-wallet/4eade336d69f4c4f64142c3643399e20c8d27d0f#packages.x86_64-linux.cardano-wallet": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
@@ -500,7 +502,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-addresses-cli-exe-cardano-address",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
   },
   "github:cardano-foundation/cardano-wallet/8ff4882288d913defe130011e34860c3522ba947#packages.x86_64-linux.cardano-wallet": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
@@ -704,7 +707,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-addresses-cli-exe-cardano-address",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
   },
   "github:cardano-foundation/cardano-wallet/9a072f90b8c52a7e25012269b21e2ddd8be28a74#packages.x86_64-linux.cardano-wallet": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
@@ -900,7 +904,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-addresses-cli-exe-cardano-address",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
   },
   "github:cardano-foundation/cardano-wallet/aee7e5373c956bd771390e9b5e7616eb39290c76#packages.x86_64-linux.cardano-wallet": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
@@ -1102,7 +1107,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-addresses-cli-exe-cardano-address",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
   },
   "github:cardano-foundation/cardano-wallet/b717b361afa3ade78192c5280679bfb9c53461f2#packages.x86_64-linux.cardano-wallet": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
@@ -1313,7 +1319,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-addresses-cli-exe-cardano-address",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
   },
   "github:cardano-foundation/cardano-wallet/c565a835a532bd2e0a65a0d5dc0d7563c35bdcc1#packages.x86_64-linux.cardano-wallet": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
@@ -1518,7 +1525,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-addresses-cli-exe-cardano-address",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
   },
   "github:cardano-foundation/cardano-wallet/ef1d2b2a8923c0f746aace0a8dc61f114bc044ed#packages.x86_64-linux.cardano-wallet": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
@@ -1724,7 +1732,125 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
+  },
+  "github:input-output-hk/cardano-cli/55d627015935f01e6ab43d9ad63e21b5f5338dd3#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
+    "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
+    "version": "cardano-cli-8.10.0.0",
+    "commit": "55d627015935f01e6ab43d9ad63e21b5f5338dd3",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-cli",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "The Cardano command-line interface",
+      "homepage": "",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "cardano-cli",
+      "name": "cardano-cli-exe-cardano-cli-8.10.0.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/bdkxqq0n6h0jqxkxzhdnj9dccwvlw6cz-source/builder/comp-builder.nix:389",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/kwlqzf9dnrp7qq18ic27gd1b5r8p32i2-cardano-cli-exe-cardano-cli-8.10.0.0",
+    "closure": {
+      "fromPath": "/nix/store/kwlqzf9dnrp7qq18ic27gd1b5r8p32i2-cardano-cli-exe-cardano-cli-8.10.0.0",
+      "toPath": "/nix/store/b0mlljv2y1w5jx06m6p30pk247bxmwd9-cardano-cli-exe-cardano-cli-8.10.0.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-cli-exe-cardano-cli",
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-cli/59d9717b010340837bcf1d5eb6b678d6ba5df36f#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
@@ -1840,7 +1966,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-cli/79264057deda984ca955c36e56c15a5c28e9307a#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
@@ -1956,7 +2083,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-cli/82897fc3ab538731daafbfadf5235ba067422fc4#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
@@ -2068,7 +2196,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-cli/a38c1c6db06f65fdb95271e7549c97960fcabc74#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
@@ -2184,7 +2313,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-cli/b2bb5da397077e63badc1d093105cd72db2f3d16#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
@@ -2296,7 +2426,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-cli/e198717d59768cee7a0283d2dc4b673f943576d7#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
@@ -2412,7 +2543,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-cli/f5e4259569d705d13e05b9c2e17224d4dc301be0#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
@@ -2524,7 +2656,125 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
+  },
+  "github:input-output-hk/cardano-cli/f6ddefa53d9911ea666b96a8827c54c19cf06b10#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
+    "name": "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
+    "version": "cardano-cli-8.11.0.0",
+    "commit": "f6ddefa53d9911ea666b96a8827c54c19cf06b10",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-cli",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "The Cardano command-line interface",
+      "homepage": "",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "cardano-cli",
+      "name": "cardano-cli-exe-cardano-cli-8.11.0.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/bdkxqq0n6h0jqxkxzhdnj9dccwvlw6cz-source/builder/comp-builder.nix:389",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/qfa2c18yp3zvhx45q1qz202r9lpxryr3-cardano-cli-exe-cardano-cli-8.11.0.0",
+    "closure": {
+      "fromPath": "/nix/store/qfa2c18yp3zvhx45q1qz202r9lpxryr3-cardano-cli-exe-cardano-cli-8.11.0.0",
+      "toPath": "/nix/store/ddzb64pjsfwnnr3hjpfpv054j0nd30h0-cardano-cli-exe-cardano-cli-8.11.0.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-cli-exe-cardano-cli",
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-db-sync/0ea93d223100db816ea5bf4468f789cadcd98b0e#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -2635,7 +2885,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/0ea93d223100db816ea5bf4468f789cadcd98b0e#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -2746,7 +2997,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/0ea93d223100db816ea5bf4468f789cadcd98b0e#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -2857,7 +3109,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/1d0edc3e8986a287f654d39e407aa72b3c3d6bc0#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -2962,7 +3215,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/1d0edc3e8986a287f654d39e407aa72b3c3d6bc0#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -3067,7 +3321,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/1d0edc3e8986a287f654d39e407aa72b3c3d6bc0#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -3172,7 +3427,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/26c88d7cf74572cd2f56e5d3cbd37c1f6056fb49#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -3199,7 +3455,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/26c88d7cf74572cd2f56e5d3cbd37c1f6056fb49#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -3226,7 +3483,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/26c88d7cf74572cd2f56e5d3cbd37c1f6056fb49#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -3253,7 +3511,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/4162e6673d49dcfe720538be8bd01d44ada380c6#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -3358,7 +3617,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/4162e6673d49dcfe720538be8bd01d44ada380c6#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -3463,7 +3723,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/4162e6673d49dcfe720538be8bd01d44ada380c6#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -3568,7 +3829,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/417fa3676836739e5c0322a62eb481a5d7fb8835#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -3673,7 +3935,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/417fa3676836739e5c0322a62eb481a5d7fb8835#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -3778,7 +4041,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/417fa3676836739e5c0322a62eb481a5d7fb8835#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -3883,7 +4147,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/5eff9a0df135f903a803762d54bde5882aefa42e#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -3970,7 +4235,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/5eff9a0df135f903a803762d54bde5882aefa42e#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -4057,7 +4323,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/8079738e85ff39f249e63d1f940de4fbbc8ca544#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -4144,7 +4411,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/8079738e85ff39f249e63d1f940de4fbbc8ca544#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -4231,7 +4499,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/8cfc3410ac778daf4aa54d272065b5093dea3054#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -4258,7 +4527,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/8cfc3410ac778daf4aa54d272065b5093dea3054#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -4285,7 +4555,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/8cfc3410ac778daf4aa54d272065b5093dea3054#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -4312,7 +4583,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/935e1fe5d5d11d694e9b6c54030a592b85742671#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -4407,7 +4679,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/935e1fe5d5d11d694e9b6c54030a592b85742671#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -4502,7 +4775,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/935e1fe5d5d11d694e9b6c54030a592b85742671#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -4597,7 +4871,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/9d0180571482ee4c6acb6fbc6bf55b5a4e2ee833#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -4692,7 +4967,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/9d0180571482ee4c6acb6fbc6bf55b5a4e2ee833#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -4787,7 +5063,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/9d0180571482ee4c6acb6fbc6bf55b5a4e2ee833#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -4882,7 +5159,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/caa474264640d201601875a260397ab764deb314#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -4987,7 +5265,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/caa474264640d201601875a260397ab764deb314#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -5092,7 +5371,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-db-sync/caa474264640d201601875a260397ab764deb314#packages.x86_64-linux.cardano-smash-server": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
@@ -5197,7 +5477,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
   },
   "github:input-output-hk/cardano-db-sync/ec9b052b6096ea9b9559c3db99a5d696aacbc7a2#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
@@ -5292,7 +5573,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-sync-exe-cardano-db-sync",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
   },
   "github:input-output-hk/cardano-db-sync/ec9b052b6096ea9b9559c3db99a5d696aacbc7a2#packages.x86_64-linux.cardano-db-tool": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
@@ -5387,7 +5669,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-db-tool-exe-cardano-db-tool",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
   },
   "github:input-output-hk/cardano-faucet/ba2a8d9b300a81ccec67aaa32a5dffbdee5e11ad#packages.x86_64-linux.\"cardano-faucet:exe:cardano-faucet\"": {
     "name": "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\"",
@@ -5499,7 +5782,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-faucet-exe-cardano-faucet",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-faucet"
   },
   "github:input-output-hk/cardano-node/2f041a1b21233ced41e2f8a8bca20e97ed257f0d#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -5611,7 +5895,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/2f041a1b21233ced41e2f8a8bca20e97ed257f0d#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -5723,7 +6008,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.6.1.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/2f041a1b21233ced41e2f8a8bca20e97ed257f0d#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -5835,7 +6121,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.3.1",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/2f041a1b21233ced41e2f8a8bca20e97ed257f0d#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -5947,7 +6234,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/2f041a1b21233ced41e2f8a8bca20e97ed257f0d#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -6059,7 +6347,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/2f041a1b21233ced41e2f8a8bca20e97ed257f0d#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -6171,7 +6460,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/2f041a1b21233ced41e2f8a8bca20e97ed257f0d#hydraJobs.musl.db-truncater": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-truncater",
@@ -6283,7 +6573,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-truncater",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-truncater"
   },
   "github:input-output-hk/cardano-node/408d8ae10a2792ace3a822e312433960e47de4e9#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -6394,7 +6685,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/408d8ae10a2792ace3a822e312433960e47de4e9#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -6505,7 +6797,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.4.0.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/408d8ae10a2792ace3a822e312433960e47de4e9#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -6616,7 +6909,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.2.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/408d8ae10a2792ace3a822e312433960e47de4e9#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -6727,7 +7021,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/408d8ae10a2792ace3a822e312433960e47de4e9#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -6838,7 +7133,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/408d8ae10a2792ace3a822e312433960e47de4e9#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -6949,7 +7245,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/408d8ae10a2792ace3a822e312433960e47de4e9#hydraJobs.musl.db-truncater": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-truncater",
@@ -7060,7 +7357,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-truncater",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-truncater"
   },
   "github:input-output-hk/cardano-node/6639b2e742f41ca04b04d8c2436beb86d4e5b770#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -7172,7 +7470,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/6639b2e742f41ca04b04d8c2436beb86d4e5b770#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -7284,7 +7583,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.6.1.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/6639b2e742f41ca04b04d8c2436beb86d4e5b770#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -7396,7 +7696,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.3.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/6639b2e742f41ca04b04d8c2436beb86d4e5b770#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -7508,7 +7809,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/6639b2e742f41ca04b04d8c2436beb86d4e5b770#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -7620,7 +7922,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/6639b2e742f41ca04b04d8c2436beb86d4e5b770#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -7732,7 +8035,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/6639b2e742f41ca04b04d8c2436beb86d4e5b770#hydraJobs.musl.db-truncater": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-truncater",
@@ -7844,7 +8148,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-truncater",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-truncater"
   },
   "github:input-output-hk/cardano-node/69a117b7be3db0f4ce6d9fc5cd4c16a2a409dcb8#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -7955,7 +8260,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/69a117b7be3db0f4ce6d9fc5cd4c16a2a409dcb8#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -8066,7 +8372,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.0.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/69a117b7be3db0f4ce6d9fc5cd4c16a2a409dcb8#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -8177,7 +8484,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.0.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/69a117b7be3db0f4ce6d9fc5cd4c16a2a409dcb8#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -8288,7 +8596,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/69a117b7be3db0f4ce6d9fc5cd4c16a2a409dcb8#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -8399,7 +8708,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/69a117b7be3db0f4ce6d9fc5cd4c16a2a409dcb8#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -8510,7 +8820,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/6f79e5c3ea109a70cd01910368e011635767305a#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -8621,7 +8932,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/6f79e5c3ea109a70cd01910368e011635767305a#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -8732,7 +9044,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.1.1",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/6f79e5c3ea109a70cd01910368e011635767305a#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -8843,7 +9156,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.1.1",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/6f79e5c3ea109a70cd01910368e011635767305a#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -8954,7 +9268,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/6f79e5c3ea109a70cd01910368e011635767305a#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -9065,7 +9380,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/6f79e5c3ea109a70cd01910368e011635767305a#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -9176,7 +9492,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/8762a10efe3f9f97939e3cb05edaf04250456702#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -9287,7 +9604,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/8762a10efe3f9f97939e3cb05edaf04250456702#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -9398,7 +9716,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-1.35.5",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/8762a10efe3f9f97939e3cb05edaf04250456702#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -9509,7 +9828,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-1.35.5",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/8762a10efe3f9f97939e3cb05edaf04250456702#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -9620,7 +9940,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/8762a10efe3f9f97939e3cb05edaf04250456702#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -9731,7 +10052,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/8762a10efe3f9f97939e3cb05edaf04250456702#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -9842,7 +10164,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-tools-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/93c0307b33d4105156924b03a2316bea38e6d358#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -9953,7 +10276,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/93c0307b33d4105156924b03a2316bea38e6d358#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -10064,7 +10388,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.1.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/93c0307b33d4105156924b03a2316bea38e6d358#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -10175,7 +10500,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.1.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/93c0307b33d4105156924b03a2316bea38e6d358#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -10286,7 +10612,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/93c0307b33d4105156924b03a2316bea38e6d358#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -10397,7 +10724,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/93c0307b33d4105156924b03a2316bea38e6d358#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -10508,7 +10836,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/9a0898636a4ea13f720dc3c6c8789b27beeb37c9#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -10620,7 +10949,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/9a0898636a4ea13f720dc3c6c8789b27beeb37c9#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -10732,7 +11062,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.8.0.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/9a0898636a4ea13f720dc3c6c8789b27beeb37c9#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -10844,7 +11175,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.4.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/9a0898636a4ea13f720dc3c6c8789b27beeb37c9#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -10956,7 +11288,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/9a0898636a4ea13f720dc3c6c8789b27beeb37c9#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -11068,7 +11401,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/9a0898636a4ea13f720dc3c6c8789b27beeb37c9#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -11180,7 +11514,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/9a0898636a4ea13f720dc3c6c8789b27beeb37c9#hydraJobs.musl.db-truncater": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-truncater",
@@ -11292,7 +11627,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-truncater",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-truncater"
   },
   "github:input-output-hk/cardano-node/a29ee68ba2c850cd50be39a3105ef191cfbc41d5#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -11404,7 +11740,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/a29ee68ba2c850cd50be39a3105ef191cfbc41d5#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -11516,7 +11853,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.5.0.0",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/a29ee68ba2c850cd50be39a3105ef191cfbc41d5#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -11628,7 +11966,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.2.1",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/a29ee68ba2c850cd50be39a3105ef191cfbc41d5#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -11740,7 +12079,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/a29ee68ba2c850cd50be39a3105ef191cfbc41d5#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -11852,7 +12192,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/a29ee68ba2c850cd50be39a3105ef191cfbc41d5#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -11964,7 +12305,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/a29ee68ba2c850cd50be39a3105ef191cfbc41d5#hydraJobs.musl.db-truncater": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-truncater",
@@ -12076,7 +12418,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-truncater",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-truncater"
   },
   "github:input-output-hk/cardano-node/d2d90b48c5577b4412d5c9c9968b55f8ab4b9767#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -12187,7 +12530,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/d2d90b48c5577b4412d5c9c9968b55f8ab4b9767#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -12298,7 +12642,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-8.1.2",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/d2d90b48c5577b4412d5c9c9968b55f8ab4b9767#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -12409,7 +12754,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-8.1.2",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/d2d90b48c5577b4412d5c9c9968b55f8ab4b9767#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -12520,7 +12866,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/d2d90b48c5577b4412d5c9c9968b55f8ab4b9767#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -12631,7 +12978,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/d2d90b48c5577b4412d5c9c9968b55f8ab4b9767#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -12742,7 +13090,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/f0b4ac897dcbefba9fa0d247b204a24543cf55f6#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -12853,7 +13202,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/f0b4ac897dcbefba9fa0d247b204a24543cf55f6#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -12964,7 +13314,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-1.35.7",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/f0b4ac897dcbefba9fa0d247b204a24543cf55f6#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -13075,7 +13426,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-1.35.7",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/f0b4ac897dcbefba9fa0d247b204a24543cf55f6#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -13186,7 +13538,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/f0b4ac897dcbefba9fa0d247b204a24543cf55f6#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -13297,7 +13650,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/f0b4ac897dcbefba9fa0d247b204a24543cf55f6#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -13408,7 +13762,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-tools-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   },
   "github:input-output-hk/cardano-node/f143d305acf65ed0c788236d8f26d12e197896d5#hydraJobs.musl.bech32": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
@@ -13519,7 +13874,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "bech32-exe-bech32",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "bech32"
   },
   "github:input-output-hk/cardano-node/f143d305acf65ed0c788236d8f26d12e197896d5#hydraJobs.musl.cardano-cli": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
@@ -13630,7 +13986,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli-x86_64-unknown-linux-musl-1.35.6",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
   },
   "github:input-output-hk/cardano-node/f143d305acf65ed0c788236d8f26d12e197896d5#hydraJobs.musl.cardano-node": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
@@ -13741,7 +14098,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-node-exe-cardano-node-x86_64-unknown-linux-musl-1.35.6",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-node"
   },
   "github:input-output-hk/cardano-node/f143d305acf65ed0c788236d8f26d12e197896d5#hydraJobs.musl.cardano-submit-api": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
@@ -13852,7 +14210,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-submit-api-exe-cardano-submit-api",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "cardano-submit-api"
   },
   "github:input-output-hk/cardano-node/f143d305acf65ed0c788236d8f26d12e197896d5#hydraJobs.musl.db-analyser": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
@@ -13963,7 +14322,8 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-exe-db-analyser",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-analyser"
   },
   "github:input-output-hk/cardano-node/f143d305acf65ed0c788236d8f26d12e197896d5#hydraJobs.musl.db-synthesizer": {
     "name": "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
@@ -14074,6 +14434,7 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "ouroboros-consensus-cardano-tools-exe-db-synthesizer",
-    "system": "x86_64-linux"
+    "system": "x86_64-linux",
+    "exeName": "db-synthesizer"
   }
 }

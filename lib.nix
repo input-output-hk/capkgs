@@ -1,5 +1,19 @@
 let
-  inherit (builtins) attrNames concatMap elemAt fetchClosure foldl' head isAttrs length listToAttrs replaceStrings zipAttrsWith;
+  inherit
+    (builtins)
+    attrNames
+    concatMap
+    elemAt
+    fetchClosure
+    foldl'
+    hasAttr
+    head
+    isAttrs
+    length
+    listToAttrs
+    replaceStrings
+    zipAttrsWith
+    ;
 
   # x86-64-linux
   busybox = fetchClosure {
@@ -80,6 +94,11 @@ let
     recursiveUpdateUntil (path: lhs: rhs: !(isAttrs lhs && isAttrs rhs)) lhs rhs;
 
   mapAndMergeAttrs = f: attrs: foldl' recursiveUpdate {} (mapAttrsToList f attrs);
+
+  optionalAttr = attrs: name:
+    if hasAttr name attrs
+    then {${name} = attrs.${name};}
+    else {};
 in {
-  inherit filterAttrs mapAndMergeAttrs sane symlinkPath aggregate;
+  inherit filterAttrs mapAndMergeAttrs sane symlinkPath aggregate optionalAttr;
 }

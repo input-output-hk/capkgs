@@ -45,7 +45,6 @@ class Config
 end
 
 config = Config.new.parse
-pp! config
 
 def sh(command : String, *args : String)
   output = IO::Memory.new
@@ -74,8 +73,6 @@ def fetch_git_refs(org_name, repo_name, ref_patterns, dest)
         [ref.sub(%r(^refs/[^/]+/), ""), rev]
       end
   end
-
-  pp! org_name, repo_name, ref_patterns, refs_tags
 
   puts "writing #{dest}"
   File.write(dest, refs_tags.to_h.to_pretty_json)
@@ -172,6 +169,7 @@ struct Package
   property closure : NamedTuple(fromPath: String, toPath: String, fromStore: String)?
   property pname : String?
   property system : String
+  property exeName : String?
 
   def initialize(@config, @system, @name, @version, @commit, @org_name, @repo_name)
   end
@@ -209,6 +207,7 @@ struct Package
       pname = d.pname or d.name or null;
       version = d.version or null;
       meta = d.meta or null;
+      exeName = d.exeName or null;
     }
   CODE
 
@@ -222,7 +221,8 @@ struct Package
     ) do |stdout|
       @meta = stdout["meta"].as_h
       @pname = stdout["pname"].as_s
-      # @version = stdout["version"].as_s
+      @exeName = stdout["exeName"].as_s?
+      true
     end
   end
 
@@ -245,18 +245,7 @@ struct Package
       "--accept-flake-config",
       "--no-write-lock-file",
     ) do |stdout|
-      pp! stdout
-    end
-  end
-
-  def nix_copy_closure
-    process(copy_closure_file_path, false,
-      "nix", "copy", closure.not_nil![:toPath],
-      "--to", config.to,
-      "--accept-flake-config",
-      "--no-write-lock-file",
-    ) do |stdout|
-      pp! stdout
+      true
     end
   end
 
@@ -271,6 +260,17 @@ struct Package
       stdout.dig?("rewrites", path).try { |to_path|
         @closure = {fromPath: path, toPath: to_path.as_s, fromStore: config.from_store}
       }
+    end
+  end
+
+  def nix_copy_closure
+    process(copy_closure_file_path, false,
+      "nix", "copy", closure.not_nil![:toPath],
+      "--to", config.to,
+      "--accept-flake-config",
+      "--no-write-lock-file",
+    ) do |stdout|
+      true
     end
   end
 
@@ -333,6 +333,7 @@ each_package(config) do |pkg|
     pkg.nix_copy_original &&
     pkg.nix_store_make_content_addressed &&
     pkg.nix_copy_closure
+
   valid[pkg.flake_url] = pkg if pkg.closure
 end
 

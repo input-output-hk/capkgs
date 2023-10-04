@@ -1,7 +1,7 @@
 {
   outputs = inputs: let
     inherit (builtins) fromJSON readFile fetchClosure attrValues;
-    inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate;
+    inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate optionalAttr;
 
     # This is a really verbose name, but it ensures we don't get collisions
     nameOf = pkg: sane "${pkg.meta.name or pkg.meta.pname}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}";
@@ -11,11 +11,12 @@
     packages =
       mapAndMergeAttrs (
         flakeUrl: pkg: {
-          packages.${pkg.system}.${nameOf pkg} = symlinkPath {
-            inherit (pkg) pname version meta system;
-            name = pkg.meta.name;
-            path = fetchClosure pkg.closure;
-          };
+          packages.${pkg.system}.${nameOf pkg} = symlinkPath ({
+              inherit (pkg) pname version meta system;
+              name = pkg.meta.name;
+              path = fetchClosure pkg.closure;
+            }
+            // (optionalAttr pkg "exeName"));
         }
       )
       validPackages;
