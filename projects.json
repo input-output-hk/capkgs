@@ -44,14 +44,14 @@
     "cardano-node": {
       "github_releases": true,
       "packages": [
-        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.bech32",
-        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-cli",
-        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-node",
-        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.cardano-submit-api",
+        "github:input-output-hk/cardano-node/${tag}#bech32",
+        "github:input-output-hk/cardano-node/${tag}#cardano-cli",
+        "github:input-output-hk/cardano-node/${tag}#cardano-node",
+        "github:input-output-hk/cardano-node/${tag}#cardano-submit-api",
         "github:input-output-hk/cardano-node/${tag}#cardano-tracer",
-        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-analyser",
-        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-synthesizer",
-        "github:input-output-hk/cardano-node/${tag}#hydraJobs.musl.db-truncater"
+        "github:input-output-hk/cardano-node/${tag}#db-analyser",
+        "github:input-output-hk/cardano-node/${tag}#db-synthesizer",
+        "github:input-output-hk/cardano-node/${tag}#db-truncater"
       ]
     },
     "offchain-metadata-tools": {
