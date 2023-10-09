@@ -7,7 +7,6 @@ require "file_utils"
 class Config
   property from_store : String?
   property to : String?
-  property nix_store : String?
   property systems : Array(String)?
 
   def parse
@@ -17,7 +16,6 @@ class Config
       parser.on "--from-store=URL", "Public cache URL that users fetch closures from" { |v| @from_store = v }
       parser.on "--to=URL", "Nix store URL to copy CA outputs to" { |v| @to = v }
       parser.on "--systems=A,B", "systems to process" { |v| @systems = v.split.map(&.strip) }
-      parser.on "--nix-store=STORE", "store URI" { |v| @nix_store = v }
 
       parser.on "-h", "--help", "Show this help" do
         puts parser
@@ -28,18 +26,16 @@ class Config
     raise "Missing required flag: --from-store" unless from_store_value = @from_store
     raise "Missing required flag: --to" unless to_value = @to
     raise "Missing required flag: --systems" unless systems_value = @systems
-    raise "Missing required flag: --nix-store" unless nix_store_value = @nix_store
 
-    Valid.new(from_store_value, to_value, systems_value, nix_store_value)
+    Valid.new(from_store_value, to_value, systems_value)
   end
 
   struct Valid
     property from_store : String
     property to : String
     property systems : Array(String)
-    property nix_store : String
 
-    def initialize(@from_store, @to, @systems, @nix_store)
+    def initialize(@from_store, @to, @systems)
     end
   end
 end

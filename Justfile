@@ -7,14 +7,19 @@ packages *ARGS:
     ./packages.cr \
         --to "s3://devx?secret-key=hydra_key&endpoint=${S3_ENDPOINT}&region=auto&compression=zstd" \
         --from-store https://cache.iog.io \
-        --nix-store "${NIX_STORE}" \
         --systems x86_64-linux
 
 # Based on releases.json, upload the CA contents and update packages.json
 ci:
-    just rclone copy s3://devx/capkgs cache
+    @just cache-download
     just packages
-    just rclone sync cache s3://devx/capkgs
+    @just cache-upload
+
+cache-download:
+    @just rclone copy s3://devx/capkgs cache
+
+cache-upload:
+    @just rclone sync cache s3://devx/capkgs
 
 rclone *ARGS:
     #!/usr/bin/env nu
