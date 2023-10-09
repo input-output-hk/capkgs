@@ -27,6 +27,7 @@
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server"
+        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth"
       ],
       "refs": [
         "^refs/tags/sancho-1-1-0$"
