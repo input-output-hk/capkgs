@@ -30,7 +30,6 @@ jobs:
       - run: |
           nix develop \
           --ignore-environment \
-          --keep NIX_STORE \
           --keep AWS_ACCESS_KEY_ID \
           --keep AWS_SECRET_ACCESS_KEY \
           --keep S3_ENDPOINT \
@@ -39,6 +38,5 @@ jobs:
           AWS_ACCESS_KEY_ID: "${{secrets.AWS_ACCESS_KEY_ID}}"
           AWS_SECRET_ACCESS_KEY: "${{secrets.AWS_SECRET_ACCESS_KEY}}"
           S3_ENDPOINT: "${{secrets.S3_ENDPOINT}}"
-          NIX_STORE: "${{secrets.NIX_STORE}}"
       - run: nix develop --ignore-environment --command just check
       - run: git add packages.json
