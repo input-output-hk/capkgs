@@ -2,10 +2,12 @@
 list:
     just -l
 
+secret_key := env_var_or_default('NIX_SIGNING_KEY_FILE', "hydra_key")
+
 # Based on releases.json, upload the CA contents and update packages.json
 packages *ARGS:
     ./packages.cr \
-        --to "s3://devx?secret-key=hydra_key&endpoint=${S3_ENDPOINT}&region=auto&compression=zstd" \
+        --to "s3://devx?secret-key={{secret_key}}&endpoint=${S3_ENDPOINT}&region=auto&compression=zstd" \
         --from-store https://cache.iog.io \
         --systems x86_64-linux
 
