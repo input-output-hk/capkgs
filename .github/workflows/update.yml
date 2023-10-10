@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: Free up disk space
         run: |
+          pwd
           df -h
           sudo rm -rf /usr/share/dotnet
           sudo rm -rf /usr/share/swift
