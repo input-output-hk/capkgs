@@ -53,6 +53,8 @@
             rclone
             treefmt
             watchexec
+            gnutar
+            zstd
           ];
         };
     }

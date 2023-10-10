@@ -63,3 +63,4 @@ strategies, based on tag patterns or bare branch names.
 - [ ] Automatically update this repo.
 - [ ] Maybe an easier way to force rebuilding specific packages.
 - [ ] Record _why_ a specific package is marked as failed, not just that it did. 
+- [ ] validate projects.json syntax before starting

@@ -11,15 +11,20 @@ packages *ARGS:
 
 # Based on releases.json, upload the CA contents and update packages.json
 ci:
-    @just cache-download
-    just packages
-    @just cache-upload
+    @just -v cache-download
+    @just -v packages
+    @just -v check
+    @just -v cache-upload
 
+# download and uncompress the cache folder
 cache-download:
-    @just rclone copy s3://devx/capkgs cache
+    @just -v rclone copyto s3://devx/capkgs/cache.tar.zst cache.tar.zst
+    tar xf cache.tar.zst
 
+# compress and upload the cache folder
 cache-upload:
-    @just rclone sync cache s3://devx/capkgs
+    tar cfa cache.tar.zst cache
+    @just -v rclone copyto cache.tar.zst s3://devx/capkgs/cache.tar.zst
 
 rclone *ARGS:
     #!/usr/bin/env nu
@@ -28,6 +33,9 @@ rclone *ARGS:
     rclone config create s3 s3 env_auth=true | save -f .config/rclone/rclone.conf
     rclone --s3-provider Cloudflare --s3-region auto --s3-endpoint $env.S3_ENDPOINT --verbose {{ARGS}}
     
+push:
+    git add packages.json
+    git commit -m 'Update packages.json'
 
 # Attempt to build all packages from this flake
 check:

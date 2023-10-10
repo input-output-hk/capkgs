@@ -1,1 +1,5 @@
 /cache 
+/.config
+hydra_key
+*.tar.zst
+*.tmp.*

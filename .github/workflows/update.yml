@@ -18,6 +18,17 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - name: Free up disk space
+        run: |
+          df -h
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/share/swift
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/hostedtoolcache
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /opt/az
+          sudo docker image prune --all --force
+          df -h
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install Nix
@@ -26,6 +37,9 @@ jobs:
           extra_nix_config: |
             trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
             substituters = https://cache.iog.io https://cache.nixos.org/
+            min-free = 1073741824
+            max-free = 2147483648
+            secret-key-files = hydra_key
       - run: echo "${{secrets.NIX_SIGNING_KEY}}" > hydra_key
       - run: |
           nix develop \
@@ -38,5 +52,3 @@ jobs:
           AWS_ACCESS_KEY_ID: "${{secrets.AWS_ACCESS_KEY_ID}}"
           AWS_SECRET_ACCESS_KEY: "${{secrets.AWS_SECRET_ACCESS_KEY}}"
           S3_ENDPOINT: "${{secrets.S3_ENDPOINT}}"
-      - run: nix develop --ignore-environment --command just check
-      - run: git add packages.json
