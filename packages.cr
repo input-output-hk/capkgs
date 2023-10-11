@@ -190,6 +190,7 @@ class CAPkgs
 
       raise "Couldn't add packages.json" unless sh("git", "add", "packages.json").success?
       raise "Couldn't commit result" unless sh("git", "commit", "-m", msg).success?
+      raise "Couldn't push changes" unless sh("git", "push").success?
     end
   end
 
