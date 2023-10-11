@@ -3631,6 +3631,34 @@
     "system": "x86_64-linux",
     "exeName": "cardano-smash-server"
   },
+  "github:input-output-hk/cardano-db-sync/26c88d7cf74572cd2f56e5d3cbd37c1f6056fb49#packages.x86_64-linux.cardano-smash-server-no-basic-auth": {
+    "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth",
+    "version": "13.1.1.3",
+    "commit": "26c88d7cf74572cd2f56e5d3cbd37c1f6056fb49",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/1pzsf1gr27zzj8rkzy1q59dxacshpf5k-source/pkgs/build-support/trivial-builders.nix:87",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/s1qn8zx84hc2kzk6paq78anrpwcgsniz-cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
+    "closure": {
+      "fromPath": "/nix/store/s1qn8zx84hc2kzk6paq78anrpwcgsniz-cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
+      "toPath": "/nix/store/lsz7g27zdwawpk728c5i1kh4jd1qrywq-cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-smash-server-exe-cardano-smash-server",
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
+  },
   "github:input-output-hk/cardano-db-sync/4162e6673d49dcfe720538be8bd01d44ada380c6#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
     "version": "13.0.4",
@@ -4697,6 +4725,34 @@
     "closure": {
       "fromPath": "/nix/store/3nv0s94mkvvc226aj2hw4iq6wzcj907w-cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
       "toPath": "/nix/store/ajgs37s4ksw690il6vjzamar3fwj2jic-cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-smash-server-exe-cardano-smash-server",
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
+  },
+  "github:input-output-hk/cardano-db-sync/8cfc3410ac778daf4aa54d272065b5093dea3054#packages.x86_64-linux.cardano-smash-server-no-basic-auth": {
+    "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth",
+    "version": "sancho-1-1-0",
+    "commit": "8cfc3410ac778daf4aa54d272065b5093dea3054",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/1pzsf1gr27zzj8rkzy1q59dxacshpf5k-source/pkgs/build-support/trivial-builders.nix:87",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/fhagskqwrdsqma3n12y2a078k9bzqsiv-cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
+    "closure": {
+      "fromPath": "/nix/store/fhagskqwrdsqma3n12y2a078k9bzqsiv-cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
+      "toPath": "/nix/store/jhr4d5g9qsikw63qn3q0yf8fb3afvsjs-cardano-smash-server-exe-cardano-smash-server-13.1.1.3",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
