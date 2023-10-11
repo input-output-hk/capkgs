@@ -404,8 +404,10 @@ class CAPkgs
     def process(path, expect_json, command : String, *args)
       result =
         if File.file?(path)
+          Log.debug { "File exists: #{path}" }
           Result.from_json(File.read(path))
         else
+          Log.debug { "File create: #{path}" }
           sh(command, *args).tap { |r|
             File.write(path, r.to_pretty_json)
           }
