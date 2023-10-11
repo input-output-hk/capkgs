@@ -42,10 +42,11 @@ jobs:
             min-free = 1073741824
             max-free = 2147483648
             secret-key-files = /home/runner/work/capkgs/capkgs/hydra_key
+            experimental-features = fetch-closure flakes nix-command
       - run: |
-          echo "${{secrets.NIX_SIGNING_KEY}}" > hydra_key
           git config user.name github-actions
           git config user.email github-actions@github.com
+          echo "${{secrets.NIX_SIGNING_KEY}}" > hydra_key
           nix develop \
           --ignore-environment \
           --keep AWS_ACCESS_KEY_ID \
