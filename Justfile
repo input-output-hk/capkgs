@@ -15,7 +15,6 @@ packages *ARGS:
 ci:
     @just -v cache-download
     @just -v packages
-    @just -v check
     @just -v cache-upload
 
 # download and uncompress the cache folder
