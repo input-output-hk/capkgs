@@ -4,14 +4,18 @@
     inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate optionalAttr;
 
     # This is a really verbose name, but it ensures we don't get collisions
-    nameOf = pkg: sane "${pkg.meta.name or pkg.meta.pname}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}";
+    nameOf = flakeUrl: pkg: let
+      parts = builtins.split "\\." flakeUrl;
+      name = builtins.elemAt parts ((builtins.length parts) - 1);
+    in
+      sane "${name}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}";
 
     packagesJson = fromJSON (readFile ./packages.json);
     validPackages = filterAttrs (flakeUrl: pkg: pkg ? system && !(pkg ? fail)) packagesJson;
     packages =
       mapAndMergeAttrs (
         flakeUrl: pkg: {
-          packages.${pkg.system}.${nameOf pkg} = symlinkPath ({
+          packages.${pkg.system}.${nameOf flakeUrl pkg} = symlinkPath ({
               inherit (pkg) pname version meta system;
               name = pkg.meta.name;
               path = fetchClosure pkg.closure;
