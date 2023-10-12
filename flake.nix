@@ -1,12 +1,13 @@
 {
   outputs = inputs: let
     inherit (builtins) fromJSON readFile fetchClosure attrValues;
-    inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate optionalAttr;
+    inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate optionalAttr last;
 
     # This is a really verbose name, but it ensures we don't get collisions
     nameOf = flakeUrl: pkg: let
-      parts = builtins.split "\\." flakeUrl;
-      name = builtins.elemAt parts ((builtins.length parts) - 1);
+      fragment = builtins.split "#" flakeUrl;
+      parts = builtins.split "\\." (last fragment);
+      name = last parts;
     in
       sane "${name}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}";
 

@@ -99,6 +99,8 @@ let
     if hasAttr name attrs
     then {${name} = attrs.${name};}
     else {};
+
+  last = list: elemAt list ((length list) - 1);
 in {
-  inherit filterAttrs mapAndMergeAttrs sane symlinkPath aggregate optionalAttr;
+  inherit filterAttrs mapAndMergeAttrs sane symlinkPath aggregate optionalAttr last;
 }
