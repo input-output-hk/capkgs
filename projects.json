@@ -30,7 +30,8 @@
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth"
       ],
       "refs": [
-        "^refs/tags/sancho-1-1-0$"
+        "^refs/tags/sancho-1-1-0$",
+        "^refs/tags/sancho-2-0-0$"
       ]
     },
     "cardano-faucet": {
