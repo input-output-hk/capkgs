@@ -59,14 +59,14 @@
     "offchain-metadata-tools": {
       "github_releases": true,
       "packages": [
-        "github:input-output-hk/offchain-metadata-tools/${tag}#hydraJobs.${system}.native.metadata-server",
-        "github:input-output-hk/offchain-metadata-tools/${tag}#hydraJobs.${system}.native.metadata-sync",
-        "github:input-output-hk/offchain-metadata-tools/${tag}#hydraJobs.${system}.native.metadata-validator-github",
-        "github:input-output-hk/offchain-metadata-tools/${tag}#hydraJobs.${system}.native.metadata-webhook",
-        "github:input-output-hk/offchain-metadata-tools/${tag}#hydraJobs.${system}.native.token-metadata-creator"
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-server",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-sync",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-validator-github",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-webhook",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.token-metadata-creator"
       ],
       "refs": [
-        "^refs/heads/master$"
+        "^refs/heads/feat-add-password-to-db-conn-string$"
       ]
     }
   }
