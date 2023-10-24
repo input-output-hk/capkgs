@@ -32,7 +32,8 @@
       "refs": [
         "^refs/tags/sancho-1-1-0$",
         "^refs/tags/sancho-2-0-0$",
-        "^refs/tags/sancho-2-0-1$"
+        "^refs/tags/sancho-2-0-1$",
+        "^refs/tags/sancho-2-1-0$"
       ]
     },
     "cardano-faucet": {
