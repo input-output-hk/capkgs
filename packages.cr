@@ -130,7 +130,7 @@ class CAPkgs
     tag_names = Array(GithubRelease).from_json(curl_result.stdout).map { |release| release.tag_name }
     refs_tags = tag_names.map do |tag_name|
       # Once we record a tag, prevent it from updating
-      if File.file?(dest) && (found = JSON.parse(File.read(dest))[tag_name])
+      if File.file?(dest) && (found = JSON.parse(File.read(dest))[tag_name]?)
         next [tag_name, found.as_s]
       end
 
