@@ -25,16 +25,15 @@
       "github_releases": true,
       "packages": [
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
+        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-sync:exe:cardano-db-sync\"",
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
+        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-tool:exe:cardano-db-tool\"",
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
+        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-smash-server:exe:cardano-smash-server\"",
         "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth"
       ],
       "refs": [
-        "^refs/tags/sancho-1-1-0$",
-        "^refs/tags/sancho-2-0-0$",
-        "^refs/tags/sancho-2-0-1$",
-        "^refs/tags/sancho-2-1-0$",
-        "^refs/tags/sancho-2-2-0$"
+        "^refs/tags/sancho-\\d+-\\d+-\\d+$"
       ]
     },
     "cardano-faucet": {
