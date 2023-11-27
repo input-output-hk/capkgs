@@ -58,14 +58,14 @@
     "offchain-metadata-tools": {
       "github_releases": true,
       "packages": [
-        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-server",
-        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-sync",
-        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-validator-github",
-        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.metadata-webhook",
-        "github:input-output-hk/offchain-metadata-tools/${tag}#${system}.app.packages.token-metadata-creator"
+        "github:input-output-hk/offchain-metadata-tools/${tag}#packages.${system}.metadata-server",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#packages.${system}.metadata-sync",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#packages.${system}.metadata-validator-github",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#packages.${system}.metadata-webhook",
+        "github:input-output-hk/offchain-metadata-tools/${tag}#packages.${system}.token-metadata-creator"
       ],
       "refs": [
-        "^refs/heads/feat-add-password-to-db-conn-string$"
+        "^refs/tags/ops-\\d+\\-\\d+\\-\\d+$"
       ]
     }
   }
