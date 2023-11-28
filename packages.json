@@ -8128,6 +8128,118 @@
     "system": "x86_64-linux",
     "exeName": "cardano-smash-server"
   },
+  "github:input-output-hk/cardano-db-sync/b3519b7e5380476c5ed0126c89ccba1355a2fc12#packages.x86_64-linux.\"cardano-db-sync:exe:cardano-db-sync\"": {
+    "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-sync:exe:cardano-db-sync\"",
+    "version": "sancho-2-3-0",
+    "commit": "b3519b7e5380476c5ed0126c89ccba1355a2fc12",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-db-sync-exe-cardano-db-sync-13.2.0.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/4q1kj9w3iz9pw4l26jjq0bwvlqg4x4am-source/overlays/haskell-nix-extra/default.nix:55",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/cag724jz7g36im22pgalbldvl9chx0wq-cardano-db-sync-exe-cardano-db-sync-13.2.0.0",
+    "closure": {
+      "fromPath": "/nix/store/cag724jz7g36im22pgalbldvl9chx0wq-cardano-db-sync-exe-cardano-db-sync-13.2.0.0",
+      "toPath": "/nix/store/y5grpsrq7qlq3d32zyg0m3aqviprr9dp-cardano-db-sync-exe-cardano-db-sync-13.2.0.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-db-sync-exe-cardano-db-sync",
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
+  },
+  "github:input-output-hk/cardano-db-sync/b3519b7e5380476c5ed0126c89ccba1355a2fc12#packages.x86_64-linux.\"cardano-db-tool:exe:cardano-db-tool\"": {
+    "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-tool:exe:cardano-db-tool\"",
+    "version": "sancho-2-3-0",
+    "commit": "b3519b7e5380476c5ed0126c89ccba1355a2fc12",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-db-tool-exe-cardano-db-tool-13.2.0.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/4q1kj9w3iz9pw4l26jjq0bwvlqg4x4am-source/overlays/haskell-nix-extra/default.nix:55",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/6fx8i9v1by93k6l73nqdqzg4y7ybk2kx-cardano-db-tool-exe-cardano-db-tool-13.2.0.0",
+    "closure": {
+      "fromPath": "/nix/store/6fx8i9v1by93k6l73nqdqzg4y7ybk2kx-cardano-db-tool-exe-cardano-db-tool-13.2.0.0",
+      "toPath": "/nix/store/gq53313f3k36h9ll83fdzq0a8y30747a-cardano-db-tool-exe-cardano-db-tool-13.2.0.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-db-tool-exe-cardano-db-tool",
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
+  },
+  "github:input-output-hk/cardano-db-sync/b3519b7e5380476c5ed0126c89ccba1355a2fc12#packages.x86_64-linux.\"cardano-smash-server:exe:cardano-smash-server\"": {
+    "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-smash-server:exe:cardano-smash-server\"",
+    "version": "sancho-2-3-0",
+    "commit": "b3519b7e5380476c5ed0126c89ccba1355a2fc12",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-smash-server-exe-cardano-smash-server-13.2.0.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/4q1kj9w3iz9pw4l26jjq0bwvlqg4x4am-source/overlays/haskell-nix-extra/default.nix:55",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/xpwbcl6w7ajlp4s6c8lv3dapqk2rj03p-cardano-smash-server-exe-cardano-smash-server-13.2.0.0",
+    "closure": {
+      "fromPath": "/nix/store/xpwbcl6w7ajlp4s6c8lv3dapqk2rj03p-cardano-smash-server-exe-cardano-smash-server-13.2.0.0",
+      "toPath": "/nix/store/6a10x69zk7302mf9489nm3j01z2abxkh-cardano-smash-server-exe-cardano-smash-server-13.2.0.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-smash-server-exe-cardano-smash-server",
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
+  },
+  "github:input-output-hk/cardano-db-sync/b3519b7e5380476c5ed0126c89ccba1355a2fc12#packages.x86_64-linux.cardano-smash-server-no-basic-auth": {
+    "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth",
+    "version": "sancho-2-3-0",
+    "commit": "b3519b7e5380476c5ed0126c89ccba1355a2fc12",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-smash-server-exe-cardano-smash-server-13.2.0.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/4q1kj9w3iz9pw4l26jjq0bwvlqg4x4am-source/overlays/haskell-nix-extra/default.nix:55",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/nxk78wfcwind4skphxwrnp6vmn7ymhvv-cardano-smash-server-exe-cardano-smash-server-13.2.0.0",
+    "closure": {
+      "fromPath": "/nix/store/nxk78wfcwind4skphxwrnp6vmn7ymhvv-cardano-smash-server-exe-cardano-smash-server-13.2.0.0",
+      "toPath": "/nix/store/8nlrbpy2fhxj6kpkgxgikxh3izhvmqib-cardano-smash-server-exe-cardano-smash-server-13.2.0.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-smash-server-exe-cardano-smash-server",
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
+  },
   "github:input-output-hk/cardano-db-sync/bbc1c68370486dc40943fd65f86a285055f2506a#packages.x86_64-linux.cardano-db-sync": {
     "name": "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
     "version": "sancho-2-1-0",
