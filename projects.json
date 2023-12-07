@@ -71,5 +71,16 @@
         "^refs/tags/ops-\\d+\\-\\d+\\-\\d+$"
       ]
     }
+  },
+  "johnalotoski": {
+    "process-compose": {
+      "github_releases": false,
+      "packages": [
+        "github:johnalotoski/process-compose/${tag}#packages.${system}.process-compose"
+      ],
+      "refs": [
+        "^refs/heads/fix-nix-build$"
+      ]
+    }
   }
 }
