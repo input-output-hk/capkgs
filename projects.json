@@ -72,14 +72,11 @@
       ]
     }
   },
-  "johnalotoski": {
+  "F1bonacc1": {
     "process-compose": {
-      "github_releases": false,
+      "github_releases": true,
       "packages": [
-        "github:johnalotoski/process-compose/${tag}#packages.${system}.process-compose"
-      ],
-      "refs": [
-        "^refs/heads/fix-nix-build$"
+        "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose"
       ]
     }
   }
