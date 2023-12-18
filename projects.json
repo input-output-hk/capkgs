@@ -15,7 +15,7 @@
     "cardano-cli": {
       "github_releases": true,
       "packages": [
-        "github:input-output-hk/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\""
+        "github:IntersectMBO/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\""
       ],
       "refs": [
         "^refs/tags/cardano-cli-\\d+\\.\\d+\\.\\d+\\.\\d+$"
@@ -24,13 +24,13 @@
     "cardano-db-sync": {
       "github_releases": true,
       "packages": [
-        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
-        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-sync:exe:cardano-db-sync\"",
-        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
-        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-tool:exe:cardano-db-tool\"",
-        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
-        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.\"cardano-smash-server:exe:cardano-smash-server\"",
-        "github:input-output-hk/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth"
+        "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.cardano-db-sync",
+        "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-sync:exe:cardano-db-sync\"",
+        "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.cardano-db-tool",
+        "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-tool:exe:cardano-db-tool\"",
+        "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server",
+        "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.\"cardano-smash-server:exe:cardano-smash-server\"",
+        "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth"
       ],
       "refs": [
         "^refs/tags/sancho-\\d+-\\d+-\\d+$"
@@ -48,14 +48,14 @@
     "cardano-node": {
       "github_releases": true,
       "packages": [
-        "github:input-output-hk/cardano-node/${tag}#bech32",
-        "github:input-output-hk/cardano-node/${tag}#cardano-cli",
-        "github:input-output-hk/cardano-node/${tag}#cardano-node",
-        "github:input-output-hk/cardano-node/${tag}#cardano-submit-api",
-        "github:input-output-hk/cardano-node/${tag}#cardano-tracer",
-        "github:input-output-hk/cardano-node/${tag}#db-analyser",
-        "github:input-output-hk/cardano-node/${tag}#db-synthesizer",
-        "github:input-output-hk/cardano-node/${tag}#db-truncater"
+        "github:IntersectMBO/cardano-node/${tag}#bech32",
+        "github:IntersectMBO/cardano-node/${tag}#cardano-cli",
+        "github:IntersectMBO/cardano-node/${tag}#cardano-node",
+        "github:IntersectMBO/cardano-node/${tag}#cardano-submit-api",
+        "github:IntersectMBO/cardano-node/${tag}#cardano-tracer",
+        "github:IntersectMBO/cardano-node/${tag}#db-analyser",
+        "github:IntersectMBO/cardano-node/${tag}#db-synthesizer",
+        "github:IntersectMBO/cardano-node/${tag}#db-truncater"
       ]
     },
     "offchain-metadata-tools": {
