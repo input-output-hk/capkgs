@@ -58,6 +58,13 @@
         "github:IntersectMBO/cardano-node/${tag}#db-truncater"
       ]
     },
+    "mithril": {
+      "github_releases": true,
+      "packages": [
+        "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+        "github:input-output-hk/mithril/${tag}#mithril-signer"
+      ]
+    },
     "offchain-metadata-tools": {
       "github_releases": true,
       "packages": [
