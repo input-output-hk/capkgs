@@ -1,5 +1,14 @@
 {
   "cardano-foundation": {
+    "blockperf": {
+      "github_releases": true,
+      "packages": [
+        "github:cardano-foundation/blockperf/${tag}#blockperf"
+      ],
+      "refs": [
+        "^refs/heads/main$"
+      ]
+    },
     "cardano-wallet": {
       "github_releases": true,
       "packages": [
