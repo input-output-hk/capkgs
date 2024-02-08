@@ -67,7 +67,7 @@
         "github:IntersectMBO/cardano-node/${tag}#db-truncater"
       ],
       "refs": [
-        "^refs/heads/8.8.0-pre$"
+        "^refs/tags/8.8.0-pre$"
       ]
     },
     "mithril": {
