@@ -105,6 +105,9 @@ class CAPkgs
     result = sh("git", "ls-remote", "--exit-code", url)
     raise "Couldn't fetch git refs for '#{url}'" unless result.success?
 
+    # Ref patterns will not be automatically dereferenced.
+    # To dereference, a ref pattern should have a suffix of: `\\^\\{\\}$`
+    # The resulting package name of the dereferenced pattern will include a `^{}` suffix
     refs_tags = ref_patterns.flat_map do |ref_pattern|
       regex = Regex.new(ref_pattern)
       result.stdout.lines
@@ -135,8 +138,14 @@ class CAPkgs
       end
 
       tags_url = "https://github.com/#{org_name}/#{repo_name}"
-      tags_result = sh("git", "ls-remote", "--exit-code", "--tags", tags_url, tag_name)
-      raise "Failed to fetch #{tag_name} from #{tags_url}" unless tags_result.success?
+
+      # If a tag associated dereferenced object exists, use it preferentially.
+      # Only annotated tags will have a dereferenced object available.
+      tags_result = sh("git", "ls-remote", "--exit-code", "--tags", tags_url, tag_name + "^{}")
+      unless tags_result.success?
+        tags_result = sh("git", "ls-remote", "--exit-code", "--tags", tags_url, tag_name)
+        raise "Failed to fetch #{tag_name} from #{tags_url}" unless tags_result.success?
+      end
 
       pattern = /refs\/tags\/#{Regex.escape(tag_name)}/
       matching = tags_result.stdout.lines.select { |line| line =~ pattern }
