@@ -49,6 +49,7 @@ jobs:
           echo "${{secrets.NIX_SIGNING_KEY}}" > hydra_key
           nix develop \
           --ignore-environment \
+          --keep CI \
           --keep AWS_ACCESS_KEY_ID \
           --keep AWS_SECRET_ACCESS_KEY \
           --keep S3_ENDPOINT \
