@@ -107,14 +107,15 @@ class CAPkgs
 
     # Ref patterns will not be automatically dereferenced.
     # To dereference, a ref pattern should have a suffix of: `\\^\\{\\}$`
-    # The resulting package name of the dereferenced pattern will include a `^{}` suffix
+    # The resulting package name from a dereferenced pattern will *NOT* include the `^{}` suffix.
+    # The shortRev in the package name can be used to infer dereferencing.
     refs_tags = ref_patterns.flat_map do |ref_pattern|
       regex = Regex.new(ref_pattern)
       result.stdout.lines
         .map { |line| line.strip.split }
         .select { |(rev, ref)| ref =~ regex }
         .map do |(rev, ref)|
-          [ref.sub(%r(^refs/[^/]+/), ""), rev]
+          [ref.sub(%r(^refs/[^/]+/), "").sub(%r(\^\{\}$), ""), rev]
         end
     end
 
