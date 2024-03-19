@@ -8,8 +8,9 @@
       fragment = builtins.split "#" flakeUrl;
       parts = builtins.split "\\." (last fragment);
       name = last parts;
+      shortrev = builtins.substring 0 7 pkg.commit;
     in
-      sane "${name}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}";
+      sane "${name}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}-${shortrev}";
 
     packagesJson = fromJSON (readFile ./packages.json);
     validPackages = filterAttrs (flakeUrl: pkg: pkg ? system && !(pkg ? fail)) packagesJson;
