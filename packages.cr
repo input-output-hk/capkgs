@@ -105,13 +105,17 @@ class CAPkgs
     result = sh("git", "ls-remote", "--exit-code", url)
     raise "Couldn't fetch git refs for '#{url}'" unless result.success?
 
+    # Ref patterns will not be automatically dereferenced.
+    # To dereference, a ref pattern should have a suffix of: `\\^\\{\\}$`
+    # The resulting package name from a dereferenced pattern will *NOT* include the `^{}` suffix.
+    # The shortRev in the package name can be used to infer dereferencing.
     refs_tags = ref_patterns.flat_map do |ref_pattern|
       regex = Regex.new(ref_pattern)
       result.stdout.lines
         .map { |line| line.strip.split }
         .select { |(rev, ref)| ref =~ regex }
         .map do |(rev, ref)|
-          [ref.sub(%r(^refs/[^/]+/), ""), rev]
+          [ref.sub(%r(^refs/[^/]+/), "").sub(%r(\^\{\}$), ""), rev]
         end
     end
 
@@ -135,8 +139,14 @@ class CAPkgs
       end
 
       tags_url = "https://github.com/#{org_name}/#{repo_name}"
-      tags_result = sh("git", "ls-remote", "--exit-code", "--tags", tags_url, tag_name)
-      raise "Failed to fetch #{tag_name} from #{tags_url}" unless tags_result.success?
+
+      # If a tag associated dereferenced object exists, use it preferentially.
+      # Only annotated tags will have a dereferenced object available.
+      tags_result = sh("git", "ls-remote", "--exit-code", "--tags", tags_url, tag_name + "^{}")
+      unless tags_result.success?
+        tags_result = sh("git", "ls-remote", "--exit-code", "--tags", tags_url, tag_name)
+        raise "Failed to fetch #{tag_name} from #{tags_url}" unless tags_result.success?
+      end
 
       pattern = /refs\/tags\/#{Regex.escape(tag_name)}/
       matching = tags_result.stdout.lines.select { |line| line =~ pattern }

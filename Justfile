@@ -4,14 +4,14 @@ list:
 
 secret_key := env_var_or_default('NIX_SIGNING_KEY_FILE', "hydra_key")
 
-# Based on releases.json, upload the CA contents and update packages.json
+# Based on projects.json, upload the CA contents and update packages.json
 packages *ARGS:
     ./packages.cr \
         --to "s3://devx?secret-key={{secret_key}}&endpoint=${S3_ENDPOINT}&region=auto&compression=zstd" \
         --from-store https://cache.iog.io \
         --systems x86_64-linux
 
-# Based on releases.json, upload the CA contents and update packages.json
+# Based on projects.json, upload the CA contents and update packages.json
 ci:
     @just -v cache-download
     @just -v packages
@@ -29,11 +29,11 @@ cache-upload:
 
 rclone *ARGS:
     #!/usr/bin/env nu
-    $env.HOME = $env.PWD
+    if $env.CI? == "true" { $env.HOME = $env.PWD }
     mkdir .config/rclone
     rclone config create s3 s3 env_auth=true | save -f .config/rclone/rclone.conf
     rclone --s3-provider Cloudflare --s3-region auto --s3-endpoint $env.S3_ENDPOINT --verbose {{ARGS}}
-    
+
 push:
     git add packages.json
     git commit -m 'Update packages.json'

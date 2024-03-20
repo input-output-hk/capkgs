@@ -14,9 +14,6 @@
       "packages": [
         "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
         "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet"
-      ],
-      "refs": [
-        "^refs/tags/v\\d{4}-\\d{2}-\\d{2}$"
       ]
     }
   },
@@ -25,9 +22,6 @@
       "github_releases": true,
       "packages": [
         "github:IntersectMBO/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\""
-      ],
-      "refs": [
-        "^refs/tags/cardano-cli-\\d+\\.\\d+\\.\\d+\\.\\d+$"
       ]
     },
     "cardano-db-sync": {
@@ -42,7 +36,8 @@
         "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth"
       ],
       "refs": [
-        "^refs/tags/sancho-\\d+-\\d+-\\d+$"
+        "^refs/tags/sancho-\\d+-\\d+-\\d+\\^\\{\\}$",
+        "^refs/tags/sancho-\\d+\\.\\d+\\.\\d+\\^\\{\\}$"
       ]
     },
     "cardano-faucet": {
@@ -51,7 +46,7 @@
         "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\""
       ],
       "refs": [
-        "^refs/heads/master$"
+        "^refs/tags/\\d+\\.\\d+$"
       ]
     },
     "cardano-node": {
@@ -65,9 +60,6 @@
         "github:IntersectMBO/cardano-node/${tag}#db-analyser",
         "github:IntersectMBO/cardano-node/${tag}#db-synthesizer",
         "github:IntersectMBO/cardano-node/${tag}#db-truncater"
-      ],
-      "refs": [
-        "^refs/tags/8.9.0\\^\\{\\}$"
       ]
     },
     "mithril": {
