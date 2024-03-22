@@ -11419,7 +11419,7 @@
   },
   "github:IntersectMBO/cardano-node/0d98405a60d57e1c8e13406d51cce0e34356bd64#bech32": {
     "name": "github:IntersectMBO/cardano-node/${tag}#bech32",
-    "version": "8.9.0",
+    "version": "8.9.0^{}",
     "commit": "0d98405a60d57e1c8e13406d51cce0e34356bd64",
     "org_name": "input-output-hk",
     "repo_name": "cardano-node",
@@ -11536,7 +11536,7 @@
   },
   "github:IntersectMBO/cardano-node/0d98405a60d57e1c8e13406d51cce0e34356bd64#cardano-cli": {
     "name": "github:IntersectMBO/cardano-node/${tag}#cardano-cli",
-    "version": "8.9.0",
+    "version": "8.9.0^{}",
     "commit": "0d98405a60d57e1c8e13406d51cce0e34356bd64",
     "org_name": "input-output-hk",
     "repo_name": "cardano-node",
@@ -11653,7 +11653,7 @@
   },
   "github:IntersectMBO/cardano-node/0d98405a60d57e1c8e13406d51cce0e34356bd64#cardano-node": {
     "name": "github:IntersectMBO/cardano-node/${tag}#cardano-node",
-    "version": "8.9.0",
+    "version": "8.9.0^{}",
     "commit": "0d98405a60d57e1c8e13406d51cce0e34356bd64",
     "org_name": "input-output-hk",
     "repo_name": "cardano-node",
@@ -11770,7 +11770,7 @@
   },
   "github:IntersectMBO/cardano-node/0d98405a60d57e1c8e13406d51cce0e34356bd64#cardano-submit-api": {
     "name": "github:IntersectMBO/cardano-node/${tag}#cardano-submit-api",
-    "version": "8.9.0",
+    "version": "8.9.0^{}",
     "commit": "0d98405a60d57e1c8e13406d51cce0e34356bd64",
     "org_name": "input-output-hk",
     "repo_name": "cardano-node",
@@ -11887,7 +11887,7 @@
   },
   "github:IntersectMBO/cardano-node/0d98405a60d57e1c8e13406d51cce0e34356bd64#cardano-tracer": {
     "name": "github:IntersectMBO/cardano-node/${tag}#cardano-tracer",
-    "version": "8.9.0",
+    "version": "8.9.0^{}",
     "commit": "0d98405a60d57e1c8e13406d51cce0e34356bd64",
     "org_name": "input-output-hk",
     "repo_name": "cardano-node",
@@ -12004,7 +12004,7 @@
   },
   "github:IntersectMBO/cardano-node/0d98405a60d57e1c8e13406d51cce0e34356bd64#db-analyser": {
     "name": "github:IntersectMBO/cardano-node/${tag}#db-analyser",
-    "version": "8.9.0",
+    "version": "8.9.0^{}",
     "commit": "0d98405a60d57e1c8e13406d51cce0e34356bd64",
     "org_name": "input-output-hk",
     "repo_name": "cardano-node",
@@ -12121,7 +12121,7 @@
   },
   "github:IntersectMBO/cardano-node/0d98405a60d57e1c8e13406d51cce0e34356bd64#db-synthesizer": {
     "name": "github:IntersectMBO/cardano-node/${tag}#db-synthesizer",
-    "version": "8.9.0",
+    "version": "8.9.0^{}",
     "commit": "0d98405a60d57e1c8e13406d51cce0e34356bd64",
     "org_name": "input-output-hk",
     "repo_name": "cardano-node",
@@ -12238,7 +12238,7 @@
   },
   "github:IntersectMBO/cardano-node/0d98405a60d57e1c8e13406d51cce0e34356bd64#db-truncater": {
     "name": "github:IntersectMBO/cardano-node/${tag}#db-truncater",
-    "version": "8.9.0",
+    "version": "8.9.0^{}",
     "commit": "0d98405a60d57e1c8e13406d51cce0e34356bd64",
     "org_name": "input-output-hk",
     "repo_name": "cardano-node",
@@ -30952,6 +30952,60 @@
     "closure": {
       "fromPath": "/nix/store/qpwvk2s8l9m1rqv4n4nkzblnfm354ywk-mithril-signer-0.2.57",
       "toPath": "/nix/store/pihcw8mgj4ay0092wyb51da19hnajyc8-mithril-signer-0.2.57",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-signer",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/2e462c013abff0504f5ee53452b4edf6c20acf33#mithril-client-cli": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+    "version": "2412.0-pre",
+    "commit": "2e462c013abff0504f5ee53452b4edf6c20acf33",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "mithril-client-cli-0.7.6",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/c3afw4qy9a1wcd4pkw9zvpk5lvx4mxll-source/lib/mkCargoDerivation.nix:62",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/zhqhk69xvs9b4kgpcqxk26r5msx4vz5f-mithril-client-cli-0.7.6",
+    "closure": {
+      "fromPath": "/nix/store/zhqhk69xvs9b4kgpcqxk26r5msx4vz5f-mithril-client-cli-0.7.6",
+      "toPath": "/nix/store/yd8xj811x423m5fn6v3c80kgpx9yzp9v-mithril-client-cli-0.7.6",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-client-cli",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/2e462c013abff0504f5ee53452b4edf6c20acf33#mithril-signer": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
+    "version": "2412.0-pre",
+    "commit": "2e462c013abff0504f5ee53452b4edf6c20acf33",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "mithril-signer-0.2.116",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/c3afw4qy9a1wcd4pkw9zvpk5lvx4mxll-source/lib/mkCargoDerivation.nix:62",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/syp07fiz8bs9dkh27jwjfw492w6kyf5s-mithril-signer-0.2.116",
+    "closure": {
+      "fromPath": "/nix/store/syp07fiz8bs9dkh27jwjfw492w6kyf5s-mithril-signer-0.2.116",
+      "toPath": "/nix/store/0gf4jba8s62zfqcyra19cnhny2ggrzgs-mithril-signer-0.2.116",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
