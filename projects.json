@@ -60,9 +60,6 @@
         "github:IntersectMBO/cardano-node/${tag}#db-analyser",
         "github:IntersectMBO/cardano-node/${tag}#db-synthesizer",
         "github:IntersectMBO/cardano-node/${tag}#db-truncater"
-      ],
-      "refs": [
-        "^refs/tags/8\\.10\\.0-pre$"
       ]
     },
     "mithril": {
