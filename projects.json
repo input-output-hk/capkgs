@@ -70,6 +70,9 @@
       "packages": [
         "github:input-output-hk/mithril/${tag}#mithril-client-cli",
         "github:input-output-hk/mithril/${tag}#mithril-signer"
+      ],
+      "refs": [
+        "^refs/tags/unstable$"
       ]
     },
     "offchain-metadata-tools": {
