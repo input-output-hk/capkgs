@@ -38,7 +38,7 @@
       "refs": [
         "^refs/tags/sancho-\\d+-\\d+-\\d+\\^\\{\\}$",
         "^refs/tags/sancho-\\d+\\.\\d+\\.\\d+\\^\\{\\}$",
-        "^refs/tags/sancho-13\\.2\\.0\\.2\\^\\{\\}$"
+        "^refs/tags/13\\.2\\.0\\.2\\^\\{\\}$"
       ]
     },
     "cardano-faucet": {
