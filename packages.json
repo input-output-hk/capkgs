@@ -392,6 +392,73 @@
     "pname": "process-compose",
     "system": "x86_64-linux"
   },
+  "github:F1bonacc1/process-compose/3cd252df8d3a6852aea56efddf5f77eece7d5406#packages.x86_64-linux.process-compose": {
+    "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
+    "version": "v1.6.1",
+    "commit": "3cd252df8d3a6852aea56efddf5f77eece7d5406",
+    "org_name": "F1bonacc1",
+    "repo_name": "process-compose",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "changelog": "https://github.com/F1bonacc1/process-compose/releases/tag/v1.6.1",
+      "description": "A simple and flexible scheduler and orchestrator to manage non-containerized applications",
+      "homepage": "https://github.com/F1bonacc1/process-compose",
+      "insecure": false,
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "Apache License 2.0",
+        "redistributable": true,
+        "shortName": "asl20",
+        "spdxId": "Apache-2.0",
+        "url": "https://spdx.org/licenses/Apache-2.0.html"
+      },
+      "mainProgram": "process-compose",
+      "name": "process-compose-1.6.1",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux"
+      ],
+      "position": "/nix/store/xqff85yyiqiz2zc9891q10cz131x391m-source/default.nix:34",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/dfx02ix4qm0df94728msmczhkyj2sgkq-process-compose-1.6.1",
+    "closure": {
+      "fromPath": "/nix/store/dfx02ix4qm0df94728msmczhkyj2sgkq-process-compose-1.6.1",
+      "toPath": "/nix/store/l32kr8ja8lqp88vagbkg8qlilfvagpc9-process-compose-1.6.1",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "process-compose",
+    "system": "x86_64-linux"
+  },
   "github:F1bonacc1/process-compose/4986f3580f2fd8d7f5ed4ab7432643fc7fdaa2e3#packages.x86_64-linux.process-compose": {
     "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
     "version": "v0.77.4",
@@ -1040,69 +1107,6 @@
     "closure": {
       "fromPath": "/nix/store/7hz4gmy19bk0387k8ihjr7qccchlnwn3-process-compose-af32b08",
       "toPath": "/nix/store/jyqjmmcbna2jnvacam8a2gg5nh6n3zws-process-compose-af32b08",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "process-compose",
-    "system": "x86_64-linux"
-  },
-  "github:F1bonacc1/process-compose/b544c6bb014fbc75928bb6a290d3530e5dc71d63#packages.x86_64-linux.process-compose": {
-    "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
-    "version": "v0.24.0",
-    "commit": "b544c6bb014fbc75928bb6a290d3530e5dc71d63",
-    "org_name": "F1bonacc1",
-    "repo_name": "process-compose",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "Process Compose is like docker-compose, but for orchestrating a suite of processes, not containers.",
-      "homepage": "https://github.com/F1bonacc1/process-compose",
-      "insecure": false,
-      "license": {
-        "deprecated": false,
-        "free": true,
-        "fullName": "Apache License 2.0",
-        "redistributable": true,
-        "shortName": "asl20",
-        "spdxId": "Apache-2.0",
-        "url": "https://spdx.org/licenses/Apache-2.0.html"
-      },
-      "mainProgram": "process-compose",
-      "name": "process-compose-0.21.0",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mipsel-linux",
-        "mips64el-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux"
-      ],
-      "position": "/nix/store/gmbz81gv8xpsn8mn557q0n6wp16fad5p-source/default.nix:23",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/82q7svkqla2rxv0hymbhhkw7615l40f7-process-compose-0.21.0",
-    "closure": {
-      "fromPath": "/nix/store/82q7svkqla2rxv0hymbhhkw7615l40f7-process-compose-0.21.0",
-      "toPath": "/nix/store/0yhic1023rhgzypvkh10jp32skb91d66-process-compose-0.21.0",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "process-compose",
@@ -8081,6 +8085,118 @@
     "closure": {
       "fromPath": "/nix/store/ycz1im07y07y05mh4yn9lhafzvyj11ba-cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
       "toPath": "/nix/store/66hj95g6m35dk5j9631nix6zhkpwc3j7-cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-smash-server-exe-cardano-smash-server",
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
+  },
+  "github:IntersectMBO/cardano-db-sync/56c6b1592b7d0df75a47bdadb24c424d3ef453b5#packages.x86_64-linux.\"cardano-db-sync:exe:cardano-db-sync\"": {
+    "name": "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-sync:exe:cardano-db-sync\"",
+    "version": "sancho-4-3-0",
+    "commit": "56c6b1592b7d0df75a47bdadb24c424d3ef453b5",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-db-sync-exe-cardano-db-sync-13.2.0.1",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/vlhkkbxshvnxjjzv3kkl837lslsildww-source/overlays/haskell-nix-extra/default.nix:55",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/mnqjgzbz87nyn7kj1g0w7jj8lsk76ssh-cardano-db-sync-exe-cardano-db-sync-13.2.0.1",
+    "closure": {
+      "fromPath": "/nix/store/mnqjgzbz87nyn7kj1g0w7jj8lsk76ssh-cardano-db-sync-exe-cardano-db-sync-13.2.0.1",
+      "toPath": "/nix/store/can20dyhka3a0ck5q6y69f9jy91z9d6k-cardano-db-sync-exe-cardano-db-sync-13.2.0.1",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-db-sync-exe-cardano-db-sync",
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-sync"
+  },
+  "github:IntersectMBO/cardano-db-sync/56c6b1592b7d0df75a47bdadb24c424d3ef453b5#packages.x86_64-linux.\"cardano-db-tool:exe:cardano-db-tool\"": {
+    "name": "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.\"cardano-db-tool:exe:cardano-db-tool\"",
+    "version": "sancho-4-3-0",
+    "commit": "56c6b1592b7d0df75a47bdadb24c424d3ef453b5",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-db-tool-exe-cardano-db-tool-13.2.0.1",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/vlhkkbxshvnxjjzv3kkl837lslsildww-source/overlays/haskell-nix-extra/default.nix:55",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/d56xg3gry16q17iqplc81iv2mvgnr1i5-cardano-db-tool-exe-cardano-db-tool-13.2.0.1",
+    "closure": {
+      "fromPath": "/nix/store/d56xg3gry16q17iqplc81iv2mvgnr1i5-cardano-db-tool-exe-cardano-db-tool-13.2.0.1",
+      "toPath": "/nix/store/chcvgy9kxpqbqs9a91n4fr5wl61jna99-cardano-db-tool-exe-cardano-db-tool-13.2.0.1",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-db-tool-exe-cardano-db-tool",
+    "system": "x86_64-linux",
+    "exeName": "cardano-db-tool"
+  },
+  "github:IntersectMBO/cardano-db-sync/56c6b1592b7d0df75a47bdadb24c424d3ef453b5#packages.x86_64-linux.\"cardano-smash-server:exe:cardano-smash-server\"": {
+    "name": "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.\"cardano-smash-server:exe:cardano-smash-server\"",
+    "version": "sancho-4-3-0",
+    "commit": "56c6b1592b7d0df75a47bdadb24c424d3ef453b5",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/vlhkkbxshvnxjjzv3kkl837lslsildww-source/overlays/haskell-nix-extra/default.nix:55",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/619fqwxsf38a6q9wcn7pgw2sggrn2c71-cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
+    "closure": {
+      "fromPath": "/nix/store/619fqwxsf38a6q9wcn7pgw2sggrn2c71-cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
+      "toPath": "/nix/store/v90fh0girw80a6li397zhr74z454yifz-cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-smash-server-exe-cardano-smash-server",
+    "system": "x86_64-linux",
+    "exeName": "cardano-smash-server"
+  },
+  "github:IntersectMBO/cardano-db-sync/56c6b1592b7d0df75a47bdadb24c424d3ef453b5#packages.x86_64-linux.cardano-smash-server-no-basic-auth": {
+    "name": "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth",
+    "version": "sancho-4-3-0",
+    "commit": "56c6b1592b7d0df75a47bdadb24c424d3ef453b5",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-db-sync",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/vlhkkbxshvnxjjzv3kkl837lslsildww-source/overlays/haskell-nix-extra/default.nix:55",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/ij9l59p6qjv78xcj3qgf0g6ljgrv5c79-cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
+    "closure": {
+      "fromPath": "/nix/store/ij9l59p6qjv78xcj3qgf0g6ljgrv5c79-cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
+      "toPath": "/nix/store/gkbpgbf6ybj7byz6qclz93md5kzadpcx-cardano-smash-server-exe-cardano-smash-server-13.2.0.1",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-smash-server-exe-cardano-smash-server",
