@@ -128,7 +128,7 @@ class CAPkgs
   def fetch_github_releases(org_name, repo_name, dest)
     releases_url = "https://api.github.com/repos/#{org_name}/#{repo_name}/releases"
     # Use curl here to take advantage of netrc for the token without having to parse it
-    curl_result = sh("curl", "-L", "-s", "--fail-with-body", releases_url)
+    curl_result = sh("curl", "--netrc", "-L", "-s", "--fail-with-body", releases_url)
     raise "Couldn't fetch releases for '#{releases_url}'" unless curl_result.success?
 
     tag_names = Array(GithubRelease).from_json(curl_result.stdout).map { |release| release.tag_name }
