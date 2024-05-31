@@ -66,6 +66,15 @@
         "^refs/tags/8\\.9\\.3$"
       ]
     },
+    "cardano-ogmios": {
+      "github_releases": true,
+      "packages": [
+        "github:input-output-hk/cardano-ogmios/${tag}#packages.${system}.ogmios"
+      ],
+      "refs": [
+        "^refs/heads/ogmios-6-3-0$"
+      ]
+    },
     "mithril": {
       "github_releases": true,
       "packages": [
