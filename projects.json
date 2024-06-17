@@ -72,7 +72,7 @@
         "github:input-output-hk/cardano-ogmios/${tag}#packages.${system}.ogmios"
       ],
       "refs": [
-        "^refs/heads/ogmios-6-3-0$"
+        "^refs/tags/v\\d+\\.\\d+\\.\\d+$"
       ]
     },
     "mithril": {
