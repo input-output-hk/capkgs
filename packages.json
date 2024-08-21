@@ -45173,6 +45173,60 @@
     "pname": "mithril-signer",
     "system": "x86_64-linux"
   },
+  "github:input-output-hk/mithril/21ed6fcdb901145d3b325497e372759e34b1ba29#mithril-client-cli": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+    "version": "unstable",
+    "commit": "21ed6fcdb901145d3b325497e372759e34b1ba29",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "mithril-client-cli-0.9.11",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/165pp610184nnl1znimdk46gbkwh0644-source/lib/mkCargoDerivation.nix:62",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/n84g8g3gp2lpzn1a9cdwl2ayn8h3sqd9-mithril-client-cli-0.9.11",
+    "closure": {
+      "fromPath": "/nix/store/n84g8g3gp2lpzn1a9cdwl2ayn8h3sqd9-mithril-client-cli-0.9.11",
+      "toPath": "/nix/store/yksxw55pbqf988m7yc1fd750091y3ngv-mithril-client-cli-0.9.11",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-client-cli",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/21ed6fcdb901145d3b325497e372759e34b1ba29#mithril-signer": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
+    "version": "unstable",
+    "commit": "21ed6fcdb901145d3b325497e372759e34b1ba29",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "mithril-signer-0.2.173",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/165pp610184nnl1znimdk46gbkwh0644-source/lib/mkCargoDerivation.nix:62",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/5bxmzgkrr0r32230crbdwzkwwl51h2ql-mithril-signer-0.2.173",
+    "closure": {
+      "fromPath": "/nix/store/5bxmzgkrr0r32230crbdwzkwwl51h2ql-mithril-signer-0.2.173",
+      "toPath": "/nix/store/046lpgr8a3dhv99njahjjsjp26li4dfp-mithril-signer-0.2.173",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-signer",
+    "system": "x86_64-linux"
+  },
   "github:input-output-hk/mithril/254d2665c34472943a517057d84e08f8667b304f#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "2403.1-pre",
@@ -45708,60 +45762,6 @@
     "closure": {
       "fromPath": "/nix/store/4ffxy7w0v4l8b33gb417r8awnfji5pf9-mithril-signer-0.2.72",
       "toPath": "/nix/store/06i2vmj4wjpnxwl0aipnkhvq22ss013x-mithril-signer-0.2.72",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-signer",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/c0fa486b2c6766a59fb1b406a80620aa79d49b8a#mithril-client-cli": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
-    "version": "unstable",
-    "commit": "c0fa486b2c6766a59fb1b406a80620aa79d49b8a",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "insecure": false,
-      "name": "mithril-client-cli-0.9.11",
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/165pp610184nnl1znimdk46gbkwh0644-source/lib/mkCargoDerivation.nix:62",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/w8c3s26ikg9w27y44caaif4yv0kgmcz3-mithril-client-cli-0.9.11",
-    "closure": {
-      "fromPath": "/nix/store/w8c3s26ikg9w27y44caaif4yv0kgmcz3-mithril-client-cli-0.9.11",
-      "toPath": "/nix/store/yksxw55pbqf988m7yc1fd750091y3ngv-mithril-client-cli-0.9.11",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-client-cli",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/c0fa486b2c6766a59fb1b406a80620aa79d49b8a#mithril-signer": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
-    "version": "unstable",
-    "commit": "c0fa486b2c6766a59fb1b406a80620aa79d49b8a",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "insecure": false,
-      "name": "mithril-signer-0.2.173",
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/165pp610184nnl1znimdk46gbkwh0644-source/lib/mkCargoDerivation.nix:62",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/5wi4dybwdzh1f9ry3jm4g2mi0wpgsh7k-mithril-signer-0.2.173",
-    "closure": {
-      "fromPath": "/nix/store/5wi4dybwdzh1f9ry3jm4g2mi0wpgsh7k-mithril-signer-0.2.173",
-      "toPath": "/nix/store/046lpgr8a3dhv99njahjjsjp26li4dfp-mithril-signer-0.2.173",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
