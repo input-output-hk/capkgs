@@ -46740,10 +46740,10 @@
     "pname": "mithril-signer",
     "system": "x86_64-linux"
   },
-  "github:input-output-hk/mithril/899f86cce8e4239904104fdea6bcdea442425190#mithril-client-cli": {
+  "github:input-output-hk/mithril/8690abe099149b41472d78321329121cb75b679e#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "unstable",
-    "commit": "899f86cce8e4239904104fdea6bcdea442425190",
+    "commit": "8690abe099149b41472d78321329121cb75b679e",
     "org_name": "input-output-hk",
     "repo_name": "mithril",
     "meta": {
@@ -46758,19 +46758,19 @@
       "unfree": false,
       "unsupported": false
     },
-    "output": "/nix/store/ar3xajz2q4wvgpaj9nnp7h4x5zh85x9n-mithril-client-cli-0.9.11",
+    "output": "/nix/store/xvgw4i8zbsvzk7z92lylnp3hfam21c0f-mithril-client-cli-0.9.11",
     "closure": {
-      "fromPath": "/nix/store/ar3xajz2q4wvgpaj9nnp7h4x5zh85x9n-mithril-client-cli-0.9.11",
+      "fromPath": "/nix/store/xvgw4i8zbsvzk7z92lylnp3hfam21c0f-mithril-client-cli-0.9.11",
       "toPath": "/nix/store/r1plr649cl7yafl9ahb3zi0q70sjilm6-mithril-client-cli-0.9.11",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-client-cli",
     "system": "x86_64-linux"
   },
-  "github:input-output-hk/mithril/899f86cce8e4239904104fdea6bcdea442425190#mithril-signer": {
+  "github:input-output-hk/mithril/8690abe099149b41472d78321329121cb75b679e#mithril-signer": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
     "version": "unstable",
-    "commit": "899f86cce8e4239904104fdea6bcdea442425190",
+    "commit": "8690abe099149b41472d78321329121cb75b679e",
     "org_name": "input-output-hk",
     "repo_name": "mithril",
     "meta": {
@@ -46785,9 +46785,9 @@
       "unfree": false,
       "unsupported": false
     },
-    "output": "/nix/store/53pg76gml35sy3fhyyc8ppm0rnx8dsbk-mithril-signer-0.2.176",
+    "output": "/nix/store/h4bcb656l9sp19r2jyh7nx2p0yq3pvr0-mithril-signer-0.2.176",
     "closure": {
-      "fromPath": "/nix/store/53pg76gml35sy3fhyyc8ppm0rnx8dsbk-mithril-signer-0.2.176",
+      "fromPath": "/nix/store/h4bcb656l9sp19r2jyh7nx2p0yq3pvr0-mithril-signer-0.2.176",
       "toPath": "/nix/store/p8r5da7cw1ifzpyabcw6wb7yqnwk1j9l-mithril-signer-0.2.176",
       "fromStore": "https://cache.iog.io"
     },
