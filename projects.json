@@ -63,7 +63,7 @@
         "github:IntersectMBO/cardano-node/${tag}#db-truncater"
       ],
       "refs": [
-        "^refs/tags/9\\.2\\.0\\^\\{\\}$"
+        "^refs/tags/9\\.2\\.1$"
       ]
     },
     "cardano-ogmios": {
