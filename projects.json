@@ -17,6 +17,14 @@
       ]
     }
   },
+  "F1bonacc1": {
+    "process-compose": {
+      "github_releases": true,
+      "packages": [
+        "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose"
+      ]
+    }
+  },
   "input-output-hk": {
     "cardano-cli": {
       "github_releases": true,
@@ -97,11 +105,13 @@
       ]
     }
   },
-  "F1bonacc1": {
-    "process-compose": {
+  "IntersectMBO": {
+    "credential-manager": {
       "github_releases": true,
       "packages": [
-        "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose"
+        "github:IntersectMBO/credential-manager/${tag}#packages.${system}.cc-sign",
+        "github:IntersectMBO/credential-manager/${tag}#packages.${system}.orchestrator-cli",
+        "github:IntersectMBO/credential-manager/${tag}#packages.${system}.tx-bundle"
       ]
     }
   }
