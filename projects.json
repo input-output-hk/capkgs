@@ -70,7 +70,7 @@
       ],
       "refs": [
         "^refs/tags/10\\.1\\.1-pre$",
-        "^refs/heads/release/10.1.3$"
+        "^refs/tags/10\\.1\\.3$"
       ]
     },
     "cardano-ogmios": {
