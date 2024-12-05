@@ -63,13 +63,13 @@
         "github:IntersectMBO/cardano-node/${tag}#cardano-cli",
         "github:IntersectMBO/cardano-node/${tag}#cardano-node",
         "github:IntersectMBO/cardano-node/${tag}#cardano-submit-api",
+        "github:IntersectMBO/cardano-node/${tag}#cardano-testnet",
         "github:IntersectMBO/cardano-node/${tag}#cardano-tracer",
         "github:IntersectMBO/cardano-node/${tag}#db-analyser",
         "github:IntersectMBO/cardano-node/${tag}#db-synthesizer",
         "github:IntersectMBO/cardano-node/${tag}#db-truncater"
       ],
       "refs": [
-        "^refs/tags/10\\.1\\.1-pre$",
         "^refs/tags/10\\.1\\.3$"
       ]
     },
