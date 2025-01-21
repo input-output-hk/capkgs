@@ -115,5 +115,13 @@
         "github:IntersectMBO/credential-manager/${tag}#packages.${system}.tx-bundle"
       ]
     }
+  },
+  "isd-project": {
+    "isd": {
+      "github_releases": true,
+      "packages": [
+        "github:isd-project/isd/${tag}#packages.${system}.isd"
+      ]
+    }
   }
 }
