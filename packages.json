@@ -54069,10 +54069,10 @@
     "pname": "mithril-signer",
     "system": "x86_64-linux"
   },
-  "github:input-output-hk/mithril/9a2faa1b80fd327730038835ac091add9f57d1ba#mithril-client-cli": {
+  "github:input-output-hk/mithril/875d0901d645075fae7929fa8b6a158e761e1498#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "unstable",
-    "commit": "9a2faa1b80fd327730038835ac091add9f57d1ba",
+    "commit": "875d0901d645075fae7929fa8b6a158e761e1498",
     "org_name": "input-output-hk",
     "repo_name": "mithril",
     "meta": {
@@ -54087,10 +54087,10 @@
       "unfree": false,
       "unsupported": false
     },
-    "output": "/nix/store/f0h2hygp3sffkq8s5byk14sn11n3d1z3-mithril-client-cli-0.11.0",
+    "output": "/nix/store/j1v74yf9py4ks5nx3191dbvkwk386zs5-mithril-client-cli-0.11.0",
     "closure": {
-      "fromPath": "/nix/store/f0h2hygp3sffkq8s5byk14sn11n3d1z3-mithril-client-cli-0.11.0",
-      "toPath": "/nix/store/n4gwzk21s41ym0h83rsqp8by1v25g86d-mithril-client-cli-0.11.0",
+      "fromPath": "/nix/store/j1v74yf9py4ks5nx3191dbvkwk386zs5-mithril-client-cli-0.11.0",
+      "toPath": "/nix/store/bc782vvqi5p0wdp198dpd93fa8rkjvs8-mithril-client-cli-0.11.0",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-client-cli",
@@ -54941,6 +54941,43 @@
     "closure": {
       "fromPath": "/nix/store/89zzh43icj0i1zck90l4s0z1c4scv2sf-isd-0.4.0",
       "toPath": "/nix/store/mav4gsi9hrz3l7xlsprzdx49dlqp7l3l-isd-0.4.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "isd",
+    "system": "x86_64-linux"
+  },
+  "github:isd-project/isd/8021a51ddb46f068dbbeb341734892242300dc50#packages.x86_64-linux.isd": {
+    "name": "github:isd-project/isd/${tag}#packages.${system}.isd",
+    "version": "v0.5.0",
+    "commit": "8021a51ddb46f068dbbeb341734892242300dc50",
+    "org_name": "isd-project",
+    "repo_name": "isd",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "GNU General Public License v3.0 or later",
+        "redistributable": true,
+        "shortName": "gpl3Plus",
+        "spdxId": "GPL-3.0-or-later",
+        "url": "https://spdx.org/licenses/GPL-3.0-or-later.html"
+      },
+      "mainProgram": "isd",
+      "name": "isd-0.5.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/vn9xzkfay3yh5f4bdv8lw45vp68ymwjf-source/flake.nix:226",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/w0n9whbch8h0dgs9vcx6447axlnnyrsk-isd-0.5.0",
+    "closure": {
+      "fromPath": "/nix/store/w0n9whbch8h0dgs9vcx6447axlnnyrsk-isd-0.5.0",
+      "toPath": "/nix/store/mgl55218lx9z8h82c0fpxabcq65g7xvv-isd-0.5.0",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "isd",
