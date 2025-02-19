@@ -20,7 +20,10 @@
           packages.${pkg.system}.${nameOf flakeUrl pkg} = symlinkPath ({
               inherit (pkg) pname version meta system;
               name = pkg.meta.name;
-              path = fetchClosure pkg.closure;
+              path = fetchClosure {
+                inherit (pkg.closure) fromPath fromStore;
+                inputAddressed = true;
+              };
             }
             // (optionalAttr pkg "exeName"));
         }
