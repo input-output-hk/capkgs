@@ -89,7 +89,8 @@
         "github:input-output-hk/mithril/${tag}#mithril-signer"
       ],
       "refs": [
-        "^refs/tags/unstable$"
+        "^refs/tags/unstable$",
+        "^refs/heads/fix-release-2506-0-hydra-ci$"
       ]
     },
     "offchain-metadata-tools": {
