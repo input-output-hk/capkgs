@@ -115,6 +115,12 @@
         "github:IntersectMBO/credential-manager/${tag}#packages.${system}.orchestrator-cli",
         "github:IntersectMBO/credential-manager/${tag}#packages.${system}.tx-bundle"
       ]
+    },
+    "cardano-addresses": {
+      "github_releases": true,
+      "packages": [
+        "github:IntersectMBO/cardano-addresses/${tag}#packages.${system}.\"cardano-addresses:exe:cardano-address\""
+      ]
     }
   },
   "isd-project": {
