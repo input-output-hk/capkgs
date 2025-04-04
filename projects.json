@@ -1,4 +1,12 @@
 {
+  "blockfrost": {
+    "blockfrost-platform": {
+      "github_releases": true,
+      "packages": [
+        "github:blockfrost/blockfrost-platform/${tag}#packages.${system}.default"
+      ]
+    }
+  },
   "cardano-foundation": {
     "blockperf": {
       "github_releases": true,
