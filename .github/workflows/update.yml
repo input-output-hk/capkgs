@@ -1,24 +1,60 @@
 name: Update
 run-name: ${{github.actor}} is updating capkgs
+
 on:
   workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Optional PR number, for maintainer use
+        required: false
+
   push:
     branches:
       - main
+
   pull_request:
+
   schedule:
     - cron: "14 14 * * 1-5"
+
 permissions:
   contents: write
   pull-requests: read
+
 concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
   cancel-in-progress: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # This step allows for maintainer workflow dispatch of forked PRs with a
+      # declared PR input number.
+      - name: Detect PR context
+        id: detect-pr
+        uses: ./.github/actions/detect-pr
+
+      # For PRs, checkout a merge base, including for forked PRs.
+      - name: Checkout and merge PR
+        uses: ./.github/actions/checkout-merge
+        with:
+          base_ref: ${{ steps.detect-pr.outputs.base_ref }}
+          head_ref: ${{ steps.detect-pr.outputs.head_ref }}
+          pr_number: ${{ steps.detect-pr.outputs.pr_number }}
+
+      - name: Exit early if untrusted
+        if: steps.detect-pr.outputs.is_trusted == 'false'
+        run: |
+          echo "Exiting early due to an untrusted fork PR."
+          echo "A maintainer can optionally run this via workflow dispatch with a declared PR input number."
+          exit
+
       - name: Free up disk space
+        if: steps.detect-pr.outputs.is_trusted == 'true'
         run: |
           pwd
           df -h
@@ -31,11 +67,9 @@ jobs:
             /opt/az
           sudo docker image prune --all --force
           df -h
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: "${{github.head_ref || github.ref_name}}"
+
       - name: Install Nix
+        if: steps.detect-pr.outputs.is_trusted == 'true'
         uses: cachix/install-nix-action@v30
         with:
           extra_nix_config: |
@@ -45,11 +79,14 @@ jobs:
             max-free = 2147483648
             secret-key-files = /home/runner/work/capkgs/capkgs/hydra_key
             experimental-features = fetch-closure flakes nix-command
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          echo "${{secrets.NIX_SIGNING_KEY}}" > hydra_key
-          echo "${{secrets.IOHK_DEVOPS_NETRC_FILE}}" > .netrc
+
+      - name: CI eval, build, cache push and commit
+        if: steps.detect-pr.outputs.is_trusted == 'true'
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          echo "${{ secrets.NIX_SIGNING_KEY }}" > hydra_key
+          echo "${{ secrets.IOHK_DEVOPS_NETRC_FILE }}" > .netrc
           nix develop \
           --ignore-environment \
           --keep AWS_ACCESS_KEY_ID \
@@ -59,8 +96,8 @@ jobs:
           --keep S3_ENDPOINT \
           --command just ci
         env:
-          AWS_ACCESS_KEY_ID: "${{secrets.AWS_ACCESS_KEY_ID}}"
-          AWS_SECRET_ACCESS_KEY: "${{secrets.AWS_SECRET_ACCESS_KEY}}"
+          AWS_ACCESS_KEY_ID: "${{ secrets.AWS_ACCESS_KEY_ID }}"
+          AWS_SECRET_ACCESS_KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           LOG_LEVEL: "debug"
           NIX_SIGNING_KEY_FILE: "/home/runner/work/capkgs/capkgs/hydra_key"
-          S3_ENDPOINT: "${{secrets.S3_ENDPOINT}}"
+          S3_ENDPOINT: "${{ secrets.S3_ENDPOINT }}"
