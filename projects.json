@@ -75,7 +75,7 @@
         "github:IntersectMBO/cardano-node/${tag}#cardano-tracer",
         "github:IntersectMBO/cardano-node/${tag}#db-analyser",
         "github:IntersectMBO/cardano-node/${tag}#db-synthesizer",
-        "github:IntersectMBO/cardano-node/${tag}#db-truncater"
+        "github:IntersectMBO/cardano-node/${tag}#db-truncater",
         "github:IntersectMBO/cardano-node/${tag}#snapshot-converter"
       ],
       "refs": [

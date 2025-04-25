@@ -65,6 +65,22 @@
             gnutar
             zstd
           ];
+
+          shellHook = let
+            pre-push = writeShellApplication {
+              name = "pre-push";
+              text = ''
+                if ! jq -e < projects.json &> /dev/null; then
+                  echo "ERROR: Invalid JSON found in projects.json"
+                  exit 1
+                fi
+              '';
+            };
+          in ''
+            if [ -d .git/hooks ] && ! [ -f .git/hook/pre-push ]; then
+              ln -s ${pre-push}/bin/pre-push .git/hooks/pre-push
+            fi
+          '';
         };
     }
     // packages;
