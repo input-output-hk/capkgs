@@ -77,7 +77,7 @@
               '';
             };
           in ''
-            if [ -d .git/hooks ] && ! [ -f .git/hook/pre-push ]; then
+            if [ -z "$CI" ] && [ -d .git/hooks ] && ! [ -f .git/hooks/pre-push ]; then
               ln -s ${pre-push}/bin/pre-push .git/hooks/pre-push
             fi
           '';
