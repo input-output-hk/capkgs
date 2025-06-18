@@ -79,7 +79,7 @@
         "github:IntersectMBO/cardano-node/${tag}#snapshot-converter"
       ],
       "refs": [
-        "^refs/tags/10\\.4\\.1\\^\\{\\}$"
+        "^refs/tags/10\\.5\\.0\\^\\{\\}$"
       ]
     },
     "cardano-ogmios": {
