@@ -5117,6 +5117,123 @@
     "system": "x86_64-linux",
     "exeName": "cardano-cli"
   },
+  "github:IntersectMBO/cardano-cli/7b9be411559be473dac5bbc69ae632a6deb1b7bd#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
+    "name": "github:IntersectMBO/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
+    "version": "cardano-cli-10.11.1.0",
+    "commit": "7b9be411559be473dac5bbc69ae632a6deb1b7bd",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-cli",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "The Cardano command-line interface",
+      "homepage": "",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "cardano-cli",
+      "name": "cardano-cli-exe-cardano-cli-10.11.1.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/0c9vyhpwmxns4a2g7idfin27x3a1hdrc-source/builder/comp-builder.nix:390",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/k2bawfsfyxdj68dpnnbllvr3qf43c2fq-cardano-cli-exe-cardano-cli-10.11.1.0",
+    "closure": {
+      "fromPath": "/nix/store/k2bawfsfyxdj68dpnnbllvr3qf43c2fq-cardano-cli-exe-cardano-cli-10.11.1.0",
+      "toPath": "/nix/store/2ijjxsy6d52w50rjadh52ncr2bbjrw62-cardano-cli-exe-cardano-cli-10.11.1.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-cli-exe-cardano-cli",
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
+  },
   "github:IntersectMBO/cardano-cli/7d3dd761830cf3c3ec73cf154058b2c4fd6fc37d#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:IntersectMBO/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
     "version": "cardano-cli-10.1.1.0",
@@ -53264,6 +53381,1321 @@
     "pname": "cardano-wallet-2024.9.26",
     "system": "x86_64-linux"
   },
+  "github:cardano-scaling/hydra/0fab58f97b7ac955e8578215848e30b444cef8cb#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.9.0",
+    "commit": "0fab58f97b7ac955e8578215848e30b444cef8cb",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "The Hydra node",
+      "homepage": "",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "hydra-node",
+      "name": "hydra-node-exe-hydra-node-0.9.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "js-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mipsel-linux",
+        "mips64el-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/z47f6sbcl6ishs9hx9rz523vkrgmq3im-source/builder/comp-builder.nix:371",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/8gqy139y1xcnxph6cl916bbncdc0cyzl-hydra-node-exe-hydra-node-0.9.0",
+    "closure": {
+      "fromPath": "/nix/store/8gqy139y1xcnxph6cl916bbncdc0cyzl-hydra-node-exe-hydra-node-0.9.0",
+      "toPath": "/nix/store/iy34l92d4shynd6cc647ad5xarics9nd-hydra-node-exe-hydra-node-0.9.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node-exe-hydra-node",
+    "system": "x86_64-linux",
+    "exeName": "hydra-node"
+  },
+  "github:cardano-scaling/hydra/0fab58f97b7ac955e8578215848e30b444cef8cb#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.9.0",
+    "commit": "0fab58f97b7ac955e8578215848e30b444cef8cb",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "TUI for managing a Hydra node",
+      "homepage": "",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "hydra-tui",
+      "name": "hydra-tui-exe-hydra-tui-0.9.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "js-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mipsel-linux",
+        "mips64el-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/z47f6sbcl6ishs9hx9rz523vkrgmq3im-source/builder/comp-builder.nix:371",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/7fs55fh3jr6yhjs18ycx8ipzmppwiscx-hydra-tui-exe-hydra-tui-0.9.0",
+    "closure": {
+      "fromPath": "/nix/store/7fs55fh3jr6yhjs18ycx8ipzmppwiscx-hydra-tui-exe-hydra-tui-0.9.0",
+      "toPath": "/nix/store/myd54zzlx2m919gkskznp2km14xn71zc-hydra-tui-exe-hydra-tui-0.9.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui-exe-hydra-tui",
+    "system": "x86_64-linux",
+    "exeName": "hydra-tui"
+  },
+  "github:cardano-scaling/hydra/134bb7578a24610c631a627330d16f10d01178ee#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.20.1",
+    "commit": "134bb7578a24610c631a627330d16f10d01178ee",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/ysgy2gpfiqy34p2ns4h2ymm5g564afza-source/nix/hydra/packages.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/p6i929wc304f198j1x110nrk4z7dq1lk-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/p6i929wc304f198j1x110nrk4z7dq1lk-hydra-node",
+      "toPath": "/nix/store/0zbpy7nz33q0jwmsqxnwr9x4k9xbbypb-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/134bb7578a24610c631a627330d16f10d01178ee#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.20.1",
+    "commit": "134bb7578a24610c631a627330d16f10d01178ee",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/ysgy2gpfiqy34p2ns4h2ymm5g564afza-source/nix/hydra/packages.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/aha5mgvxvq3fpjra5addlb3mgmfzpc1q-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/aha5mgvxvq3fpjra5addlb3mgmfzpc1q-hydra-tui",
+      "toPath": "/nix/store/yav8achyaqiymrc32ncdmjpmg02qw02p-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/1ae6839e43caf0695208620852f78fb34603037a#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.18.0",
+    "commit": "1ae6839e43caf0695208620852f78fb34603037a",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/bckq4gmi8935w3yv9va8qxm1pzr0czr5-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/h2rm2i3kfiv9yviw2s99281csw5mq00g-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/h2rm2i3kfiv9yviw2s99281csw5mq00g-hydra-node",
+      "toPath": "/nix/store/1r5v1r3g6km370f2dnhf5ld96hila95s-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/1ae6839e43caf0695208620852f78fb34603037a#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.18.0",
+    "commit": "1ae6839e43caf0695208620852f78fb34603037a",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/bckq4gmi8935w3yv9va8qxm1pzr0czr5-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/cwiskjg4s57mfsxixqbz82y72ywh0ds5-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/cwiskjg4s57mfsxixqbz82y72ywh0ds5-hydra-tui",
+      "toPath": "/nix/store/azl8b4rjfflp11l69s20rfi59hmjb8wy-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/1bbac9c14377983a87c9ffc28ab6146057b388aa#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.15.0",
+    "commit": "1bbac9c14377983a87c9ffc28ab6146057b388aa",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/kgch0hi891vjv9arrriqnkp7gmkx4vdw-source/nix/hydra/packages.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/xr6z502kpagabk72r2x3hcajcygc62sw-hydra-node-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/xr6z502kpagabk72r2x3hcajcygc62sw-hydra-node-with-revision",
+      "toPath": "/nix/store/j3rrbf0pxjjzphyrb3zjx5qkkibcwnr3-hydra-node-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/1bbac9c14377983a87c9ffc28ab6146057b388aa#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.15.0",
+    "commit": "1bbac9c14377983a87c9ffc28ab6146057b388aa",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/kgch0hi891vjv9arrriqnkp7gmkx4vdw-source/nix/hydra/packages.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/pl2xd0fllkay19if4hz3f8qayxilqqf2-hydra-tui-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/pl2xd0fllkay19if4hz3f8qayxilqqf2-hydra-tui-with-revision",
+      "toPath": "/nix/store/shb7875ap8ikqnrr2rr0qsbrdj6jmws9-hydra-tui-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/1ffe7c6b505e3f38b5546ae5e5b97de26bc70425#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.19.0",
+    "commit": "1ffe7c6b505e3f38b5546ae5e5b97de26bc70425",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/1z1qnk2d7nvlppcjwlaiwl9y8ybkmgir-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/hyr2ikpfapw73avv1x90m87qqh2nrq1c-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/hyr2ikpfapw73avv1x90m87qqh2nrq1c-hydra-node",
+      "toPath": "/nix/store/3cf2srwjkgxm68ryhmfna56kjfr4asbp-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/1ffe7c6b505e3f38b5546ae5e5b97de26bc70425#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.19.0",
+    "commit": "1ffe7c6b505e3f38b5546ae5e5b97de26bc70425",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/1z1qnk2d7nvlppcjwlaiwl9y8ybkmgir-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/adqzm44m5dvvaak15rwvsxsqwgsmg7ib-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/adqzm44m5dvvaak15rwvsxsqwgsmg7ib-hydra-tui",
+      "toPath": "/nix/store/bsz7kljjwmpk9r599dl187jalg7yvrli-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/2baae13fdfb7dec6071501ed5290f7a54a86315f#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.14.0",
+    "commit": "2baae13fdfb7dec6071501ed5290f7a54a86315f",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/99vxjpqyqdv2avfhkpgqdsln0wfwgjdm-source/nix/hydra/packages.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/81h6ad5qlhnr9539v2kcdkwp0696hcfz-hydra-node-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/81h6ad5qlhnr9539v2kcdkwp0696hcfz-hydra-node-with-revision",
+      "toPath": "/nix/store/m332y7blv9dayzb9wbn63fcsy6vflsid-hydra-node-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/2baae13fdfb7dec6071501ed5290f7a54a86315f#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.14.0",
+    "commit": "2baae13fdfb7dec6071501ed5290f7a54a86315f",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/99vxjpqyqdv2avfhkpgqdsln0wfwgjdm-source/nix/hydra/packages.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/lknw8n6fhwc6fi65sj8x9xgw5xz14k4s-hydra-tui-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/lknw8n6fhwc6fi65sj8x9xgw5xz14k4s-hydra-tui-with-revision",
+      "toPath": "/nix/store/a8ch3mpfx3gh8ga4yz2vran3zvyghvjs-hydra-tui-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/4e1e1ed67b0da8aad442c235fa151f752dbf78de#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.16.0",
+    "commit": "4e1e1ed67b0da8aad442c235fa151f752dbf78de",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/5dbx1m7v74prgfy0yg5abv7za54h3s51-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/yswr3flgdiy5l1x1adj9wxifnvlpgbpy-hydra-tui-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/yswr3flgdiy5l1x1adj9wxifnvlpgbpy-hydra-tui-with-revision",
+      "toPath": "/nix/store/sgn0a2flrdh9plnvjvn82mrbqiv0i8yi-hydra-tui-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/531cccabae9e49c5e85dc07204b3822654c1351f#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.11.0",
+    "commit": "531cccabae9e49c5e85dc07204b3822654c1351f",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "TUI for managing a Hydra node",
+      "homepage": "",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "hydra-tui",
+      "name": "hydra-tui-exe-hydra-tui-0.11.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mipsel-linux",
+        "mips64el-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/xygsgnwf1ihha6s5mk9540yfvw6csx8d-source/builder/comp-builder.nix:375",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/c3dfbqa3wcqhjs3f6zy7g9h34vrw34qx-hydra-tui-exe-hydra-tui-0.11.0",
+    "closure": {
+      "fromPath": "/nix/store/c3dfbqa3wcqhjs3f6zy7g9h34vrw34qx-hydra-tui-exe-hydra-tui-0.11.0",
+      "toPath": "/nix/store/akianjsl2039rcxda6wpbnalf3zsy44v-hydra-tui-exe-hydra-tui-0.11.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui-exe-hydra-tui",
+    "system": "x86_64-linux",
+    "exeName": "hydra-tui"
+  },
+  "github:cardano-scaling/hydra/65b4c1201e7533d4269d42e2ca1c8b53f999454f#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.22.0",
+    "commit": "65b4c1201e7533d4269d42e2ca1c8b53f999454f",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/3g9n180xy5z0zgwr37k45p99ygdxbzsh-source/nix/hydra/packages.nix:38",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/2ry2j32pwjpx0d0jv25ly6c805wy1zm5-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/2ry2j32pwjpx0d0jv25ly6c805wy1zm5-hydra-node",
+      "toPath": "/nix/store/yikdrn2y8npkyikm65ym9g7g41rv8j6b-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/65b4c1201e7533d4269d42e2ca1c8b53f999454f#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.22.0",
+    "commit": "65b4c1201e7533d4269d42e2ca1c8b53f999454f",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/3g9n180xy5z0zgwr37k45p99ygdxbzsh-source/nix/hydra/packages.nix:38",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/qv2ymqpazmxmqabsgagblgww079m7iwi-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/qv2ymqpazmxmqabsgagblgww079m7iwi-hydra-tui",
+      "toPath": "/nix/store/3cv1lvry575y26d6mzs3bx2hwr43fiy8-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/8a8157d8cba4907e1653e2fbb87551cf7ddd59d8#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.10.0",
+    "commit": "8a8157d8cba4907e1653e2fbb87551cf7ddd59d8",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "The Hydra node",
+      "homepage": "",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "hydra-node",
+      "name": "hydra-node-exe-hydra-node-0.10.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "js-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mipsel-linux",
+        "mips64el-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/kxi9zk8dqpnlxhq1gcpdzanpajyvmi21-source/builder/comp-builder.nix:364",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/bx585ilp53pqpf4jslyvjzmj0s829j4f-hydra-node-exe-hydra-node-0.10.0",
+    "closure": {
+      "fromPath": "/nix/store/bx585ilp53pqpf4jslyvjzmj0s829j4f-hydra-node-exe-hydra-node-0.10.0",
+      "toPath": "/nix/store/pwq4qcvg6jr911d0d5jbi3gwwwa20lwn-hydra-node-exe-hydra-node-0.10.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node-exe-hydra-node",
+    "system": "x86_64-linux",
+    "exeName": "hydra-node"
+  },
+  "github:cardano-scaling/hydra/8a8157d8cba4907e1653e2fbb87551cf7ddd59d8#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.10.0",
+    "commit": "8a8157d8cba4907e1653e2fbb87551cf7ddd59d8",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "TUI for managing a Hydra node",
+      "homepage": "",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "hydra-tui",
+      "name": "hydra-tui-exe-hydra-tui-0.10.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "js-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mipsel-linux",
+        "mips64el-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/kxi9zk8dqpnlxhq1gcpdzanpajyvmi21-source/builder/comp-builder.nix:364",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/fa6lx0f94yjyyayw01x83v8m01rpvzwl-hydra-tui-exe-hydra-tui-0.10.0",
+    "closure": {
+      "fromPath": "/nix/store/fa6lx0f94yjyyayw01x83v8m01rpvzwl-hydra-tui-exe-hydra-tui-0.10.0",
+      "toPath": "/nix/store/s8pimxrwf3qrjc6iq5j6jyayyhn622ws-hydra-tui-exe-hydra-tui-0.10.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui-exe-hydra-tui",
+    "system": "x86_64-linux",
+    "exeName": "hydra-tui"
+  },
+  "github:cardano-scaling/hydra/8d8d3a3662f0e3cb677b31071976c9b6ecae3f1d#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.18.1",
+    "commit": "8d8d3a3662f0e3cb677b31071976c9b6ecae3f1d",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/byhwn13zaka5d76a9jwdng0hlzyf9khj-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/fvspvg48njh3wz80i085hvbmy3rrwnpy-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/fvspvg48njh3wz80i085hvbmy3rrwnpy-hydra-node",
+      "toPath": "/nix/store/mxyz05wnm1jb92rm8lsw9m43dzvlm1vj-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/8d8d3a3662f0e3cb677b31071976c9b6ecae3f1d#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.18.1",
+    "commit": "8d8d3a3662f0e3cb677b31071976c9b6ecae3f1d",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/byhwn13zaka5d76a9jwdng0hlzyf9khj-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/dma53a36bf64f0a2lpdahrvymc7g1pkp-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/dma53a36bf64f0a2lpdahrvymc7g1pkp-hydra-tui",
+      "toPath": "/nix/store/84cbfaxm4k9sg3fp5fws2nrkjjhqhlwg-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/98ec49fcbf4a112cd7188f1d5d65bcaf09810884#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.19.1",
+    "commit": "98ec49fcbf4a112cd7188f1d5d65bcaf09810884",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/i3yzb1fm6w94bfhimgnm422zm39j3l8l-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/68mpzczl35cc8gpdxrcbfbgjl2afd1fr-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/68mpzczl35cc8gpdxrcbfbgjl2afd1fr-hydra-node",
+      "toPath": "/nix/store/zbn1gq775rlmhx16y37432ayvwk75yzw-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/98ec49fcbf4a112cd7188f1d5d65bcaf09810884#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.19.1",
+    "commit": "98ec49fcbf4a112cd7188f1d5d65bcaf09810884",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/i3yzb1fm6w94bfhimgnm422zm39j3l8l-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/36a1ci2n9swsdrx02xkcby76kdjrbapj-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/36a1ci2n9swsdrx02xkcby76kdjrbapj-hydra-tui",
+      "toPath": "/nix/store/29gkz1z5a5xqpqs2npd81j3kklj91x59-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/9e4e961f811c7d072d5b0d080b83c213cd88431d#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.12.0",
+    "commit": "9e4e961f811c7d072d5b0d080b83c213cd88431d",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/555js085m03f4835r4x609ahq1xfpnd4-source/pkgs/build-support/trivial-builders/default.nix:87",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/b0a8qpn4a1h9zvjhg98n9z7k29x668zi-hydra-node-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/b0a8qpn4a1h9zvjhg98n9z7k29x668zi-hydra-node-with-revision",
+      "toPath": "/nix/store/madc717qy75afwg0izw5qxhi6wbym98l-hydra-node-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/9e4e961f811c7d072d5b0d080b83c213cd88431d#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.12.0",
+    "commit": "9e4e961f811c7d072d5b0d080b83c213cd88431d",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/555js085m03f4835r4x609ahq1xfpnd4-source/pkgs/build-support/trivial-builders/default.nix:87",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/9bq96j6ywbn8bc0lfx9bpw9bb3a3208b-hydra-tui-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/9bq96j6ywbn8bc0lfx9bpw9bb3a3208b-hydra-tui-with-revision",
+      "toPath": "/nix/store/hm5whl1hn3cr3gvlxjw1415xg236pp5x-hydra-tui-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/9f1027e0fdff6765f5233f19c4639fdaa3558bfa#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.13.0",
+    "commit": "9f1027e0fdff6765f5233f19c4639fdaa3558bfa",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/92al15zpcrwzbppw1s58wn0hqyky7cyi-hydra-node-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/92al15zpcrwzbppw1s58wn0hqyky7cyi-hydra-node-with-revision",
+      "toPath": "/nix/store/snia0842kcnmvjx74yj53bhjq3iig12m-hydra-node-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/9f1027e0fdff6765f5233f19c4639fdaa3558bfa#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.13.0",
+    "commit": "9f1027e0fdff6765f5233f19c4639fdaa3558bfa",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui-with-revision",
+      "outputsToInstall": [
+        "out"
+      ],
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/f75ixrk5mgy31ykapgicw13a9a4cl57m-hydra-tui-with-revision",
+    "closure": {
+      "fromPath": "/nix/store/f75ixrk5mgy31ykapgicw13a9a4cl57m-hydra-tui-with-revision",
+      "toPath": "/nix/store/spxa0s617ncj4s9kxsgaai3d7w1p8mjx-hydra-tui-with-revision",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui-with-revision",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/a22b2728ccff71160b3af835b419dc03e167885f#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.20.0",
+    "commit": "a22b2728ccff71160b3af835b419dc03e167885f",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/qww3fvxv736csmk2c2jp77sky4gi9f0m-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/cci5zn8yz4z377nf663ivy6qdvf430jy-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/cci5zn8yz4z377nf663ivy6qdvf430jy-hydra-tui",
+      "toPath": "/nix/store/m8p2pqr1m6pkvjp9l7bz6vc334p5rh8g-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/b984abccf65921decc0e36452fb59cd3f478ba7d#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.22.2",
+    "commit": "b984abccf65921decc0e36452fb59cd3f478ba7d",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/w5wjb5a2mqj7g8v0zj2clzl2bmmlgbhn-source/nix/hydra/packages.nix:38",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/y179dkg5pk7nb5hwaqxzybiqw38x0crz-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/y179dkg5pk7nb5hwaqxzybiqw38x0crz-hydra-node",
+      "toPath": "/nix/store/r80mbbkamhmp3nli4xs1xd7hvagvqzf0-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/b984abccf65921decc0e36452fb59cd3f478ba7d#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.22.2",
+    "commit": "b984abccf65921decc0e36452fb59cd3f478ba7d",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/w5wjb5a2mqj7g8v0zj2clzl2bmmlgbhn-source/nix/hydra/packages.nix:38",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/ihgri7ylbbqf23sjijy8y577ssmzvg5f-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/ihgri7ylbbqf23sjijy8y577ssmzvg5f-hydra-tui",
+      "toPath": "/nix/store/zivhv02bzg8g7r29a7yqzi9nils3k530-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/dce60413d3a731a18b7025f54fab50dfa37cf59e#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.17.0",
+    "commit": "dce60413d3a731a18b7025f54fab50dfa37cf59e",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/18xy5xqyymr311x0864yk05cmhkcf40a-source/nix/hydra/packages.nix:40",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/2zjrljh5qi8ag578c9sgxyjb64d8n2k9-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/2zjrljh5qi8ag578c9sgxyjb64d8n2k9-hydra-tui",
+      "toPath": "/nix/store/4wmyww1ajjnma88s97p8prx2h0vvzzv0-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/de71074c41fd5ae97fd5a9bced4f8b8952d3eec2#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "0.21.0",
+    "commit": "de71074c41fd5ae97fd5a9bced4f8b8952d3eec2",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/qjmjg6677yvig4r1yxlrhq4814hwgg1a-source/nix/hydra/packages.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/h51kdi69h0af10w4nk9p1yjd77awy8wd-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/h51kdi69h0af10w4nk9p1yjd77awy8wd-hydra-node",
+      "toPath": "/nix/store/fnsmshd7mwnb3zwr6bykkk4gl1z45p70-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/de71074c41fd5ae97fd5a9bced4f8b8952d3eec2#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.21.0",
+    "commit": "de71074c41fd5ae97fd5a9bced4f8b8952d3eec2",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/qjmjg6677yvig4r1yxlrhq4814hwgg1a-source/nix/hydra/packages.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/41yw8h8bmnzjrfcn2qhj5fmrc2mjbzzq-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/41yw8h8bmnzjrfcn2qhj5fmrc2mjbzzq-hydra-tui",
+      "toPath": "/nix/store/2v7b7z244cnl4n504l5jvx1ghv8n8j6d-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/ebf719ec4ac0357dbea138e72fefcfe9635e00b0#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "0.22.1",
+    "commit": "ebf719ec4ac0357dbea138e72fefcfe9635e00b0",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/jf0py4ffy7l9gwvbhcl8yiwaa6fb9jnf-source/nix/hydra/packages.nix:38",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/6gdvcfcqay24xa9r782h23g6dm7ffil0-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/6gdvcfcqay24xa9r782h23g6dm7ffil0-hydra-tui",
+      "toPath": "/nix/store/669ap7k1whlia5040l8kzcyqg0lff87l-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
   "github:input-output-hk/cardano-faucet/0f9206ea3692fbf5d23fe739f12ad5520644c4f5#packages.x86_64-linux.\"cardano-faucet:exe:cardano-faucet\"": {
     "name": "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\"",
     "version": "9.1",
@@ -54697,10 +56129,10 @@
     "pname": "mithril-signer",
     "system": "x86_64-linux"
   },
-  "github:input-output-hk/mithril/546b1a1025d6fd113830f112b6f240eb0afa1d09#mithril-client-cli": {
+  "github:input-output-hk/mithril/55ca841744799f7b14ea0347aac74942b4106823#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "unstable",
-    "commit": "546b1a1025d6fd113830f112b6f240eb0afa1d09",
+    "commit": "55ca841744799f7b14ea0347aac74942b4106823",
     "org_name": "input-output-hk",
     "repo_name": "mithril",
     "meta": {
@@ -54716,19 +56148,19 @@
       "unfree": false,
       "unsupported": false
     },
-    "output": "/nix/store/0p5r9c193ah9n21l6s94inn0asyh3p5f-mithril-client-0.12.16",
+    "output": "/nix/store/6jfnzhkd7kp0lk2nsrx42mmxz6zx4iry-mithril-client-0.12.16",
     "closure": {
-      "fromPath": "/nix/store/0p5r9c193ah9n21l6s94inn0asyh3p5f-mithril-client-0.12.16",
-      "toPath": "/nix/store/sc7j7q912w9sy1rydpyry61d0y8ggj02-mithril-client-0.12.16",
+      "fromPath": "/nix/store/6jfnzhkd7kp0lk2nsrx42mmxz6zx4iry-mithril-client-0.12.16",
+      "toPath": "/nix/store/cbajb08115abzdps37nnf1p4d04agy6m-mithril-client-0.12.16",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-client",
     "system": "x86_64-linux"
   },
-  "github:input-output-hk/mithril/546b1a1025d6fd113830f112b6f240eb0afa1d09#mithril-signer": {
+  "github:input-output-hk/mithril/55ca841744799f7b14ea0347aac74942b4106823#mithril-signer": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
     "version": "unstable",
-    "commit": "546b1a1025d6fd113830f112b6f240eb0afa1d09",
+    "commit": "55ca841744799f7b14ea0347aac74942b4106823",
     "org_name": "input-output-hk",
     "repo_name": "mithril",
     "meta": {
@@ -54736,7 +56168,7 @@
       "broken": false,
       "insecure": false,
       "maintainers": [],
-      "name": "mithril-signer-0.2.256",
+      "name": "mithril-signer-0.2.257",
       "outputsToInstall": [
         "out"
       ],
@@ -54744,10 +56176,10 @@
       "unfree": false,
       "unsupported": false
     },
-    "output": "/nix/store/vwa2pakf179c7j41yvphwbpwglqgrm6s-mithril-signer-0.2.256",
+    "output": "/nix/store/qdpzrbgvxlh7b972x1kfjrddqjf9ks69-mithril-signer-0.2.257",
     "closure": {
-      "fromPath": "/nix/store/vwa2pakf179c7j41yvphwbpwglqgrm6s-mithril-signer-0.2.256",
-      "toPath": "/nix/store/vivh7sfd40sikfjimg2xaf0b9bm263sa-mithril-signer-0.2.256",
+      "fromPath": "/nix/store/qdpzrbgvxlh7b972x1kfjrddqjf9ks69-mithril-signer-0.2.257",
+      "toPath": "/nix/store/mlpmq55rpz02xlfgp8vh4a0lvicr85vb-mithril-signer-0.2.257",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
