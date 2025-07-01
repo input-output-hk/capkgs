@@ -25,6 +25,13 @@
       ]
     }
   },
+  "cardano-scaling": {
+    "github_releases": true,
+    "packages": [
+      "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+      "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui"
+    ]
+  },
   "F1bonacc1": {
     "process-compose": {
       "github_releases": true,
