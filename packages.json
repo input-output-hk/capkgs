@@ -57299,6 +57299,62 @@
     "pname": "mithril-signer",
     "system": "x86_64-linux"
   },
+  "github:input-output-hk/mithril/5a699e2f6fa978dd8e4c0daeb451cd36e8549b35#mithril-client-cli": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+    "version": "unstable",
+    "commit": "5a699e2f6fa978dd8e4c0daeb451cd36e8549b35",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-client-0.12.22",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/qas33nb3b9xkdl3dmcqlsrjzvps6cz2f-source/lib/mkCargoDerivation.nix:93",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/6ffsf8gsrlljp0s7rkbfm2a7q4dg7ifq-mithril-client-0.12.22",
+    "closure": {
+      "fromPath": "/nix/store/6ffsf8gsrlljp0s7rkbfm2a7q4dg7ifq-mithril-client-0.12.22",
+      "toPath": "/nix/store/bgb6dcwbzkxfh41lx9k39cbxw4g6vfd5-mithril-client-0.12.22",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-client",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/5a699e2f6fa978dd8e4c0daeb451cd36e8549b35#mithril-signer": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
+    "version": "unstable",
+    "commit": "5a699e2f6fa978dd8e4c0daeb451cd36e8549b35",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-signer-0.2.260",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/qas33nb3b9xkdl3dmcqlsrjzvps6cz2f-source/lib/mkCargoDerivation.nix:93",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/c2rwjv7pryiml1wil4d9zbil3mgz1zzh-mithril-signer-0.2.260",
+    "closure": {
+      "fromPath": "/nix/store/c2rwjv7pryiml1wil4d9zbil3mgz1zzh-mithril-signer-0.2.260",
+      "toPath": "/nix/store/5ph4aikb3x1b5s1b7jx3q0bjdvyi97gf-mithril-signer-0.2.260",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-signer",
+    "system": "x86_64-linux"
+  },
   "github:input-output-hk/mithril/5d743e433703c9ba56ce77f6f3cf7afed6c97124#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "fix-release-2506-0-hydra-ci",
@@ -57782,62 +57838,6 @@
     "closure": {
       "fromPath": "/nix/store/xq930mizg63d3v5wy3hdsg28iqsc7wsy-mithril-signer-0.2.221",
       "toPath": "/nix/store/2dwgqhgj2gycn203higxi6wibchhl9ga-mithril-signer-0.2.221",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-signer",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/d8ac86cda3ac1826b5c5bb8394cc73065ac1276d#mithril-client-cli": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
-    "version": "unstable",
-    "commit": "d8ac86cda3ac1826b5c5bb8394cc73065ac1276d",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-client-0.12.22",
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/xjv630ims74pmsfnzg2wk6pg933s55kg-source/lib/mkCargoDerivation.nix:93",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/wikpcn63vgdqnmk9kgjqamg2dxd1np6r-mithril-client-0.12.22",
-    "closure": {
-      "fromPath": "/nix/store/wikpcn63vgdqnmk9kgjqamg2dxd1np6r-mithril-client-0.12.22",
-      "toPath": "/nix/store/xcmj5drgr4w3wv0dljzs4agyr5h0zycc-mithril-client-0.12.22",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-client",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/d8ac86cda3ac1826b5c5bb8394cc73065ac1276d#mithril-signer": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
-    "version": "unstable",
-    "commit": "d8ac86cda3ac1826b5c5bb8394cc73065ac1276d",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-signer-0.2.260",
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/xjv630ims74pmsfnzg2wk6pg933s55kg-source/lib/mkCargoDerivation.nix:93",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/yd9bg1sms9b15140hgxfvbh64147pr82-mithril-signer-0.2.260",
-    "closure": {
-      "fromPath": "/nix/store/yd9bg1sms9b15140hgxfvbh64147pr82-mithril-signer-0.2.260",
-      "toPath": "/nix/store/qwzcn56jb7hjimi0qva9wy10bfqmh8ql-mithril-signer-0.2.260",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
@@ -58631,6 +58631,33 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "isd",
+    "system": "x86_64-linux"
+  },
+  "github:johnalotoski/cardano-signer/b71c3f1403b36f840a5fe3f003fdb777f838b7ee#packages.x86_64-linux.cardano-signer": {
+    "name": "github:johnalotoski/cardano-signer/${tag}#packages.${system}.cardano-signer",
+    "version": "v1.27.0",
+    "commit": "b71c3f1403b36f840a5fe3f003fdb777f838b7ee",
+    "org_name": "johnalotoski",
+    "repo_name": "cardano-signer",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "maintainers": [],
+      "name": "cardano-signer-279d556",
+      "outputsToInstall": [
+        "out"
+      ],
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/ad4jmp4g1gq1c7glry4lp4z1zwrsbgwf-cardano-signer-279d556",
+    "closure": {
+      "fromPath": "/nix/store/ad4jmp4g1gq1c7glry4lp4z1zwrsbgwf-cardano-signer-279d556",
+      "toPath": "/nix/store/6kwbkbkiw5rdg683ywd6pslz7g2rsvhq-cardano-signer-279d556",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-signer-279d556",
     "system": "x86_64-linux"
   }
 }
