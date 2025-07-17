@@ -148,5 +148,13 @@
         "github:isd-project/isd/${tag}#packages.${system}.isd"
       ]
     }
+  },
+  "johnalotoski": {
+    "cardano-signer": {
+      "github_releases": true,
+      "packages": [
+        "github:johnalotoski/cardano-signer/${tag}#packages.${system}.cardano-signer"
+      ]
+    }
   }
 }
