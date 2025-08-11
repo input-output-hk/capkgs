@@ -867,6 +867,76 @@
     "pname": "process-compose",
     "system": "x86_64-linux"
   },
+  "github:F1bonacc1/process-compose/81ef36d80b4850ca11b6a63c57d9f96d4dc4e914#packages.x86_64-linux.process-compose": {
+    "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
+    "version": "v1.73.0",
+    "commit": "81ef36d80b4850ca11b6a63c57d9f96d4dc4e914",
+    "org_name": "F1bonacc1",
+    "repo_name": "process-compose",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "changelog": "https://github.com/F1bonacc1/process-compose/releases/tag/v1.73.0",
+      "description": "A simple and flexible scheduler and orchestrator to manage non-containerized applications",
+      "homepage": "https://github.com/F1bonacc1/process-compose",
+      "insecure": false,
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "Apache License 2.0",
+        "redistributable": true,
+        "shortName": "asl20",
+        "spdxId": "Apache-2.0",
+        "url": "https://spdx.org/licenses/Apache-2.0.html"
+      },
+      "mainProgram": "process-compose",
+      "name": "process-compose-1.73.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "x86_64-darwin",
+        "aarch64-darwin",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd"
+      ],
+      "position": "/nix/store/kf4yzhg0pif1gqn41ymp3shwhrsvm0j0-source/default.nix:35",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/w1xhb90dy6293abdd00pz1vdhn6nx132-process-compose-1.73.0",
+    "closure": {
+      "fromPath": "/nix/store/w1xhb90dy6293abdd00pz1vdhn6nx132-process-compose-1.73.0",
+      "toPath": "/nix/store/0mpm6l712l5kbzvnsz6d37ywyqm4wl86-process-compose-1.73.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "process-compose",
+    "system": "x86_64-linux"
+  },
   "github:F1bonacc1/process-compose/8382b85f6f697ad2bce2258250e21a72c51a3d80#packages.x86_64-linux.process-compose": {
     "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
     "version": "v1.9.0",
@@ -1197,70 +1267,6 @@
     "closure": {
       "fromPath": "/nix/store/cr8s6z46llds02rn6fqwi5q4686v1ajg-process-compose-1.34.0",
       "toPath": "/nix/store/paafpsq5iai09ywgqxa5gwn48c3lw2v8-process-compose-1.34.0",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "process-compose",
-    "system": "x86_64-linux"
-  },
-  "github:F1bonacc1/process-compose/c0e9fcc73c651fc3b3f9128927293d4857b291f1#packages.x86_64-linux.process-compose": {
-    "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
-    "version": "v0.51.0",
-    "commit": "c0e9fcc73c651fc3b3f9128927293d4857b291f1",
-    "org_name": "F1bonacc1",
-    "repo_name": "process-compose",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "changelog": "https://github.com/F1bonacc1/process-compose/releases/tag/v0.50.0",
-      "description": "A simple and flexible scheduler and orchestrator to manage non-containerized applications",
-      "homepage": "https://github.com/F1bonacc1/process-compose",
-      "insecure": false,
-      "license": {
-        "deprecated": false,
-        "free": true,
-        "fullName": "Apache License 2.0",
-        "redistributable": true,
-        "shortName": "asl20",
-        "spdxId": "Apache-2.0",
-        "url": "https://spdx.org/licenses/Apache-2.0.html"
-      },
-      "mainProgram": "process-compose",
-      "name": "process-compose-0.50.0",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mipsel-linux",
-        "mips64el-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux"
-      ],
-      "position": "/nix/store/m0qmlcsnjjxl4jqcs3dagr32mqpwqqja-source/default.nix:34",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/j1c8iv9fynl0c4wnmw7pz0dx2yy4cw41-process-compose-0.50.0",
-    "closure": {
-      "fromPath": "/nix/store/j1c8iv9fynl0c4wnmw7pz0dx2yy4cw41-process-compose-0.50.0",
-      "toPath": "/nix/store/ar9civgi2r9irm9fc3pz7idpb5jgf7m0-process-compose-0.50.0",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "process-compose",
