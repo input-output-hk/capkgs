@@ -60417,6 +60417,33 @@
     "pname": "isd",
     "system": "x86_64-linux"
   },
+  "github:johnalotoski/cardano-signer/2ef95e10dafcd64dbd55e534b3c1eb1adaba58e5#packages.x86_64-linux.cardano-signer": {
+    "name": "github:johnalotoski/cardano-signer/${tag}#packages.${system}.cardano-signer",
+    "version": "v1.29.0",
+    "commit": "2ef95e10dafcd64dbd55e534b3c1eb1adaba58e5",
+    "org_name": "johnalotoski",
+    "repo_name": "cardano-signer",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "maintainers": [],
+      "name": "cardano-signer-v1.29.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/a0linkd0c9r3saf3ngz1zwv113yb8zq6-cardano-signer-v1.29.0",
+    "closure": {
+      "fromPath": "/nix/store/a0linkd0c9r3saf3ngz1zwv113yb8zq6-cardano-signer-v1.29.0",
+      "toPath": "/nix/store/4c1j7j6fmswg15989h2pdjw5gx1k71gk-cardano-signer-v1.29.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-signer-v1.29.0",
+    "system": "x86_64-linux"
+  },
   "github:johnalotoski/cardano-signer/b71c3f1403b36f840a5fe3f003fdb777f838b7ee#packages.x86_64-linux.cardano-signer": {
     "name": "github:johnalotoski/cardano-signer/${tag}#packages.${system}.cardano-signer",
     "version": "v1.27.0",
