@@ -49190,6 +49190,46 @@
     "pname": "blockfrost-platform",
     "system": "x86_64-linux"
   },
+  "github:blockfrost/blockfrost-platform/e8da7854cbc7ddf3b667b603a970cca37c5e8497#packages.x86_64-linux.default": {
+    "name": "github:blockfrost/blockfrost-platform/${tag}#packages.${system}.default",
+    "version": "0.0.3-rc.3",
+    "commit": "e8da7854cbc7ddf3b667b603a970cca37c5e8497",
+    "org_name": "blockfrost",
+    "repo_name": "blockfrost-platform",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "The Blockfrost platform transforms your Cardano node infrastructure into a high-performance JSON API endpoint.",
+      "homepage": "https://platform.blockfrost.io",
+      "insecure": false,
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "Apache License 2.0",
+        "redistributable": true,
+        "shortName": "asl20",
+        "spdxId": "Apache-2.0",
+        "url": "https://spdx.org/licenses/Apache-2.0.html"
+      },
+      "mainProgram": "blockfrost-platform",
+      "maintainers": [],
+      "name": "blockfrost-platform-0.0.3-rc.3",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/q8kz3wsjbz506341wm8g82mwnk2n2aaz-source/nix/internal/unix.nix:79",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/lfbiyxnsqwgc558hf7crqbxn7adhmw7m-blockfrost-platform-0.0.3-rc.3",
+    "closure": {
+      "fromPath": "/nix/store/lfbiyxnsqwgc558hf7crqbxn7adhmw7m-blockfrost-platform-0.0.3-rc.3",
+      "toPath": "/nix/store/11mfjjy94zkgr26nkgq1wnl22ynnx823-blockfrost-platform-0.0.3-rc.3",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "blockfrost-platform",
+    "system": "x86_64-linux"
+  },
   "github:cardano-foundation/blockperf/d757f3858108d70e62cae6c1e77fcf96c0f9ceca#blockperf": {
     "name": "github:cardano-foundation/blockperf/${tag}#blockperf",
     "version": "main",
