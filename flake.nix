@@ -1,6 +1,6 @@
 {
   outputs = inputs: let
-    inherit (builtins) fromJSON readFile fetchClosure attrValues;
+    inherit (builtins) fromJSON readFile fetchClosure attrValues attrNames;
     inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate optionalAttr last;
 
     # This is a really verbose name, but it ensures we don't get collisions
@@ -21,7 +21,7 @@
               inherit (pkg) pname version meta system;
               name = pkg.meta.name;
               path = fetchClosure {
-                inherit (pkg.closure) fromPath fromStore;
+                inherit ((builtins.trace (builtins.toJSON pkg) pkg).closure) fromPath fromStore;
                 inputAddressed = true;
               };
             }
@@ -43,9 +43,29 @@
     inherit (flakes.nix.packages.${system}) nix;
   in
     {
-      hydraJobs.required = aggregate {
-        name = "required";
-        constituents = attrValues inputs.self.packages.x86_64-linux;
+      hydraJobs = {
+        required = aggregate {
+          name = "required";
+          constituents = attrValues inputs.self.packages.x86_64-linux;
+        };
+
+        required-deps = aggregate {
+          name = "required-deps";
+          constituents = map (
+            a: let
+              parts = builtins.split "#" a;
+              flake = builtins.getFlake (builtins.elemAt parts 0);
+              attr = builtins.elemAt parts 2;
+              path = builtins.split "\\." attr;
+            in
+              builtins.foldl' (s: v:
+                if v == []
+                then s
+                else s.${v})
+              flake
+              path
+          ) (attrNames packagesJson);
+        };
       };
 
       devShells.${system}.default = with (flakes.nixpkgs.legacyPackages.${system});
