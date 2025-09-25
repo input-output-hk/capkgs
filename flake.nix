@@ -1,14 +1,36 @@
 {
   outputs = inputs: let
-    inherit (builtins) fromJSON readFile fetchClosure attrValues attrNames;
-    inherit (import ./lib.nix) filterAttrs symlinkPath sane mapAndMergeAttrs aggregate optionalAttr last;
+    inherit
+      (builtins)
+      attrNames
+      attrValues
+      elemAt
+      fetchClosure
+      foldl'
+      fromJSON
+      getFlake
+      readFile
+      split
+      substring
+      ;
+
+    inherit
+      (import ./lib.nix)
+      aggregate
+      filterAttrs
+      last
+      mapAndMergeAttrs
+      optionalAttr
+      sane
+      symlinkPath
+      ;
 
     # This is a really verbose name, but it ensures we don't get collisions
     nameOf = flakeUrl: pkg: let
-      fragment = builtins.split "#" flakeUrl;
-      parts = builtins.split "\\." (last fragment);
+      fragment = split "#" flakeUrl;
+      parts = split "\\." (last fragment);
       name = last parts;
-      shortrev = builtins.substring 0 7 pkg.commit;
+      shortrev = substring 0 7 pkg.commit;
     in
       sane "${name}-${pkg.org_name}-${pkg.repo_name}-${pkg.version}-${shortrev}";
 
@@ -21,7 +43,7 @@
               inherit (pkg) pname version meta system;
               name = pkg.meta.name;
               path = fetchClosure {
-                inherit ((builtins.trace (builtins.toJSON pkg) pkg).closure) fromPath fromStore;
+                inherit (pkg.closure) fromPath fromStore;
                 inputAddressed = true;
               };
             }
@@ -35,8 +57,8 @@
     # These inputs are purely used for the devShell and hydra to avoid any
     # evaluation and download of nixpkgs for just building a package.
     flakes = {
-      nixpkgs = builtins.getFlake "github:nixos/nixpkgs?rev=bfb7dfec93f3b5d7274db109f2990bc889861caf";
-      nix = builtins.getFlake "github:nixos/nix?rev=9e212344f948e3f362807581bfe3e3d535372618";
+      nixpkgs = getFlake "github:nixos/nixpkgs?rev=bfb7dfec93f3b5d7274db109f2990bc889861caf";
+      nix = getFlake "github:nixos/nix?rev=9e212344f948e3f362807581bfe3e3d535372618";
     };
 
     # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
@@ -49,22 +71,24 @@
           constituents = attrValues inputs.self.packages.x86_64-linux;
         };
 
-        required-deps = aggregate {
-          name = "required-deps";
+        recovery = aggregate {
+          name = "recovery";
           constituents = map (
             a: let
-              parts = builtins.split "#" a;
-              flake = builtins.getFlake (builtins.elemAt parts 0);
-              attr = builtins.elemAt parts 2;
-              path = builtins.split "\\." attr;
+              parts = split "#" a;
+              flake = getFlake (elemAt parts 0);
+              attr = elemAt parts 2;
+              path = split "\\." attr;
             in
-              builtins.foldl' (s: v:
-                if v == []
-                then s
-                else s.${v})
+              foldl' (
+                s: v:
+                  if v == []
+                  then s
+                  else s.${v}
+              )
               flake
               path
-          ) (attrNames packagesJson);
+          ) (attrNames validPackages);
         };
       };
 
