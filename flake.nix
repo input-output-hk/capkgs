@@ -11,6 +11,7 @@
       getFlake
       readFile
       split
+      stringLength
       substring
       ;
 
@@ -74,12 +75,12 @@
         recovery = aggregate {
           name = "recovery";
           constituents = map (
-            a: let
-              parts = split "#" a;
+            url: let
+              parts = split "#" url;
               flake = getFlake (elemAt parts 0);
               attr = elemAt parts 2;
               path = split "\\." attr;
-              withoutQuote = str: builtins.substring 1 ((builtins.stringLength str) - 1) str;
+              withoutQuote = str: substring 1 ((stringLength str) - 2) str;
             in
               foldl' (
                 s: v:
