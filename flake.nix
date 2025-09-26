@@ -66,16 +66,36 @@
     inherit (flakes.nix.packages.${system}) nix;
   in
     {
-      hydraJobs = {
-        required = aggregate {
-          name = "required";
-          constituents = attrValues inputs.self.packages.x86_64-linux;
-        };
+      hydraJobs =
+        {
+          required = aggregate {
+            name = "required";
+            constituents = attrValues inputs.self.packages.x86_64-linux;
+          };
 
-        recovery = aggregate {
-          name = "recovery";
-          constituents = map (
-            url: let
+          # recovery = aggregate {
+          #   name = "recovery";
+          #   constituents = map (
+          #     url: let
+          #       parts = split "#" url;
+          #       flake = getFlake (elemAt parts 0);
+          #       attr = elemAt parts 2;
+          #       path = split "\\." attr;
+          #       withoutQuote = str: substring 1 ((stringLength str) - 2) str;
+          #     in
+          #       foldl' (
+          #         s: v:
+          #           if v == []
+          #           then s
+          #           else s.${v} or s.${withoutQuote v}
+          #       )
+          #       flake
+          #       path
+          #   ) (attrNames validPackages);
+          # };
+        }
+        // (builtins.mapAttrs (
+            url: _: let
               parts = split "#" url;
               flake = getFlake (elemAt parts 0);
               attr = elemAt parts 2;
@@ -90,9 +110,8 @@
               )
               flake
               path
-          ) (attrNames validPackages);
-        };
-      };
+          )
+          validPackages);
 
       devShells.${system}.default = with (flakes.nixpkgs.legacyPackages.${system});
         mkShell {
