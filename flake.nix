@@ -79,12 +79,13 @@
               flake = getFlake (elemAt parts 0);
               attr = elemAt parts 2;
               path = split "\\." attr;
+              withoutQuote = str: builtins.substring 1 ((builtins.stringLength str) - 1) str;
             in
               foldl' (
                 s: v:
                   if v == []
                   then s
-                  else s.${v}
+                  else s.${v} or s.${withoutQuote v}
               )
               flake
               path
