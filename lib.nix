@@ -95,6 +95,10 @@ let
 
   mapAndMergeAttrs = f: attrs: foldl' recursiveUpdate {} (mapAttrsToList f attrs);
 
+  mapAttrs' = f: set: listToAttrs (mapAttrsToList f set);
+
+  nameValuePair = name: value: {inherit name value;};
+
   optionalAttr = attrs: name:
     if hasAttr name attrs
     then {${name} = attrs.${name};}
@@ -102,5 +106,15 @@ let
 
   last = list: elemAt list ((length list) - 1);
 in {
-  inherit filterAttrs mapAndMergeAttrs sane symlinkPath aggregate optionalAttr last;
+  inherit
+    aggregate
+    filterAttrs
+    last
+    mapAttrs'
+    mapAndMergeAttrs
+    nameValuePair
+    optionalAttr
+    sane
+    symlinkPath
+    ;
 }

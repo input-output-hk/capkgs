@@ -2,7 +2,6 @@
   outputs = inputs: let
     inherit
       (builtins)
-      attrNames
       attrValues
       elemAt
       fetchClosure
@@ -10,6 +9,7 @@
       fromJSON
       getFlake
       readFile
+      replaceStrings
       split
       stringLength
       substring
@@ -21,6 +21,8 @@
       filterAttrs
       last
       mapAndMergeAttrs
+      mapAttrs'
+      nameValuePair
       optionalAttr
       sane
       symlinkPath
@@ -94,22 +96,23 @@
           #   ) (attrNames validPackages);
           # };
         }
-        // (builtins.mapAttrs (
+        // (mapAttrs' (
             url: _: let
               parts = split "#" url;
               flake = getFlake (elemAt parts 0);
               attr = elemAt parts 2;
               path = split "\\." attr;
               withoutQuote = str: substring 1 ((stringLength str) - 2) str;
+              jobName = replaceStrings [":" "/" "#" "." "\""] ["-colon-" "-slash-" "-pound-" "-dot-" ""];
             in
-              foldl' (
-                s: v:
-                  if v == []
-                  then s
-                  else s.${v} or s.${withoutQuote v}
-              )
-              flake
-              path
+              nameValuePair (jobName url) (foldl' (
+                  s: v:
+                    if v == []
+                    then s
+                    else s.${v} or s.${withoutQuote v}
+                )
+                flake
+                path)
           )
           validPackages);
 
