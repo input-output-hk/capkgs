@@ -12,6 +12,8 @@ let
     length
     listToAttrs
     replaceStrings
+    stringLength
+    substring
     zipAttrsWith
     ;
 
@@ -105,15 +107,32 @@ let
     else {};
 
   last = list: elemAt list ((length list) - 1);
+
+  removePrefix = prefix: str: let
+    preLen = stringLength prefix;
+  in
+    if substring 0 preLen str == prefix
+    then substring preLen (-1) str
+    else str;
+
+  removeSuffix = suffix: str: let
+    sufLen = stringLength suffix;
+    sLen = stringLength str;
+  in
+    if sufLen <= sLen && suffix == substring (sLen - sufLen) sufLen str
+    then substring 0 (sLen - sufLen) str
+    else str;
 in {
   inherit
     aggregate
     filterAttrs
     last
-    mapAttrs'
     mapAndMergeAttrs
+    mapAttrs'
     nameValuePair
     optionalAttr
+    removePrefix
+    removeSuffix
     sane
     symlinkPath
     ;

@@ -5,13 +5,14 @@
       attrValues
       elemAt
       fetchClosure
+      filter
       foldl'
       fromJSON
       getFlake
+      isString
       readFile
       replaceStrings
       split
-      stringLength
       substring
       ;
 
@@ -24,6 +25,8 @@
       mapAttrs'
       nameValuePair
       optionalAttr
+      removePrefix
+      removeSuffix
       sane
       symlinkPath
       ;
@@ -74,42 +77,25 @@
             name = "required";
             constituents = attrValues inputs.self.packages.x86_64-linux;
           };
-
-          # recovery = aggregate {
-          #   name = "recovery";
-          #   constituents = map (
-          #     url: let
-          #       parts = split "#" url;
-          #       flake = getFlake (elemAt parts 0);
-          #       attr = elemAt parts 2;
-          #       path = split "\\." attr;
-          #       withoutQuote = str: substring 1 ((stringLength str) - 2) str;
-          #     in
-          #       foldl' (
-          #         s: v:
-          #           if v == []
-          #           then s
-          #           else s.${v} or s.${withoutQuote v}
-          #       )
-          #       flake
-          #       path
-          #   ) (attrNames validPackages);
-          # };
         }
         // (mapAttrs' (
-            url: _: let
+            url: pkg: let
               parts = split "#" url;
               flake = getFlake (elemAt parts 0);
               attr = elemAt parts 2;
-              path = split "\\." attr;
-              withoutQuote = str: substring 1 ((stringLength str) - 2) str;
+              path = filter isString (split "\\." attr);
+              withoutQuote = str: removePrefix "\"" (removeSuffix "\"" str);
               jobName = replaceStrings [":" "/" "#" "." "\""] ["-colon-" "-slash-" "-pound-" "-dot-" ""];
             in
               nameValuePair (jobName url) (foldl' (
                   s: v:
-                    if v == []
-                    then s
-                    else s.${v} or s.${withoutQuote v}
+                    s.${v} or
+                    s.${withoutQuote v} or
+                    s.packages.${pkg.system}.${v} or
+                    s.packages.${pkg.system}.${withoutQuote v} or
+                    s.legacyPackages.${pkg.system}.${v} or
+                    s.legacyPackages.${pkg.system}.${withoutQuote v} or
+                    (throw "couldn't find ${attr} in ${elemAt parts 0}")
                 )
                 flake
                 path)
