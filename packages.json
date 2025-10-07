@@ -60744,6 +60744,44 @@
     "pname": "isd",
     "system": "x86_64-linux"
   },
+  "github:isd-project/isd/a4a50994d06a91a77e5331c388e61ffe34e54c66#packages.x86_64-linux.isd": {
+    "name": "github:isd-project/isd/${tag}#packages.${system}.isd",
+    "version": "v0.6.1",
+    "commit": "a4a50994d06a91a77e5331c388e61ffe34e54c66",
+    "org_name": "isd-project",
+    "repo_name": "isd",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "GNU General Public License v3.0 or later",
+        "redistributable": true,
+        "shortName": "gpl3Plus",
+        "spdxId": "GPL-3.0-or-later",
+        "url": "https://spdx.org/licenses/GPL-3.0-or-later.html"
+      },
+      "mainProgram": "isd",
+      "maintainers": [],
+      "name": "isd-0.6.1",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/4317njsn04sz3i6rzn4gjnls0mndmn1q-source/flake.nix:183",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/30pz5fmqlib26nkljxnk426pr95nb7d7-isd-0.6.1",
+    "closure": {
+      "fromPath": "/nix/store/30pz5fmqlib26nkljxnk426pr95nb7d7-isd-0.6.1",
+      "toPath": "/nix/store/7pv5k0k5408yd4ynd1i92xr0jg9hqm1i-isd-0.6.1",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "isd",
+    "system": "x86_64-linux"
+  },
   "github:isd-project/isd/f9e442671299fef723c78ad45ff17e170fc0691c#packages.x86_64-linux.isd": {
     "name": "github:isd-project/isd/${tag}#packages.${system}.isd",
     "version": "v0.1.0",
