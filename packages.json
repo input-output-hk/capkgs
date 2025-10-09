@@ -57749,6 +57749,62 @@
     "pname": "hydra-tui",
     "system": "x86_64-linux"
   },
+  "github:cardano-scaling/hydra/b5e33b55e9fba442c562f82cec6c36b1716d9847#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "1.0.0",
+    "commit": "b5e33b55e9fba442c562f82cec6c36b1716d9847",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "maintainers": [],
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/8fw7w7ygx33ws15fhjifdd11nd0qlkz4-source/nix/hydra/packages.nix:32",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/99yhxza472lhymbknjpfbm10ykbf1yvy-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/99yhxza472lhymbknjpfbm10ykbf1yvy-hydra-node",
+      "toPath": "/nix/store/21h15sfhb6dpnlrxfkq285p76idnhpyl-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/b5e33b55e9fba442c562f82cec6c36b1716d9847#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "1.0.0",
+    "commit": "b5e33b55e9fba442c562f82cec6c36b1716d9847",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "maintainers": [],
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/8fw7w7ygx33ws15fhjifdd11nd0qlkz4-source/nix/hydra/packages.nix:32",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/l2ji9x1fa3xagbiqf0qpfh5fzndgfajq-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/l2ji9x1fa3xagbiqf0qpfh5fzndgfajq-hydra-tui",
+      "toPath": "/nix/store/xps0vhmq3hbk8r0aj7x5dv4p0jrv5b8h-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
   "github:cardano-scaling/hydra/b984abccf65921decc0e36452fb59cd3f478ba7d#packages.x86_64-linux.hydra-node": {
     "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
     "version": "0.22.2",
