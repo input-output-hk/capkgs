@@ -1,6 +1,8 @@
 {
   "github:cardano-foundation/cardano-wallet/3f9055373c272a4d7b1f9f6bacc1df3b6dc906af#packages.x86_64-linux.cardano-address": "Not writing modified lock file",
   "github:cardano-foundation/cardano-wallet/3f9055373c272a4d7b1f9f6bacc1df3b6dc906af#packages.x86_64-linux.cardano-wallet": "Not writing modified lock file",
+  "github:cardano-foundation/cardano-wallet/d372d86b65edd833ba11e485cbab19694afdbb1c#packages.x86_64-linux.cardano-wallet": "Missing zw3rk artifact",
+  "github:cardano-foundation/cardano-wallet/e69616ba776f4a52173ead423141d234e03d468f#packages.x86_64-linux.cardano-wallet": "Missing zw3rk artifact",
   "github:cardano-scaling/hydra/1bbac9c14377983a87c9ffc28ab6146057b388aa#packages.x86_64-linux.hydra-node": "Missing zw3rk artifact",
   "github:cardano-scaling/hydra/1bbac9c14377983a87c9ffc28ab6146057b388aa#packages.x86_64-linux.hydra-tui": "Missing zw3rk artifact",
   "github:cardano-scaling/hydra/2baae13fdfb7dec6071501ed5290f7a54a86315f#packages.x86_64-linux.hydra-node": "Missing zw3rk artifact",
