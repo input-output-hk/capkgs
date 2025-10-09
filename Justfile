@@ -84,3 +84,7 @@ check:
     print "Build results:"
     $builds | table -e
 
+# Filter exclusion flake urls from packages.json
+filter-packages:
+    jq --slurpfile ex exclusions.json 'with_entries(select(.key as $k | ($ex[0] | has($k) | not)))' packages.json > packages.tmp
+    mv packages.tmp packages.json
