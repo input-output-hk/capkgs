@@ -18,8 +18,12 @@ class CAPkgs
   end
 
   def update_packages
+    exclusions = load_exclusions
+
     ({} of String => CAPkgs::Package).tap do |valid|
       each_package do |pkg|
+        next if exclusions.includes?(pkg.flake_url)
+
         pkg.mkdirs
         pkg.nix_eval &&
           pkg.nix_build &&
@@ -30,6 +34,12 @@ class CAPkgs
         valid[pkg.flake_url] = pkg if pkg.closure
       end
     end
+  end
+
+  def load_exclusions
+    return [] of String unless File.exists?("exclusions.json")
+    data = JSON.parse(File.read("exclusions.json")).as_h.keys
+    data
   end
 
   def each_package(&block : Package -> Nil)
@@ -131,7 +141,13 @@ class CAPkgs
     curl_result = sh("curl", "--netrc", "-L", "-s", "--fail-with-body", releases_url)
     raise "Couldn't fetch releases for '#{releases_url}'" unless curl_result.success?
 
-    tag_names = Array(GithubRelease).from_json(curl_result.stdout).map { |release| release.tag_name }
+    releases = Array(GithubRelease).from_json(curl_result.stdout)
+
+    # If running locally with required privileges, draft releases may be
+    # included causing an exception if not filtered.
+    releases.reject!(&.draft)
+
+    tag_names = releases.map { |release| release.tag_name }
     refs_tags = tag_names.map do |tag_name|
       # Once we record a tag, prevent it from updating
       if File.file?(dest) && (found = JSON.parse(File.read(dest))[tag_name]?)
@@ -264,6 +280,7 @@ class CAPkgs
   struct GithubRelease
     include JSON::Serializable
     property tag_name : String
+    property draft : Bool = false
   end
 
   struct Repo
