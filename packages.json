@@ -51807,6 +51807,231 @@
     "pname": "cardano-wallet-2022.8.16",
     "system": "x86_64-linux"
   },
+  "github:cardano-foundation/cardano-wallet/b13cf08f7c8c3e59c408eaaf4307a71972e00e66#packages.x86_64-linux.cardano-address": {
+    "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
+    "version": "v2025-12-15",
+    "commit": "b13cf08f7c8c3e59c408eaaf4307a71972e00e66",
+    "org_name": "cardano-foundation",
+    "repo_name": "cardano-wallet",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "Utils for constructing a command-line on top of cardano-addresses.",
+      "homepage": "https://github.com/IntersectMBO/cardano-addresses#readme",
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "cardano-address",
+      "name": "cardano-addresses-cli-exe-cardano-address-3.12.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "aarch64-windows",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/vzl097ja6mjvnwfidvrjx97znk7fhwvb-source/builder/comp-builder.nix:401",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/6g9l08x4fni5286bqx67cg6gaayx9xsg-cardano-addresses-cli-exe-cardano-address-3.12.0",
+    "closure": {
+      "fromPath": "/nix/store/6g9l08x4fni5286bqx67cg6gaayx9xsg-cardano-addresses-cli-exe-cardano-address-3.12.0",
+      "toPath": "/nix/store/irpx1lm2iwynlwhq0h513q58miycgz3l-cardano-addresses-cli-exe-cardano-address-3.12.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-addresses-cli-exe-cardano-address",
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
+  },
+  "github:cardano-foundation/cardano-wallet/b13cf08f7c8c3e59c408eaaf4307a71972e00e66#packages.x86_64-linux.cardano-wallet": {
+    "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
+    "version": "v2025-12-15",
+    "commit": "b13cf08f7c8c3e59c408eaaf4307a71972e00e66",
+    "org_name": "cardano-foundation",
+    "repo_name": "cardano-wallet",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "insecure": false,
+      "name": "cardano-wallet-2025.12.15",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "aarch64-windows",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/8s1rcnh4pmx39446g2n8ndkvn4f5bc9x-source/nix/release-build.nix:15",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/92xnsc7j8ljm859hqcbjzsnp9xgnz95j-cardano-wallet-2025.12.15",
+    "closure": {
+      "fromPath": "/nix/store/92xnsc7j8ljm859hqcbjzsnp9xgnz95j-cardano-wallet-2025.12.15",
+      "toPath": "/nix/store/m2b6nsv3432vf7bb6l2af8h45is4s6aw-cardano-wallet-2025.12.15",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-wallet-2025.12.15",
+    "system": "x86_64-linux"
+  },
   "github:cardano-foundation/cardano-wallet/b44176d25d8d417f06aa2640513ace2d65b91b00#packages.x86_64-linux.cardano-address": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
     "version": "v2024-09-29",
@@ -57422,114 +57647,6 @@
     "pname": "mithril-signer",
     "system": "x86_64-linux"
   },
-  "github:input-output-hk/mithril/b3772ac5ba1e2143644f6805c3b2f43ea20e2b1c#mithril-client-cli": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
-    "version": "unstable",
-    "commit": "b3772ac5ba1e2143644f6805c3b2f43ea20e2b1c",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-client",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-client",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-client-0.12.36",
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/5x1pcylnw7zs3289wrkz6sk0qv2vim72-source/lib/mkCargoDerivation.nix:93",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/c5d0n3k5pa40869bgswrr8h8byghxpnv-mithril-client-0.12.36",
-    "closure": {
-      "fromPath": "/nix/store/c5d0n3k5pa40869bgswrr8h8byghxpnv-mithril-client-0.12.36",
-      "toPath": "/nix/store/pnask6iv031k3gn45f6sdz7kzaknw5dp-mithril-client-0.12.36",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-client",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/b3772ac5ba1e2143644f6805c3b2f43ea20e2b1c#mithril-signer": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
-    "version": "unstable",
-    "commit": "b3772ac5ba1e2143644f6805c3b2f43ea20e2b1c",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-signer",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-signer",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-signer-0.2.280",
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/5x1pcylnw7zs3289wrkz6sk0qv2vim72-source/lib/mkCargoDerivation.nix:93",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/2idbk0i7m7s8fz2gxcqr2gkdiqw35zx1-mithril-signer-0.2.280",
-    "closure": {
-      "fromPath": "/nix/store/2idbk0i7m7s8fz2gxcqr2gkdiqw35zx1-mithril-signer-0.2.280",
-      "toPath": "/nix/store/x9k4z4vkhqmn7lix1zsm2vw6zjshnrs4-mithril-signer-0.2.280",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-signer",
-    "system": "x86_64-linux"
-  },
   "github:input-output-hk/mithril/c6c7ebafae0158b2c1672eb96f6ef832fd542f93#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "2450.0-pre",
@@ -57579,6 +57696,114 @@
     "closure": {
       "fromPath": "/nix/store/xq930mizg63d3v5wy3hdsg28iqsc7wsy-mithril-signer-0.2.221",
       "toPath": "/nix/store/2dwgqhgj2gycn203higxi6wibchhl9ga-mithril-signer-0.2.221",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-signer",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/ecad03d76d638bd6d3d5c768085d2f6337a10e9b#mithril-client-cli": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+    "version": "unstable",
+    "commit": "ecad03d76d638bd6d3d5c768085d2f6337a10e9b",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-client",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-client",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-client-0.12.37",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/5x1pcylnw7zs3289wrkz6sk0qv2vim72-source/lib/mkCargoDerivation.nix:93",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/1vlwghxw6cvymcha4y50a81kq7xjfn9g-mithril-client-0.12.37",
+    "closure": {
+      "fromPath": "/nix/store/1vlwghxw6cvymcha4y50a81kq7xjfn9g-mithril-client-0.12.37",
+      "toPath": "/nix/store/7cvbj2bx7h18mz9gm1czgs85nhrq7csp-mithril-client-0.12.37",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-client",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/ecad03d76d638bd6d3d5c768085d2f6337a10e9b#mithril-signer": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
+    "version": "unstable",
+    "commit": "ecad03d76d638bd6d3d5c768085d2f6337a10e9b",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-signer",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-signer",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-signer-0.3.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/5x1pcylnw7zs3289wrkz6sk0qv2vim72-source/lib/mkCargoDerivation.nix:93",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/lq377n5wrd3z2aff6zchywqm1w2fb76y-mithril-signer-0.3.0",
+    "closure": {
+      "fromPath": "/nix/store/lq377n5wrd3z2aff6zchywqm1w2fb76y-mithril-signer-0.3.0",
+      "toPath": "/nix/store/z2kyamr1pinrs63wlvf25cpmiwa3l8ba-mithril-signer-0.3.0",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
