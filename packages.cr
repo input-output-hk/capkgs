@@ -144,7 +144,7 @@ class CAPkgs
 
     response = HTTP::Client::Response.from_io(IO::Memory.new(curl_result.stdout))
     Log.debug { "headers: #{response.headers.inspect}" }
-    releases = Array(GithubRelease).from_json(response.body_io)
+    releases = Array(GithubRelease).from_json(response.body)
 
     # If running locally with required privileges, draft releases may be
     # included causing an exception if not filtered.
