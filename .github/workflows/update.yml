@@ -99,7 +99,7 @@ jobs:
           --keep CI \
           --keep LOG_LEVEL \
           --keep S3_ENDPOINT \
-          --keep NETRC_FILE
+          --keep NETRC_FILE \
           --command just ci
         env:
           AWS_ACCESS_KEY_ID: "${{ secrets.AWS_ACCESS_KEY_ID }}"
