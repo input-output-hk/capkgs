@@ -5,11 +5,20 @@ require "option_parser"
 require "file_utils"
 require "log"
 require "http/client"
+require "string_scanner"
 
 class CAPkgs
   property config : Config::Valid
+  property client : HTTP::Client
 
   def initialize(@config)
+    netrc = Netrc.parse(@config.netrc)
+    url = URI.parse("https://api.github.com")
+    token = netrc[url.host][:password]
+    @client = HTTP::Client.new(url)
+    @client.before_request do |request|
+      request.headers["Authorization"] = "Bearer #{token}"
+    end
   end
 
   def run
@@ -137,16 +146,8 @@ class CAPkgs
   end
 
   def fetch_github_releases(org_name, repo_name, dest)
-    releases_url = "https://api.github.com/repos/#{org_name}/#{repo_name}/releases"
-    # Use curl here to take advantage of netrc for the token without having to parse it
-    curl_result = sh("curl", "--http1.1", "--show-headers", "--netrc-file=.netrc", "-L", "-s", "--fail-with-body", releases_url)
-    unless curl_result.success?
-      Log.warn { curl_result.inspect }
-      raise "Couldn't fetch releases for '#{releases_url}'"
-    end
-
-    response = HTTP::Client::Response.from_io(IO::Memory.new(curl_result.stdout))
-    Log.debug { "headers: #{response.headers.inspect}" }
+    response = follow_redirects("/repos/#{org_name}/#{repo_name}/releases")
+    Log.info { format_ratelimit(response.headers) }
     releases = Array(GithubRelease).from_json(response.body)
 
     # If running locally with required privileges, draft releases may be
@@ -224,12 +225,83 @@ class CAPkgs
     end
   end
 
+  def follow_redirects(url : String | URI, max_redirects : Int = 5) : HTTP::Client::Response
+    response = @client.get(url)
+    redirects = 0
+
+    while response.status_code.in?(301, 302, 303, 307, 308) && redirects < max_redirects
+      location = response.headers["Location"]?
+      return response if location.nil?
+
+      # Handle relative URLs
+      if location.starts_with?("/")
+        uri = URI.parse(url.is_a?(URI) ? url.to_s : url)
+        location = "#{uri.scheme}://#{uri.host}#{location}"
+      end
+
+      response = @client.get(location)
+      redirects += 1
+    end
+
+    response
+  end
+
+  def format_ratelimit(headers : HTTP::Headers) : String
+    limit = headers["X-RateLimit-Limit"]
+    remaining = headers["X-RateLimit-Remaining"]
+    reset = headers["X-RateLimit-Reset"]
+    used = headers["X-RateLimit-Used"]
+    "used: #{used} in: #{remaining}/#{limit} (reset at: #{Time.unix(reset.to_i)})"
+  end
+
+  class Netrc
+    def self.parse(filename : String)
+      File.open(filename) do |fd|
+        s = StringScanner.new(fd.gets_to_end)
+        machines = Hash(String, NamedTuple(login: String?, password: String)).new
+        machine : String? = nil
+        login : String? = nil
+        password : String? = nil
+        line = 1
+
+        until s.eos?
+          if s.scan(/#.*/)
+          elsif s.scan(/machine\s*(\S+)/)
+            if machine && password
+              machines[machine] = {login: login, password: password}
+              login = password = nil
+            end
+            machine = s[1]
+          elsif s.scan(/login\s*(\S+)/)
+            login = s[1]
+          elsif s.scan(/password\s*(\S+)/)
+            password = s[1]
+          elsif s.scan(/(\S+)\s+(\S+)/)
+            raise "Unexpected token '#{s[1]}' in #{filename}:#{line}"
+          elsif s.scan(/\n|\r\n/)
+            line += 1
+          elsif s.scan(/\s+/)
+          else
+            raise "Unexpected end of parsing in #{filename}:#{line}"
+          end
+        end
+
+        if machine && password
+          machines[machine] = {login: login, password: password}
+        end
+
+        machines
+      end
+    end
+  end
+
   class Config
     property from_store : String?
     property to : String?
     property systems : Array(String)?
     property update = true
     property commit = true
+    property netrc : String?
 
     def parse
       OptionParser.parse do |parser|
@@ -240,6 +312,7 @@ class CAPkgs
         parser.on "--systems=A,B", "systems to process" { |v| @systems = v.split.map(&.strip) }
         parser.on "--no-update", "skip updating release info" { |v| @update = false }
         parser.on "--no-commit", "skip commiting packages.json" { |v| @commit = false }
+        parser.on "--netrc=PATH", "use this netrc file" { |v| @netrc = v }
 
         parser.on "-h", "--help", "Show this help" do
           puts parser
@@ -250,8 +323,10 @@ class CAPkgs
       raise "Missing required flag: --from-store" unless from_store_value = @from_store
       raise "Missing required flag: --to" unless to_value = @to
       raise "Missing required flag: --systems" unless systems_value = @systems
+      raise "Missing required flag: --netrc" unless netrc_value = @netrc
+      raise "Netrc file not found: #{netrc_value}" unless File.file?(netrc_value)
 
-      Valid.new(from_store_value, to_value, systems_value, @update, @commit)
+      Valid.new(from_store_value, to_value, systems_value, @update, @commit, netrc_value)
     end
 
     struct Valid
@@ -260,8 +335,9 @@ class CAPkgs
       property systems : Array(String)
       property update : Bool
       property commit : Bool
+      property netrc : String
 
-      def initialize(@from_store, @to, @systems, @update, @commit)
+      def initialize(@from_store, @to, @systems, @update, @commit, @netrc)
       end
     end
   end
@@ -433,7 +509,7 @@ class CAPkgs
       end
     end
 
-    def process(path, expect_json, command : String, *args)
+    def process(path, expect_json, command : String, *args, &)
       result =
         if File.file?(path)
           Log.debug { "File exists: #{path}" }

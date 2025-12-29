@@ -89,8 +89,9 @@ jobs:
           echo "${{ secrets.NIX_SIGNING_KEY }}" > hydra_key
           echo "${{ secrets.IOHK_DEVOPS_NETRC_FILE }}" > .netrc
           chmod 600 .netrc
+          export NETRC_FILE="$(pwd)/.netrc"
           echo "Current api rate limit status:"
-          curl --netrc-file=.netrc -s https://api.github.com/rate_limit | jq .rate
+          curl --netrc -s https://api.github.com/rate_limit | jq .rate
           nix develop \
           --ignore-environment \
           --keep AWS_ACCESS_KEY_ID \
@@ -98,6 +99,7 @@ jobs:
           --keep CI \
           --keep LOG_LEVEL \
           --keep S3_ENDPOINT \
+          --keep NETRC_FILE
           --command just ci
         env:
           AWS_ACCESS_KEY_ID: "${{ secrets.AWS_ACCESS_KEY_ID }}"

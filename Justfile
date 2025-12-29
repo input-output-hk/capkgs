@@ -3,6 +3,7 @@ list:
     just -l
 
 secret_key := env_var_or_default('NIX_SIGNING_KEY_FILE', "hydra_key")
+netrc_file := env_var_or_default('NETRC_FILE', "~/.netrc")
 
 # Download and uncompress the cache folder
 cache-download:
@@ -62,7 +63,8 @@ packages *ARGS:
     ./packages.cr \
         --to "s3://devx?secret-key={{secret_key}}&endpoint=${S3_ENDPOINT}&region=auto&compression=zstd" \
         --from-store https://cache.iog.io \
-        --systems x86_64-linux
+        --systems x86_64-linux \
+        --netrc "${NETRC_FILE}"
 
 # Commit updates to packages.json
 push:
