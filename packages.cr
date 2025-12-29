@@ -142,9 +142,13 @@ class CAPkgs
     curl_result = sh("curl", "--http1.1", "--show-headers", "--netrc", "-L", "-s", "--fail-with-body", releases_url)
     raise "Couldn't fetch releases for '#{releases_url}'" unless curl_result.success?
 
-    releases = HTTP::Client::Response.from_io(IO::Memory.new(curl_result)) do |response|
-      pp! response.headers
+    releases = HTTP::Client::Response.from_io(IO::Memory.new(curl_result.stdout)) do |response|
+      Log.debug { "headers: #{response.headers.inspect}" }
       Array(GithubRelease).from_json(response.body_io)
+    end
+
+    unless releases
+      raise "Couldn't parse releases for '#{releases_url}'"
     end
 
     # If running locally with required privileges, draft releases may be
