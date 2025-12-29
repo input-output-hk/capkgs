@@ -90,7 +90,7 @@ jobs:
           echo "${{ secrets.IOHK_DEVOPS_NETRC_FILE }}" > .netrc
           chmod 600 .netrc
           echo "Current api rate limit status:"
-          curl --netrc -s https://api.github.com/rate_limit | jq .rate
+          curl --netrc-file=.netrc -s https://api.github.com/rate_limit | jq .rate
           nix develop \
           --ignore-environment \
           --keep AWS_ACCESS_KEY_ID \
