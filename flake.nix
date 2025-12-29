@@ -62,13 +62,8 @@
 
     # These inputs are purely used for the devShell and hydra to avoid any
     # evaluation and download of nixpkgs for just building a package.
-    flakes = {
-      nixpkgs = getFlake "github:nixos/nixpkgs?rev=bfb7dfec93f3b5d7274db109f2990bc889861caf";
-      nix = getFlake "github:nixos/nix?rev=9e212344f948e3f362807581bfe3e3d535372618";
-    };
-
-    # At least 2.17 is required for this fix: https://github.com/NixOS/nix/pull/4282
-    inherit (flakes.nix.packages.${system}) nix;
+    flakes.nixpkgs = getFlake "github:nixos/nixpkgs?rev=9ef261221d1e72399f2036786498d78c38185c46";
+    inherit (flakes.nixpkgs.legacyPackages.${system}) nix;
   in
     {
       hydraJobs =
@@ -111,11 +106,9 @@
             gitMinimal
             just
             nix
-            nushell
             pcre
             rclone
             treefmt
-            watchexec
             gnutar
             zstd
           ];

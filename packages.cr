@@ -4,6 +4,7 @@ require "json"
 require "option_parser"
 require "file_utils"
 require "log"
+require "http/client"
 
 class CAPkgs
   property config : Config::Valid
@@ -138,16 +139,17 @@ class CAPkgs
   def fetch_github_releases(org_name, repo_name, dest)
     releases_url = "https://api.github.com/repos/#{org_name}/#{repo_name}/releases"
     # Use curl here to take advantage of netrc for the token without having to parse it
-    curl_result = sh("curl", "--netrc", "-L", "-s", "--fail-with-body", releases_url)
+    curl_result = sh("curl", "--http1.1", "--show-headers", "--netrc", "-L", "-s", "--fail-with-body", releases_url)
     raise "Couldn't fetch releases for '#{releases_url}'" unless curl_result.success?
 
-    releases = Array(GithubRelease).from_json(curl_result.stdout)
+    releases = HTTP::Client::Response.from_io(IO::Memory.new(curl_result)) do |response|
+      pp! response.headers
+      Array(GithubRelease).from_json(response.body_io)
+    end
 
     # If running locally with required privileges, draft releases may be
     # included causing an exception if not filtered.
-    releases.reject!(&.draft)
-
-    tag_names = releases.map { |release| release.tag_name }
+    tag_names = releases.reject(&.draft).map { |release| release.tag_name }
     refs_tags = tag_names.map do |tag_name|
       # Once we record a tag, prevent it from updating
       if File.file?(dest) && (found = JSON.parse(File.read(dest))[tag_name]?)
