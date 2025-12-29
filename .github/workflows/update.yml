@@ -83,13 +83,14 @@ jobs:
       - name: CI eval, build, cache push and commit
         if: steps.detect-pr.outputs.is_trusted == 'true'
         run: |
+          set -e
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           echo "${{ secrets.NIX_SIGNING_KEY }}" > hydra_key
           echo "${{ secrets.IOHK_DEVOPS_NETRC_FILE }}" > .netrc
           chmod 600 .netrc
           echo "Current api rate limit status:"
-          curl -s https://api.github.com/rate_limit | jq .rate
+          curl --netrc -s https://api.github.com/rate_limit | jq .rate
           nix develop \
           --ignore-environment \
           --keep AWS_ACCESS_KEY_ID \
