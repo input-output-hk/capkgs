@@ -106,6 +106,7 @@
             gitMinimal
             just
             nix
+            nushell
             pcre
             rclone
             treefmt
