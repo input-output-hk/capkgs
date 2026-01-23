@@ -61,7 +61,7 @@
         "github:IntersectMBO/cardano-db-sync/${tag}#packages.${system}.cardano-smash-server-no-basic-auth"
       ],
       "refs": [
-        "^refs/tags/13\\.6\\.0\\.5\\^\\{\\}$"
+        "^refs/tags/13\\.7\\.0\\.0-rc\\.1$"
       ]
     },
     "cardano-faucet": {
