@@ -60177,6 +60177,58 @@
     "pname": "cardano-signer-v1.29.0",
     "system": "x86_64-linux"
   },
+  "github:johnalotoski/cardano-signer/4108dd34b71b98e853a9aa1c2eb7403a74b39929#packages.x86_64-linux.cardano-signer": {
+    "name": "github:johnalotoski/cardano-signer/${tag}#packages.${system}.cardano-signer",
+    "version": "v1.34.0",
+    "commit": "4108dd34b71b98e853a9aa1c2eb7403a74b39929",
+    "org_name": "johnalotoski",
+    "repo_name": "cardano-signer",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "cardano-signer-v1.34.0",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/hpa5psk8kz8rpharlavf48yq8ni3ly2q-cardano-signer-v1.34.0",
+    "closure": {
+      "fromPath": "/nix/store/hpa5psk8kz8rpharlavf48yq8ni3ly2q-cardano-signer-v1.34.0",
+      "toPath": "/nix/store/aw2m5jha7m90ym1wp8lzrjj6797cxqcr-cardano-signer-v1.34.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-signer-v1.34.0",
+    "system": "x86_64-linux"
+  },
   "github:johnalotoski/cardano-signer/b71c3f1403b36f840a5fe3f003fdb777f838b7ee#packages.x86_64-linux.cardano-signer": {
     "name": "github:johnalotoski/cardano-signer/${tag}#packages.${system}.cardano-signer",
     "version": "v1.27.0",
