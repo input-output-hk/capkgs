@@ -275,73 +275,6 @@
     "pname": "process-compose",
     "system": "x86_64-linux"
   },
-  "github:F1bonacc1/process-compose/26bf2120d3e6992758a753b15eb81915fecb4dbf#packages.x86_64-linux.process-compose": {
-    "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
-    "version": "v0.80.0",
-    "commit": "26bf2120d3e6992758a753b15eb81915fecb4dbf",
-    "org_name": "F1bonacc1",
-    "repo_name": "process-compose",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "changelog": "https://github.com/F1bonacc1/process-compose/releases/tag/v0.80.0",
-      "description": "A simple and flexible scheduler and orchestrator to manage non-containerized applications",
-      "homepage": "https://github.com/F1bonacc1/process-compose",
-      "insecure": false,
-      "license": {
-        "deprecated": false,
-        "free": true,
-        "fullName": "Apache License 2.0",
-        "redistributable": true,
-        "shortName": "asl20",
-        "spdxId": "Apache-2.0",
-        "url": "https://spdx.org/licenses/Apache-2.0.html"
-      },
-      "mainProgram": "process-compose",
-      "name": "process-compose-0.80.0",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "loongarch64-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mips-linux",
-        "mips64-linux",
-        "mips64el-linux",
-        "mipsel-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux"
-      ],
-      "position": "/nix/store/22zflhdlkx67fjd6hfydy4h6l38zdr33-source/default.nix:34",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/wz99q1sr5mxzvyh4n6kyhz04xbrwww48-process-compose-0.80.0",
-    "closure": {
-      "fromPath": "/nix/store/wz99q1sr5mxzvyh4n6kyhz04xbrwww48-process-compose-0.80.0",
-      "toPath": "/nix/store/adp6aq2v5fwn6xl0f91szc1i86dip1xl-process-compose-0.80.0",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "process-compose",
-    "system": "x86_64-linux"
-  },
   "github:F1bonacc1/process-compose/2b65c790b27be25399c8e9450d2db956de711f37#packages.x86_64-linux.process-compose": {
     "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
     "version": "v1.27.0",
@@ -1841,6 +1774,105 @@
     "closure": {
       "fromPath": "/nix/store/w6ijjjlkjjgyyc78dx5mdni3i5kbrm0a-process-compose-1.75.2",
       "toPath": "/nix/store/qk7kqrvmcp08yhsn8jviqrskxnradx1f-process-compose-1.75.2",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "process-compose",
+    "system": "x86_64-linux"
+  },
+  "github:F1bonacc1/process-compose/db5fd09282fae2c5e864ad2628fb7b9c97939232#packages.x86_64-linux.process-compose": {
+    "name": "github:F1bonacc1/process-compose/${tag}#packages.${system}.process-compose",
+    "version": "v1.100.0",
+    "commit": "db5fd09282fae2c5e864ad2628fb7b9c97939232",
+    "org_name": "F1bonacc1",
+    "repo_name": "process-compose",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "changelog": "https://github.com/F1bonacc1/process-compose/releases/tag/v1.100.0",
+      "description": "A simple and flexible scheduler and orchestrator to manage non-containerized applications",
+      "homepage": "https://github.com/F1bonacc1/process-compose",
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "process-compose",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "process-compose",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "Apache License 2.0",
+        "redistributable": true,
+        "shortName": "asl20",
+        "spdxId": "Apache-2.0",
+        "url": "https://spdx.org/licenses/Apache-2.0.html"
+      },
+      "mainProgram": "process-compose",
+      "maintainers": [],
+      "name": "process-compose-1.100.0",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "x86_64-darwin",
+        "aarch64-darwin",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd"
+      ],
+      "position": "/nix/store/xvq6bs6ii4lvdwwhb8znfxsixvzbsg4m-source/default.nix:33",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/0yxsp21s5ibzzd0dd08i9f2744ri1klk-process-compose-1.100.0",
+    "closure": {
+      "fromPath": "/nix/store/0yxsp21s5ibzzd0dd08i9f2744ri1klk-process-compose-1.100.0",
+      "toPath": "/nix/store/y1ihclsg5fmsrmwdwgpab8xqwh7gjlg7-process-compose-1.100.0",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "process-compose",
@@ -58119,6 +58151,116 @@
     "system": "x86_64-linux",
     "exeName": "ogmios"
   },
+  "github:input-output-hk/mithril/09d76830373f44410dcaf47cf75107c138faf9ad#mithril-client-cli": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+    "version": "unstable",
+    "commit": "09d76830373f44410dcaf47cf75107c138faf9ad",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-client",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-client",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-client-0.12.44",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/89x3wc8qxfnagxqcjdbdxvmddzgqhykq-source/lib/mkCargoDerivation.nix:93",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/6hhbd090lxvxl9mr40f64lyrsr8dlr4l-mithril-client-x86_64-unknown-linux-musl-0.12.44",
+    "closure": {
+      "fromPath": "/nix/store/6hhbd090lxvxl9mr40f64lyrsr8dlr4l-mithril-client-x86_64-unknown-linux-musl-0.12.44",
+      "toPath": "/nix/store/rbb77v4g38hj41g8yn34ndsylbxqa53f-mithril-client-x86_64-unknown-linux-musl-0.12.44",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-client",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/09d76830373f44410dcaf47cf75107c138faf9ad#mithril-signer": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
+    "version": "unstable",
+    "commit": "09d76830373f44410dcaf47cf75107c138faf9ad",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-signer",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-signer",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-signer-0.3.24",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/89x3wc8qxfnagxqcjdbdxvmddzgqhykq-source/lib/mkCargoDerivation.nix:93",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/afys0fhhih5569nlmw9k8fisclnz2dv6-mithril-signer-x86_64-unknown-linux-musl-0.3.24",
+    "closure": {
+      "fromPath": "/nix/store/afys0fhhih5569nlmw9k8fisclnz2dv6-mithril-signer-x86_64-unknown-linux-musl-0.3.24",
+      "toPath": "/nix/store/a8xnr2jm4fr86cyzqjsnf9i8kvakjq1z-mithril-signer-x86_64-unknown-linux-musl-0.3.24",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-signer",
+    "system": "x86_64-linux"
+  },
   "github:input-output-hk/mithril/0d4d6bc2ac1b2f5e7fe6e57d905bd8542e6b87b1#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "2442.0-pre",
@@ -59225,116 +59367,6 @@
     "closure": {
       "fromPath": "/nix/store/xq930mizg63d3v5wy3hdsg28iqsc7wsy-mithril-signer-0.2.221",
       "toPath": "/nix/store/2dwgqhgj2gycn203higxi6wibchhl9ga-mithril-signer-0.2.221",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-signer",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/d5504f1c6d42dbe5172562aac41a4da7bd059181#mithril-client-cli": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
-    "version": "unstable",
-    "commit": "d5504f1c6d42dbe5172562aac41a4da7bd059181",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-client",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-client",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-client-0.12.44",
-      "nonTeamMaintainers": [],
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/89x3wc8qxfnagxqcjdbdxvmddzgqhykq-source/lib/mkCargoDerivation.nix:93",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/a3zyxrknc8mf4x4bs1d107rh94f3mp5w-mithril-client-x86_64-unknown-linux-musl-0.12.44",
-    "closure": {
-      "fromPath": "/nix/store/a3zyxrknc8mf4x4bs1d107rh94f3mp5w-mithril-client-x86_64-unknown-linux-musl-0.12.44",
-      "toPath": "/nix/store/9dgxy2azvd59dmbnlaprafdm73k1qvfp-mithril-client-x86_64-unknown-linux-musl-0.12.44",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-client",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/d5504f1c6d42dbe5172562aac41a4da7bd059181#mithril-signer": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
-    "version": "unstable",
-    "commit": "d5504f1c6d42dbe5172562aac41a4da7bd059181",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-signer",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-signer",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-signer-0.3.24",
-      "nonTeamMaintainers": [],
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/89x3wc8qxfnagxqcjdbdxvmddzgqhykq-source/lib/mkCargoDerivation.nix:93",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/pb73h1i42bzdlzskr4666l0ibvlwbqks-mithril-signer-x86_64-unknown-linux-musl-0.3.24",
-    "closure": {
-      "fromPath": "/nix/store/pb73h1i42bzdlzskr4666l0ibvlwbqks-mithril-signer-x86_64-unknown-linux-musl-0.3.24",
-      "toPath": "/nix/store/h121q25l52fr84l9c7xp0p1l6dcxm8r8-mithril-signer-x86_64-unknown-linux-musl-0.3.24",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
