@@ -50799,6 +50799,281 @@
     "pname": "cardano-wallet-2022.4.27",
     "system": "x86_64-linux"
   },
+  "github:cardano-foundation/cardano-wallet/5b81c96360ef9398844bd5c018a5ddd5c370dbaa#packages.x86_64-linux.cardano-address": {
+    "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
+    "version": "test",
+    "commit": "5b81c96360ef9398844bd5c018a5ddd5c370dbaa",
+    "org_name": "cardano-foundation",
+    "repo_name": "cardano-wallet",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "Utils for constructing a command-line on top of cardano-addresses.",
+      "homepage": "https://github.com/IntersectMBO/cardano-addresses#readme",
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "cardano-addresses-exe-cardano-address",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "cardano-addresses-exe-cardano-address",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "cardano-address",
+      "maintainers": [],
+      "name": "cardano-addresses-exe-cardano-address-4.0.2",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "aarch64-darwin",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "aarch64-windows",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/7w3gk71gnb399j10y5ksb0izjgpvp8jl-source/builder/comp-builder.nix:566",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/jzsy3r6vhbbw3773cl8fahhg5cfv6dgi-cardano-addresses-exe-cardano-address-4.0.2",
+    "closure": {
+      "fromPath": "/nix/store/jzsy3r6vhbbw3773cl8fahhg5cfv6dgi-cardano-addresses-exe-cardano-address-4.0.2",
+      "toPath": "/nix/store/8i0jpf5rgrwh0m1i673lidwifzf4p1q0-cardano-addresses-exe-cardano-address-4.0.2",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-addresses-exe-cardano-address",
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
+  },
+  "github:cardano-foundation/cardano-wallet/5b81c96360ef9398844bd5c018a5ddd5c370dbaa#packages.x86_64-linux.cardano-wallet": {
+    "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
+    "version": "test",
+    "commit": "5b81c96360ef9398844bd5c018a5ddd5c370dbaa",
+    "org_name": "cardano-foundation",
+    "repo_name": "cardano-wallet",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "cardano-wallet-2026.4.21",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "aarch64-darwin",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "aarch64-windows",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/wgm5bwkdizsd5xwlwibc33ajss6pnz6b-source/nix/release-build.nix:20",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/2rlpk7i8qy373cmhhp96d49xyvvnmf77-cardano-wallet-2026.4.21",
+    "closure": {
+      "fromPath": "/nix/store/2rlpk7i8qy373cmhhp96d49xyvvnmf77-cardano-wallet-2026.4.21",
+      "toPath": "/nix/store/2i81y90kp4s4xp9pym2wdk6qdrxm48i8-cardano-wallet-2026.4.21",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-wallet-2026.4.21",
+    "system": "x86_64-linux"
+  },
   "github:cardano-foundation/cardano-wallet/5d3ede4d6801d67a8137c0efd7f242b3707638e1#packages.x86_64-linux.cardano-address": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
     "version": "v2023-12-18",
@@ -53564,6 +53839,281 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-wallet-2026.4.3",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-foundation/cardano-wallet/a4a3225cc519cecbcf096d142a11e9ab007ad1b5#packages.x86_64-linux.cardano-address": {
+    "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
+    "version": "nightly",
+    "commit": "a4a3225cc519cecbcf096d142a11e9ab007ad1b5",
+    "org_name": "cardano-foundation",
+    "repo_name": "cardano-wallet",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "Utils for constructing a command-line on top of cardano-addresses.",
+      "homepage": "https://github.com/IntersectMBO/cardano-addresses#readme",
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "cardano-addresses-exe-cardano-address",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "cardano-addresses-exe-cardano-address",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "cardano-address",
+      "maintainers": [],
+      "name": "cardano-addresses-exe-cardano-address-4.0.2",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "aarch64-darwin",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "aarch64-windows",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/7w3gk71gnb399j10y5ksb0izjgpvp8jl-source/builder/comp-builder.nix:566",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/jzsy3r6vhbbw3773cl8fahhg5cfv6dgi-cardano-addresses-exe-cardano-address-4.0.2",
+    "closure": {
+      "fromPath": "/nix/store/jzsy3r6vhbbw3773cl8fahhg5cfv6dgi-cardano-addresses-exe-cardano-address-4.0.2",
+      "toPath": "/nix/store/8i0jpf5rgrwh0m1i673lidwifzf4p1q0-cardano-addresses-exe-cardano-address-4.0.2",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-addresses-exe-cardano-address",
+    "system": "x86_64-linux",
+    "exeName": "cardano-address"
+  },
+  "github:cardano-foundation/cardano-wallet/a4a3225cc519cecbcf096d142a11e9ab007ad1b5#packages.x86_64-linux.cardano-wallet": {
+    "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-wallet",
+    "version": "nightly",
+    "commit": "a4a3225cc519cecbcf096d142a11e9ab007ad1b5",
+    "org_name": "cardano-foundation",
+    "repo_name": "cardano-wallet",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "cardano-wallet-2026.4.22",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "aarch64-darwin",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "aarch64-windows",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/2vr5p1a1rq31za5wxzjz1cs7yjdqg0a1-source/nix/release-build.nix:20",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/hyxfn2kz14r8gh6l6vbx2i8l9p29qrjg-cardano-wallet-2026.4.22",
+    "closure": {
+      "fromPath": "/nix/store/hyxfn2kz14r8gh6l6vbx2i8l9p29qrjg-cardano-wallet-2026.4.22",
+      "toPath": "/nix/store/lpnqwa82q4z5rz7pjhk9q6jplc23nf93-cardano-wallet-2026.4.22",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-wallet-2026.4.22",
     "system": "x86_64-linux"
   },
   "github:cardano-foundation/cardano-wallet/aee7e5373c956bd771390e9b5e7616eb39290c76#packages.x86_64-linux.cardano-address": {
@@ -58021,6 +58571,110 @@
     "pname": "hydra-tui",
     "system": "x86_64-linux"
   },
+  "github:cardano-scaling/hydra/f9c3bac78c0b0eb1eb8d9291fc0f7f84ec382a57#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "1.2.1",
+    "commit": "f9c3bac78c0b0eb1eb8d9291fc0f7f84ec382a57",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/95r87z5ds5fjnrqki2sfhgv09lj8z4g9-source/nix/hydra/packages.nix:32",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/q0cj1qh0slzcrfqsx2k91122h4mbjh8k-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/q0cj1qh0slzcrfqsx2k91122h4mbjh8k-hydra-node",
+      "toPath": "/nix/store/jp3b8vak2i7fi3jnyfnczpbxyb7jdjg0-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/f9c3bac78c0b0eb1eb8d9291fc0f7f84ec382a57#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "1.2.1",
+    "commit": "f9c3bac78c0b0eb1eb8d9291fc0f7f84ec382a57",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/95r87z5ds5fjnrqki2sfhgv09lj8z4g9-source/nix/hydra/packages.nix:32",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/zsagglvd31gk2wgfy1iharpcdr5y8fs9-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/zsagglvd31gk2wgfy1iharpcdr5y8fs9-hydra-tui",
+      "toPath": "/nix/store/n169m1ybx2h8ib0rbg7jxm59m3zc3hqs-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
   "github:input-output-hk/cardano-faucet/0f9206ea3692fbf5d23fe739f12ad5520644c4f5#packages.x86_64-linux.\"cardano-faucet:exe:cardano-faucet\"": {
     "name": "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\"",
     "version": "9.1",
@@ -60199,116 +60853,6 @@
     "pname": "mithril-signer",
     "system": "x86_64-linux"
   },
-  "github:input-output-hk/mithril/7608188648443af4a78915a49087fb43b60a87d2#mithril-client-cli": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
-    "version": "unstable",
-    "commit": "7608188648443af4a78915a49087fb43b60a87d2",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-client",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-client",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-client-0.13.8",
-      "nonTeamMaintainers": [],
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/6im92ly6cg18mjx8r2kj3pzhghnfymgf-source/lib/mkCargoDerivation.nix:95",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/g4rdx5p3w547aicpixwrfipjdjnspsr6-mithril-client-x86_64-unknown-linux-musl-0.13.8",
-    "closure": {
-      "fromPath": "/nix/store/g4rdx5p3w547aicpixwrfipjdjnspsr6-mithril-client-x86_64-unknown-linux-musl-0.13.8",
-      "toPath": "/nix/store/53xqgbnq9pil4xmn3lvavrcpxgml13jj-mithril-client-x86_64-unknown-linux-musl-0.13.8",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-client",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/7608188648443af4a78915a49087fb43b60a87d2#mithril-signer": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
-    "version": "unstable",
-    "commit": "7608188648443af4a78915a49087fb43b60a87d2",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-signer",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-signer",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-signer-0.3.33",
-      "nonTeamMaintainers": [],
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/6im92ly6cg18mjx8r2kj3pzhghnfymgf-source/lib/mkCargoDerivation.nix:95",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/385fqmphnp9rvnpa16jjgiwy3i8qd2p4-mithril-signer-x86_64-unknown-linux-musl-0.3.33",
-    "closure": {
-      "fromPath": "/nix/store/385fqmphnp9rvnpa16jjgiwy3i8qd2p4-mithril-signer-x86_64-unknown-linux-musl-0.3.33",
-      "toPath": "/nix/store/xhxbp6k6q8j0x0v4m8ymksbwmq2q11nz-mithril-signer-x86_64-unknown-linux-musl-0.3.33",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-signer",
-    "system": "x86_64-linux"
-  },
   "github:input-output-hk/mithril/7bf703389b0ba5ebade0e88449c79c75706cfbbc#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "2524.0-pre",
@@ -60576,6 +61120,116 @@
     "closure": {
       "fromPath": "/nix/store/xq930mizg63d3v5wy3hdsg28iqsc7wsy-mithril-signer-0.2.221",
       "toPath": "/nix/store/2dwgqhgj2gycn203higxi6wibchhl9ga-mithril-signer-0.2.221",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-signer",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/cc204d86fa4451ff4710c9adc24eab5b45f0ef05#mithril-client-cli": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+    "version": "unstable",
+    "commit": "cc204d86fa4451ff4710c9adc24eab5b45f0ef05",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-client",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-client",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-client-0.13.9",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/6im92ly6cg18mjx8r2kj3pzhghnfymgf-source/lib/mkCargoDerivation.nix:95",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/jczmclgnpvlrr9d0zd9szblnsavy753k-mithril-client-x86_64-unknown-linux-musl-0.13.9",
+    "closure": {
+      "fromPath": "/nix/store/jczmclgnpvlrr9d0zd9szblnsavy753k-mithril-client-x86_64-unknown-linux-musl-0.13.9",
+      "toPath": "/nix/store/r0ijydyxbdkzzspz8r3h3kbwzw5b0sk9-mithril-client-x86_64-unknown-linux-musl-0.13.9",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-client",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/cc204d86fa4451ff4710c9adc24eab5b45f0ef05#mithril-signer": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
+    "version": "unstable",
+    "commit": "cc204d86fa4451ff4710c9adc24eab5b45f0ef05",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-signer",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-signer",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-signer-1.0.0",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/6im92ly6cg18mjx8r2kj3pzhghnfymgf-source/lib/mkCargoDerivation.nix:95",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/wn7zba7q8zgic8d5if4lnld1ydbv1588-mithril-signer-x86_64-unknown-linux-musl-1.0.0",
+    "closure": {
+      "fromPath": "/nix/store/wn7zba7q8zgic8d5if4lnld1ydbv1588-mithril-signer-x86_64-unknown-linux-musl-1.0.0",
+      "toPath": "/nix/store/k554mpp6ninsh97515rawcl1f2k8xss2-mithril-signer-x86_64-unknown-linux-musl-1.0.0",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
