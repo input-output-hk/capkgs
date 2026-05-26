@@ -31,33 +31,43 @@ runs:
     - name: Detect context
       env:
         GH_TOKEN: ${{ github.token }}
+        EVENT_NAME: ${{ github.event_name }}
+        PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+        PR_HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+        REPO: ${{ github.repository }}
+        INPUT_PR_NUMBER: ${{ github.event.inputs.pr_number }}
       id: internal-detect-pr
       run: |
-        HEAD_REPO="${{ github.event.pull_request.head.repo.full_name }}"
-        REPO="${{ github.repository }}"
-
-        if [ "${{ github.event_name }}" = "pull_request" ]; then
+        if [ "$EVENT_NAME" = "pull_request" ]; then
           echo "PR context detected."
-          echo "pr_number=${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
-          echo "head_ref=${{ github.event.pull_request.head.ref }}" >> "$GITHUB_OUTPUT"
-          echo "base_ref=${{ github.event.pull_request.base.ref }}" >> "$GITHUB_OUTPUT"
+          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "head_ref=$PR_HEAD_REF" >> "$GITHUB_OUTPUT"
+          echo "base_ref=$PR_BASE_REF" >> "$GITHUB_OUTPUT"
 
-          if [ "$HEAD_REPO" = "$REPO" ]; then
+          if [ "$PR_HEAD_REPO" = "$REPO" ]; then
             echo "is_trusted=true" >> "$GITHUB_OUTPUT"
           else
             echo "is_trusted=false" >> "$GITHUB_OUTPUT"
           fi
 
-        elif [ -n "${{ github.event.inputs.pr_number }}" ]; then
+        elif [ -n "$INPUT_PR_NUMBER" ]; then
           echo "Manual dispatch detected."
 
-          PR_DATA=$(gh pr view ${{ github.event.inputs.pr_number }} --repo "$REPO" \
+          # Validate pr_number is numeric
+          if ! [[ "$INPUT_PR_NUMBER" =~ ^[0-9]+$ ]]; then
+            echo "::error::pr_number input must be numeric, got: $INPUT_PR_NUMBER"
+            exit 1
+          fi
+
+          PR_DATA=$(gh pr view "$INPUT_PR_NUMBER" --repo "$REPO" \
             --json headRefName,baseRefName -q '{ "head_ref": .headRefName, "base_ref": .baseRefName }')
 
           HEAD_REF=$(jq -r .head_ref <<< "$PR_DATA")
           BASE_REF=$(jq -r .base_ref <<< "$PR_DATA")
 
-          echo "pr_number=${{ github.event.inputs.pr_number }}" >> "$GITHUB_OUTPUT"
+          echo "pr_number=$INPUT_PR_NUMBER" >> "$GITHUB_OUTPUT"
           echo "head_ref=$HEAD_REF" >> "$GITHUB_OUTPUT"
           echo "base_ref=$BASE_REF" >> "$GITHUB_OUTPUT"
           echo "is_trusted=true" >> "$GITHUB_OUTPUT"
@@ -71,10 +81,16 @@ runs:
       shell: bash
 
     - name: Print detected context
+      env:
+        EVENT_NAME: ${{ github.event_name }}
+        DETECTED_PR_NUMBER: ${{ steps.internal-detect-pr.outputs.pr_number }}
+        DETECTED_HEAD_REF: ${{ steps.internal-detect-pr.outputs.head_ref }}
+        DETECTED_BASE_REF: ${{ steps.internal-detect-pr.outputs.base_ref }}
+        DETECTED_IS_TRUSTED: ${{ steps.internal-detect-pr.outputs.is_trusted }}
       run: |
-        echo "Event: ${{ github.event_name }}"
-        echo "PR number: ${{ steps.internal-detect-pr.outputs.pr_number }}"
-        echo "Head ref: ${{ steps.internal-detect-pr.outputs.head_ref }}"
-        echo "Base ref: ${{ steps.internal-detect-pr.outputs.base_ref }}"
-        echo "Trusted run: ${{ steps.internal-detect-pr.outputs.is_trusted }}"
+        echo "Event: $EVENT_NAME"
+        echo "PR number: $DETECTED_PR_NUMBER"
+        echo "Head ref: $DETECTED_HEAD_REF"
+        echo "Base ref: $DETECTED_BASE_REF"
+        echo "Trusted run: $DETECTED_IS_TRUSTED"
       shell: bash

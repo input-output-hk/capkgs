@@ -26,11 +26,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  update:
+  detect-pr:
     runs-on: ubuntu-latest
+    outputs:
+      is_trusted: ${{ steps.detect-pr.outputs.is_trusted }}
+      base_ref: ${{ steps.detect-pr.outputs.base_ref }}
+      head_ref: ${{ steps.detect-pr.outputs.head_ref }}
+      pr_number: ${{ steps.detect-pr.outputs.pr_number }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout base
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          persist-credentials: false
 
       # This step allows for maintainer workflow dispatch of forked PRs with a
       # declared PR input number.
@@ -38,23 +46,22 @@ jobs:
         id: detect-pr
         uses: ./.github/actions/detect-pr
 
-      # For PRs, checkout a merge base, including for forked PRs.
+  update:
+    needs: detect-pr
+    if: needs.detect-pr.outputs.is_trusted == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
       - name: Checkout and merge PR
         uses: ./.github/actions/checkout-merge
         with:
-          base_ref: ${{ steps.detect-pr.outputs.base_ref }}
-          head_ref: ${{ steps.detect-pr.outputs.head_ref }}
-          pr_number: ${{ steps.detect-pr.outputs.pr_number }}
-
-      - name: Exit early if untrusted
-        if: steps.detect-pr.outputs.is_trusted == 'false'
-        run: |
-          echo "Exiting early due to an untrusted fork PR."
-          echo "A maintainer can optionally run this via workflow dispatch with a declared PR input number."
-          exit
+          base_ref: ${{ needs.detect-pr.outputs.base_ref }}
+          head_ref: ${{ needs.detect-pr.outputs.head_ref }}
+          pr_number: ${{ needs.detect-pr.outputs.pr_number }}
 
       - name: Free up disk space
-        if: steps.detect-pr.outputs.is_trusted == 'true'
         run: |
           pwd
           df -h
@@ -69,8 +76,7 @@ jobs:
           df -h
 
       - name: Install Nix
-        if: steps.detect-pr.outputs.is_trusted == 'true'
-        uses: cachix/install-nix-action@v30
+        uses: cachix/install-nix-action@08dcb3a5e62fa31e2da3d490afc4176ef55ecd72 # v30
         with:
           extra_nix_config: |
             trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
@@ -81,13 +87,12 @@ jobs:
             experimental-features = fetch-closure flakes nix-command
 
       - name: CI eval, build, cache push and commit
-        if: steps.detect-pr.outputs.is_trusted == 'true'
         run: |
           set -e
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
-          echo "${{ secrets.NIX_SIGNING_KEY }}" > hydra_key
-          echo "${{ secrets.IOHK_DEVOPS_NETRC_FILE }}" > .netrc
+          echo "$NIX_SIGNING_KEY" > hydra_key
+          echo "$IOHK_DEVOPS_NETRC_FILE" > .netrc
           chmod 600 .netrc
           export NETRC_FILE="$(pwd)/.netrc"
           echo "Current api rate limit status:"
@@ -105,5 +110,7 @@ jobs:
           AWS_ACCESS_KEY_ID: "${{ secrets.AWS_ACCESS_KEY_ID }}"
           AWS_SECRET_ACCESS_KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           LOG_LEVEL: "debug"
+          NIX_SIGNING_KEY: "${{ secrets.NIX_SIGNING_KEY }}"
           NIX_SIGNING_KEY_FILE: "/home/runner/work/capkgs/capkgs/hydra_key"
+          IOHK_DEVOPS_NETRC_FILE: "${{ secrets.IOHK_DEVOPS_NETRC_FILE }}"
           S3_ENDPOINT: "${{ secrets.S3_ENDPOINT }}"
