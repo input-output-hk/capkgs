@@ -8,15 +8,6 @@
     }
   },
   "cardano-foundation": {
-    "blockperf": {
-      "github_releases": true,
-      "packages": [
-        "github:johnalotoski/blockperf/${tag}#blockperf"
-      ],
-      "refs": [
-        "^refs/heads/main$"
-      ]
-    },
     "cardano-wallet": {
       "github_releases": true,
       "packages": [
@@ -150,6 +141,15 @@
     }
   },
   "johnalotoski": {
+    "blockperf": {
+      "github_releases": true,
+      "packages": [
+        "github:johnalotoski/blockperf/${tag}#blockperf"
+      ],
+      "refs": [
+        "^refs/heads/main$"
+      ]
+    },
     "cardano-signer": {
       "github_releases": true,
       "packages": [
