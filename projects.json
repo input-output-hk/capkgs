@@ -11,7 +11,7 @@
     "blockperf": {
       "github_releases": true,
       "packages": [
-        "github:cardano-foundation/blockperf/${tag}#blockperf"
+        "github:johnalotoski/blockperf/${tag}#blockperf"
       ],
       "refs": [
         "^refs/heads/main$"
