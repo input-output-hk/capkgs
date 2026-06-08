@@ -50362,106 +50362,6 @@
     "pname": "blockfrost-platform",
     "system": "x86_64-linux"
   },
-  "github:cardano-foundation/blockperf/626ad7b8255c6099b52fa05587e639c13d86751a#blockperf": {
-    "name": "github:cardano-foundation/blockperf/${tag}#blockperf",
-    "version": "main",
-    "commit": "626ad7b8255c6099b52fa05587e639c13d86751a",
-    "org_name": "cardano-foundation",
-    "repo_name": "blockperf",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "Cardano BlockPerf",
-      "homepage": "https://github.com/cardano-foundation/blockperf",
-      "insecure": false,
-      "isBuildPythonPackage": [
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "loongarch64-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mips-linux",
-        "mips64-linux",
-        "mips64el-linux",
-        "mipsel-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "i686-cygwin",
-        "x86_64-cygwin",
-        "x86_64-windows",
-        "i686-windows"
-      ],
-      "license": {
-        "deprecated": false,
-        "free": true,
-        "fullName": "MIT License",
-        "redistributable": true,
-        "shortName": "mit",
-        "spdxId": "MIT",
-        "url": "https://spdx.org/licenses/MIT.html"
-      },
-      "name": "blockperf-2.0.3-626ad7b",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "loongarch64-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mips-linux",
-        "mips64-linux",
-        "mips64el-linux",
-        "mipsel-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "i686-cygwin",
-        "x86_64-cygwin",
-        "x86_64-windows",
-        "i686-windows"
-      ],
-      "position": "/nix/store/n92nxys1dzbdsxcwm0234nxxshf753zl-source/flake.nix:39",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/1bmmr0zsjjwlpgd04h6bmix8x7y1q9vb-blockperf-2.0.3-626ad7b",
-    "closure": {
-      "fromPath": "/nix/store/1bmmr0zsjjwlpgd04h6bmix8x7y1q9vb-blockperf-2.0.3-626ad7b",
-      "toPath": "/nix/store/mfyb7qwiafkqxq2jd07q7m1rp3y7wn16-blockperf-2.0.3-626ad7b",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "blockperf",
-    "system": "x86_64-linux"
-  },
   "github:cardano-foundation/cardano-wallet/08ab303b0e111ba8a96ab3d2634adcee230766e4#packages.x86_64-linux.cardano-address": {
     "name": "github:cardano-foundation/cardano-wallet/${tag}#packages.${system}.cardano-address",
     "version": "v2024-03-27",
@@ -63517,116 +63417,6 @@
     "pname": "mithril-signer",
     "system": "x86_64-linux"
   },
-  "github:input-output-hk/mithril/a45341db66fcbb5cfac8c25b733bfeac848cd520#mithril-client-cli": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
-    "version": "unstable",
-    "commit": "a45341db66fcbb5cfac8c25b733bfeac848cd520",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-client",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-client",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-client-0.13.12",
-      "nonTeamMaintainers": [],
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/6im92ly6cg18mjx8r2kj3pzhghnfymgf-source/lib/mkCargoDerivation.nix:95",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/lpmlbwfymdws6i5r4npmg4561c7kinpb-mithril-client-x86_64-unknown-linux-musl-0.13.12",
-    "closure": {
-      "fromPath": "/nix/store/lpmlbwfymdws6i5r4npmg4561c7kinpb-mithril-client-x86_64-unknown-linux-musl-0.13.12",
-      "toPath": "/nix/store/mf32aa3i24239y14gnwqz1awh418k9cy-mithril-client-x86_64-unknown-linux-musl-0.13.12",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-client",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/a45341db66fcbb5cfac8c25b733bfeac848cd520#mithril-signer": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
-    "version": "unstable",
-    "commit": "a45341db66fcbb5cfac8c25b733bfeac848cd520",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-signer",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-signer",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-signer-1.1.0",
-      "nonTeamMaintainers": [],
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/6im92ly6cg18mjx8r2kj3pzhghnfymgf-source/lib/mkCargoDerivation.nix:95",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/i6zrn93z91hz5ghv6dfs5dmbn6wfccf2-mithril-signer-x86_64-unknown-linux-musl-1.1.0",
-    "closure": {
-      "fromPath": "/nix/store/i6zrn93z91hz5ghv6dfs5dmbn6wfccf2-mithril-signer-x86_64-unknown-linux-musl-1.1.0",
-      "toPath": "/nix/store/j4zw5bm9i5r9cwqz2fp8nsvf56shp5ry-mithril-signer-x86_64-unknown-linux-musl-1.1.0",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-signer",
-    "system": "x86_64-linux"
-  },
   "github:input-output-hk/mithril/b1a2faa1ed11a0b7d47e4d9f7813972ad91f9bff#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "2517.1",
@@ -63730,6 +63520,122 @@
     "closure": {
       "fromPath": "/nix/store/xq930mizg63d3v5wy3hdsg28iqsc7wsy-mithril-signer-0.2.221",
       "toPath": "/nix/store/2dwgqhgj2gycn203higxi6wibchhl9ga-mithril-signer-0.2.221",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-signer",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/cb1951a2b95b6f51b728535dfa7c9a42e83ed8ea#mithril-client-cli": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+    "version": "unstable",
+    "commit": "cb1951a2b95b6f51b728535dfa7c9a42e83ed8ea",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-client",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "purlParts": {},
+        "purls": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-client",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": [],
+          "purls": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-client-0.13.15",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/30nd83bqqwwc3df3jaqngyb8yvksdmly-source/lib/mkCargoDerivation.nix:95",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/a5b8h1ny1p1brsp7drf1lw0ln3mmnkhy-mithril-client-x86_64-unknown-linux-musl-0.13.15",
+    "closure": {
+      "fromPath": "/nix/store/a5b8h1ny1p1brsp7drf1lw0ln3mmnkhy-mithril-client-x86_64-unknown-linux-musl-0.13.15",
+      "toPath": "/nix/store/22zcwwdb2gyzc59xca56c7x43rj72n1a-mithril-client-x86_64-unknown-linux-musl-0.13.15",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-client",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/cb1951a2b95b6f51b728535dfa7c9a42e83ed8ea#mithril-signer": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
+    "version": "unstable",
+    "commit": "cb1951a2b95b6f51b728535dfa7c9a42e83ed8ea",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-signer",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "purlParts": {},
+        "purls": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-signer",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": [],
+          "purls": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-signer-1.1.2",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/30nd83bqqwwc3df3jaqngyb8yvksdmly-source/lib/mkCargoDerivation.nix:95",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/q2j8y4isgi296759v1ygr5997n6a74kl-mithril-signer-x86_64-unknown-linux-musl-1.1.2",
+    "closure": {
+      "fromPath": "/nix/store/q2j8y4isgi296759v1ygr5997n6a74kl-mithril-signer-x86_64-unknown-linux-musl-1.1.2",
+      "toPath": "/nix/store/xccxv2hspyj3z241izm7lwjsgriszgfn-mithril-signer-x86_64-unknown-linux-musl-1.1.2",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
@@ -64718,6 +64624,106 @@
       "fromStore": "https://cache.iog.io"
     },
     "pname": "isd",
+    "system": "x86_64-linux"
+  },
+  "github:johnalotoski/blockperf/e77333de29e50cff6ce87bf683e58146563e8e4a#blockperf": {
+    "name": "github:johnalotoski/blockperf/${tag}#blockperf",
+    "version": "main",
+    "commit": "e77333de29e50cff6ce87bf683e58146563e8e4a",
+    "org_name": "johnalotoski",
+    "repo_name": "blockperf",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "Cardano BlockPerf",
+      "homepage": "https://github.com/cardano-foundation/blockperf",
+      "insecure": false,
+      "isBuildPythonPackage": [
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "MIT License",
+        "redistributable": true,
+        "shortName": "mit",
+        "spdxId": "MIT",
+        "url": "https://spdx.org/licenses/MIT.html"
+      },
+      "name": "blockperf-2.0.3-e77333d",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/n92nxys1dzbdsxcwm0234nxxshf753zl-source/flake.nix:39",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/9imp7b2p34xls9frrp14sxg691g27aj6-blockperf-2.0.3-e77333d",
+    "closure": {
+      "fromPath": "/nix/store/9imp7b2p34xls9frrp14sxg691g27aj6-blockperf-2.0.3-e77333d",
+      "toPath": "/nix/store/ss74yzzq2sgal8lphmia5az8kr5rwzdj-blockperf-2.0.3-e77333d",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "blockperf",
     "system": "x86_64-linux"
   },
   "github:johnalotoski/cardano-signer/2ef95e10dafcd64dbd55e534b3c1eb1adaba58e5#packages.x86_64-linux.cardano-signer": {
