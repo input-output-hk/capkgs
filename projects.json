@@ -61,7 +61,8 @@
         "github:input-output-hk/cardano-faucet/${tag}#packages.${system}.\"cardano-faucet:exe:cardano-faucet\""
       ],
       "refs": [
-        "^refs/tags/\\d+\\.\\d+$"
+        "^refs/tags/\\d+\\.\\d+$",
+        "^refs/tags/leios-prototype-w\\d+$"
       ]
     },
     "cardano-node": {
