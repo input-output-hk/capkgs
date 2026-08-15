@@ -113,8 +113,7 @@
         "github:input-output-hk/offchain-metadata-tools/${tag}#packages.${system}.token-metadata-creator"
       ],
       "refs": [
-        "^refs/tags/ops-\\d+\\-\\d+\\-\\d+$",
-        "^refs/tags/v\\d+\\.\\d+\\.\\d+\\.\\d+$"
+        "^refs/tags/ops-\\d+\\-\\d+\\-\\d+$"
       ]
     }
   },
