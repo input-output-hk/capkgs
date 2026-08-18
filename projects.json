@@ -62,7 +62,7 @@
       ],
       "refs": [
         "^refs/tags/\\d+\\.\\d+$",
-        "^refs/tags/leios-prototype-w\\d+$"
+        "^refs/tags/leios-prototype-w\\d+[a-z]?$"
       ]
     },
     "cardano-node": {
