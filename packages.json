@@ -4211,123 +4211,6 @@
     "system": "x86_64-linux",
     "exeName": "cardano-cli"
   },
-  "github:IntersectMBO/cardano-cli/71b9ec446a822c1c3553605281af84b8b83915b7#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
-    "name": "github:IntersectMBO/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
-    "version": "cardano-cli-9.1.0.0",
-    "commit": "71b9ec446a822c1c3553605281af84b8b83915b7",
-    "org_name": "input-output-hk",
-    "repo_name": "cardano-cli",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "The Cardano command-line interface",
-      "homepage": "",
-      "insecure": false,
-      "license": [
-        {
-          "free": true,
-          "fullName": "Apache License 2.0",
-          "shortName": "Apache-2.0",
-          "spdxId": "Apache-2.0",
-          "url": "https://spdx.org/licenses/Apache-2.0.html"
-        }
-      ],
-      "mainProgram": "cardano-cli",
-      "name": "cardano-cli-exe-cardano-cli-9.1.0.0",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "i686-cygwin",
-        "x86_64-cygwin",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "i686-freebsd13",
-        "x86_64-freebsd13",
-        "aarch64-genode",
-        "i686-genode",
-        "x86_64-genode",
-        "x86_64-solaris",
-        "javascript-ghcjs",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "loongarch64-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mips-linux",
-        "mips64-linux",
-        "mips64el-linux",
-        "mipsel-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux",
-        "mmix-mmixware",
-        "aarch64-netbsd",
-        "armv6l-netbsd",
-        "armv7a-netbsd",
-        "armv7l-netbsd",
-        "i686-netbsd",
-        "m68k-netbsd",
-        "mipsel-netbsd",
-        "powerpc-netbsd",
-        "riscv32-netbsd",
-        "riscv64-netbsd",
-        "x86_64-netbsd",
-        "aarch64_be-none",
-        "aarch64-none",
-        "arm-none",
-        "armv6l-none",
-        "avr-none",
-        "i686-none",
-        "microblaze-none",
-        "microblazeel-none",
-        "mips-none",
-        "mips64-none",
-        "msp430-none",
-        "or1k-none",
-        "m68k-none",
-        "powerpc-none",
-        "powerpcle-none",
-        "riscv32-none",
-        "riscv64-none",
-        "rx-none",
-        "s390-none",
-        "s390x-none",
-        "vc4-none",
-        "x86_64-none",
-        "i686-openbsd",
-        "x86_64-openbsd",
-        "x86_64-redox",
-        "wasm64-wasi",
-        "wasm32-wasi",
-        "x86_64-windows",
-        "i686-windows"
-      ],
-      "position": "/nix/store/2lxq4m465jnqgxrjiq13ppwmg7m8nm43-source/builder/comp-builder.nix:390",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/9ifq9s7x50fjxgqs2jfy3slc907qrvk8-cardano-cli-exe-cardano-cli-9.1.0.0",
-    "closure": {
-      "fromPath": "/nix/store/9ifq9s7x50fjxgqs2jfy3slc907qrvk8-cardano-cli-exe-cardano-cli-9.1.0.0",
-      "toPath": "/nix/store/gimidplr4ccwp0wvzr9b0i30k2i39v33-cardano-cli-exe-cardano-cli-9.1.0.0",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "cardano-cli-exe-cardano-cli",
-    "system": "x86_64-linux",
-    "exeName": "cardano-cli"
-  },
   "github:IntersectMBO/cardano-cli/72bae1799052b8563edc3d07f9f496ee53cb3494#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
     "name": "github:IntersectMBO/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
     "version": "cardano-cli-10.4.0.0",
@@ -6970,6 +6853,154 @@
     "closure": {
       "fromPath": "/nix/store/8rk6h59g2plvxg7sg4765sxpw3xjmv0p-cardano-cli-exe-cardano-cli-9.4.1.0",
       "toPath": "/nix/store/9xkddp7734qd33xj7qk9lyhhzpjj8ldb-cardano-cli-exe-cardano-cli-9.4.1.0",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "cardano-cli-exe-cardano-cli",
+    "system": "x86_64-linux",
+    "exeName": "cardano-cli"
+  },
+  "github:IntersectMBO/cardano-cli/eac27b8b0437a80cea2152917850aadea5749d90#packages.x86_64-linux.\"cardano-cli:exe:cardano-cli\"": {
+    "name": "github:IntersectMBO/cardano-cli/${tag}#packages.${system}.\"cardano-cli:exe:cardano-cli\"",
+    "version": "cardano-cli-11.2.3.0",
+    "commit": "eac27b8b0437a80cea2152917850aadea5749d90",
+    "org_name": "input-output-hk",
+    "repo_name": "cardano-cli",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "The Cardano command-line interface",
+      "homepage": "",
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "cardano-cli-exe-cardano-cli",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "cardano-cli-exe-cardano-cli",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "license": [
+        {
+          "free": true,
+          "fullName": "Apache License 2.0",
+          "shortName": "Apache-2.0",
+          "spdxId": "Apache-2.0",
+          "url": "https://spdx.org/licenses/Apache-2.0.html"
+        }
+      ],
+      "mainProgram": "cardano-cli",
+      "maintainers": [],
+      "name": "cardano-cli-exe-cardano-cli-11.2.3.0",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "aarch64-darwin",
+        "i686-freebsd",
+        "x86_64-freebsd",
+        "aarch64-freebsd",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "aarch64-windows",
+        "x86_64-windows",
+        "i686-windows",
+        "aarch64-uefi",
+        "x86_64-uefi"
+      ],
+      "position": "/nix/store/v0a7dq708bk8262yfls3k68ldp74d7bp-source/builder/comp-builder.nix:566",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/b9ijkgmcxdxjvfppadn33qlr0sw8hdry-cardano-cli-exe-cardano-cli-11.2.3.0",
+    "closure": {
+      "fromPath": "/nix/store/b9ijkgmcxdxjvfppadn33qlr0sw8hdry-cardano-cli-exe-cardano-cli-11.2.3.0",
+      "toPath": "/nix/store/124lfs057sky36hgh52nkqd6vrsj571f-cardano-cli-exe-cardano-cli-11.2.3.0",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "cardano-cli-exe-cardano-cli",
@@ -60321,6 +60352,110 @@
     "pname": "cardano-wallet-2024.9.26",
     "system": "x86_64-linux"
   },
+  "github:cardano-scaling/hydra/099f5dd775d8640047d0074edef294c1b39a600d#packages.x86_64-linux.hydra-node": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
+    "version": "2.4.1",
+    "commit": "099f5dd775d8640047d0074edef294c1b39a600d",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "hydra-node",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/1wcmv5zb864fl4n367fhfals132sgvyd-source/nix/hydra/packages.nix:32",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/bz8wpj1gfi2s14i31r06va2a7mlvkrbq-hydra-node",
+    "closure": {
+      "fromPath": "/nix/store/bz8wpj1gfi2s14i31r06va2a7mlvkrbq-hydra-node",
+      "toPath": "/nix/store/g0619622qa88qcjlyfhfl89by5hcbkbc-hydra-node",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-node",
+    "system": "x86_64-linux"
+  },
+  "github:cardano-scaling/hydra/099f5dd775d8640047d0074edef294c1b39a600d#packages.x86_64-linux.hydra-tui": {
+    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
+    "version": "2.4.1",
+    "commit": "099f5dd775d8640047d0074edef294c1b39a600d",
+    "org_name": "cardano-scaling",
+    "repo_name": "hydra",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "hydra-tui",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/1wcmv5zb864fl4n367fhfals132sgvyd-source/nix/hydra/packages.nix:32",
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/xpczgskpq2200xv85jj51hxvbr2finqm-hydra-tui",
+    "closure": {
+      "fromPath": "/nix/store/xpczgskpq2200xv85jj51hxvbr2finqm-hydra-tui",
+      "toPath": "/nix/store/y7cvi13nmb2znbd6k36hh1dmpq55czx7-hydra-tui",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "hydra-tui",
+    "system": "x86_64-linux"
+  },
   "github:cardano-scaling/hydra/134bb7578a24610c631a627330d16f10d01178ee#packages.x86_64-linux.hydra-node": {
     "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
     "version": "0.20.1",
@@ -60938,230 +61073,6 @@
     },
     "pname": "hydra-tui",
     "system": "x86_64-linux"
-  },
-  "github:cardano-scaling/hydra/8a8157d8cba4907e1653e2fbb87551cf7ddd59d8#packages.x86_64-linux.hydra-node": {
-    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
-    "version": "0.10.0",
-    "commit": "8a8157d8cba4907e1653e2fbb87551cf7ddd59d8",
-    "org_name": "cardano-scaling",
-    "repo_name": "hydra",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "The Hydra node",
-      "homepage": "",
-      "insecure": false,
-      "license": [
-        {
-          "free": true,
-          "fullName": "Apache License 2.0",
-          "shortName": "Apache-2.0",
-          "spdxId": "Apache-2.0",
-          "url": "https://spdx.org/licenses/Apache-2.0.html"
-        }
-      ],
-      "mainProgram": "hydra-node",
-      "name": "hydra-node-exe-hydra-node-0.10.0",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "i686-cygwin",
-        "x86_64-cygwin",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "i686-freebsd13",
-        "x86_64-freebsd13",
-        "aarch64-genode",
-        "i686-genode",
-        "x86_64-genode",
-        "x86_64-solaris",
-        "js-ghcjs",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mipsel-linux",
-        "mips64el-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux",
-        "mmix-mmixware",
-        "aarch64-netbsd",
-        "armv6l-netbsd",
-        "armv7a-netbsd",
-        "armv7l-netbsd",
-        "i686-netbsd",
-        "m68k-netbsd",
-        "mipsel-netbsd",
-        "powerpc-netbsd",
-        "riscv32-netbsd",
-        "riscv64-netbsd",
-        "x86_64-netbsd",
-        "aarch64_be-none",
-        "aarch64-none",
-        "arm-none",
-        "armv6l-none",
-        "avr-none",
-        "i686-none",
-        "microblaze-none",
-        "microblazeel-none",
-        "msp430-none",
-        "or1k-none",
-        "m68k-none",
-        "powerpc-none",
-        "powerpcle-none",
-        "riscv32-none",
-        "riscv64-none",
-        "rx-none",
-        "s390-none",
-        "s390x-none",
-        "vc4-none",
-        "x86_64-none",
-        "i686-openbsd",
-        "x86_64-openbsd",
-        "x86_64-redox",
-        "wasm64-wasi",
-        "wasm32-wasi",
-        "x86_64-windows",
-        "i686-windows"
-      ],
-      "position": "/nix/store/kxi9zk8dqpnlxhq1gcpdzanpajyvmi21-source/builder/comp-builder.nix:364",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/bx585ilp53pqpf4jslyvjzmj0s829j4f-hydra-node-exe-hydra-node-0.10.0",
-    "closure": {
-      "fromPath": "/nix/store/bx585ilp53pqpf4jslyvjzmj0s829j4f-hydra-node-exe-hydra-node-0.10.0",
-      "toPath": "/nix/store/pwq4qcvg6jr911d0d5jbi3gwwwa20lwn-hydra-node-exe-hydra-node-0.10.0",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "hydra-node-exe-hydra-node",
-    "system": "x86_64-linux",
-    "exeName": "hydra-node"
-  },
-  "github:cardano-scaling/hydra/8a8157d8cba4907e1653e2fbb87551cf7ddd59d8#packages.x86_64-linux.hydra-tui": {
-    "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-tui",
-    "version": "0.10.0",
-    "commit": "8a8157d8cba4907e1653e2fbb87551cf7ddd59d8",
-    "org_name": "cardano-scaling",
-    "repo_name": "hydra",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "TUI for managing a Hydra node",
-      "homepage": "",
-      "insecure": false,
-      "license": [
-        {
-          "free": true,
-          "fullName": "Apache License 2.0",
-          "shortName": "Apache-2.0",
-          "spdxId": "Apache-2.0",
-          "url": "https://spdx.org/licenses/Apache-2.0.html"
-        }
-      ],
-      "mainProgram": "hydra-tui",
-      "name": "hydra-tui-exe-hydra-tui-0.10.0",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "i686-cygwin",
-        "x86_64-cygwin",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "i686-freebsd13",
-        "x86_64-freebsd13",
-        "aarch64-genode",
-        "i686-genode",
-        "x86_64-genode",
-        "x86_64-solaris",
-        "js-ghcjs",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mipsel-linux",
-        "mips64el-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux",
-        "mmix-mmixware",
-        "aarch64-netbsd",
-        "armv6l-netbsd",
-        "armv7a-netbsd",
-        "armv7l-netbsd",
-        "i686-netbsd",
-        "m68k-netbsd",
-        "mipsel-netbsd",
-        "powerpc-netbsd",
-        "riscv32-netbsd",
-        "riscv64-netbsd",
-        "x86_64-netbsd",
-        "aarch64_be-none",
-        "aarch64-none",
-        "arm-none",
-        "armv6l-none",
-        "avr-none",
-        "i686-none",
-        "microblaze-none",
-        "microblazeel-none",
-        "msp430-none",
-        "or1k-none",
-        "m68k-none",
-        "powerpc-none",
-        "powerpcle-none",
-        "riscv32-none",
-        "riscv64-none",
-        "rx-none",
-        "s390-none",
-        "s390x-none",
-        "vc4-none",
-        "x86_64-none",
-        "i686-openbsd",
-        "x86_64-openbsd",
-        "x86_64-redox",
-        "wasm64-wasi",
-        "wasm32-wasi",
-        "x86_64-windows",
-        "i686-windows"
-      ],
-      "position": "/nix/store/kxi9zk8dqpnlxhq1gcpdzanpajyvmi21-source/builder/comp-builder.nix:364",
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/fa6lx0f94yjyyayw01x83v8m01rpvzwl-hydra-tui-exe-hydra-tui-0.10.0",
-    "closure": {
-      "fromPath": "/nix/store/fa6lx0f94yjyyayw01x83v8m01rpvzwl-hydra-tui-exe-hydra-tui-0.10.0",
-      "toPath": "/nix/store/s8pimxrwf3qrjc6iq5j6jyayyhn622ws-hydra-tui-exe-hydra-tui-0.10.0",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "hydra-tui-exe-hydra-tui",
-    "system": "x86_64-linux",
-    "exeName": "hydra-tui"
   },
   "github:cardano-scaling/hydra/8d8d3a3662f0e3cb677b31071976c9b6ecae3f1d#packages.x86_64-linux.hydra-node": {
     "name": "github:cardano-scaling/hydra/${tag}#packages.${system}.hydra-node",
@@ -64867,6 +64778,124 @@
     "system": "x86_64-linux",
     "exeName": "ogmios"
   },
+  "github:input-output-hk/mithril/0b079410fd7df734c018da3cdd9ad6d24befac4d#mithril-client-cli": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
+    "version": "unstable",
+    "commit": "0b079410fd7df734c018da3cdd9ad6d24befac4d",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-client",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "purlParts": {},
+        "purls": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-client",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": [],
+          "purls": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-client-0.13.23",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/dkvrj701phahim7b6z0zgwqas0xqn4vw-source/lib/mkCargoDerivation.nix:95",
+      "problems": {},
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/h65bq29rnx09ij1k39i9hd1ixkic6ky6-mithril-client-x86_64-unknown-linux-musl-0.13.23",
+    "closure": {
+      "fromPath": "/nix/store/h65bq29rnx09ij1k39i9hd1ixkic6ky6-mithril-client-x86_64-unknown-linux-musl-0.13.23",
+      "toPath": "/nix/store/m2zfx5s589b6k41cqvh15nxdwg02lrvb-mithril-client-x86_64-unknown-linux-musl-0.13.23",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-client",
+    "system": "x86_64-linux"
+  },
+  "github:input-output-hk/mithril/0b079410fd7df734c018da3cdd9ad6d24befac4d#mithril-signer": {
+    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
+    "version": "unstable",
+    "commit": "0b079410fd7df734c018da3cdd9ad6d24befac4d",
+    "org_name": "input-output-hk",
+    "repo_name": "mithril",
+    "meta": {
+      "available": true,
+      "broken": false,
+      "identifiers": {
+        "cpeParts": {
+          "edition": "*",
+          "language": "*",
+          "other": "*",
+          "part": "a",
+          "product": "mithril-signer",
+          "sw_edition": "*",
+          "target_hw": "*",
+          "target_sw": "*"
+        },
+        "possibleCPEs": [],
+        "purlParts": {},
+        "purls": [],
+        "v1": {
+          "cpeParts": {
+            "edition": "*",
+            "language": "*",
+            "other": "*",
+            "part": "a",
+            "product": "mithril-signer",
+            "sw_edition": "*",
+            "target_hw": "*",
+            "target_sw": "*"
+          },
+          "possibleCPEs": [],
+          "purls": []
+        }
+      },
+      "insecure": false,
+      "maintainers": [],
+      "name": "mithril-signer-1.2.1",
+      "nonTeamMaintainers": [],
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/dkvrj701phahim7b6z0zgwqas0xqn4vw-source/lib/mkCargoDerivation.nix:95",
+      "problems": {},
+      "unfree": false,
+      "unsupported": false
+    },
+    "output": "/nix/store/75b5kbsr8ac2xidwxj7k0ivinnjxzfg9-mithril-signer-x86_64-unknown-linux-musl-1.2.1",
+    "closure": {
+      "fromPath": "/nix/store/75b5kbsr8ac2xidwxj7k0ivinnjxzfg9-mithril-signer-x86_64-unknown-linux-musl-1.2.1",
+      "toPath": "/nix/store/n5mfm1f8xf6i53a1md36y0s3rk6yz1jg-mithril-signer-x86_64-unknown-linux-musl-1.2.1",
+      "fromStore": "https://cache.iog.io"
+    },
+    "pname": "mithril-signer",
+    "system": "x86_64-linux"
+  },
   "github:input-output-hk/mithril/0d4d6bc2ac1b2f5e7fe6e57d905bd8542e6b87b1#mithril-client-cli": {
     "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
     "version": "2442.0-pre",
@@ -66211,124 +66240,6 @@
     "closure": {
       "fromPath": "/nix/store/xq930mizg63d3v5wy3hdsg28iqsc7wsy-mithril-signer-0.2.221",
       "toPath": "/nix/store/2dwgqhgj2gycn203higxi6wibchhl9ga-mithril-signer-0.2.221",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-signer",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/e07de338d59365185fe23450818d1380dd10ed01#mithril-client-cli": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-client-cli",
-    "version": "unstable",
-    "commit": "e07de338d59365185fe23450818d1380dd10ed01",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-client",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "purlParts": {},
-        "purls": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-client",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": [],
-          "purls": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-client-0.13.23",
-      "nonTeamMaintainers": [],
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/dkvrj701phahim7b6z0zgwqas0xqn4vw-source/lib/mkCargoDerivation.nix:95",
-      "problems": {},
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/xaz87mi11blx8lic786lm2m8m4kcpny3-mithril-client-x86_64-unknown-linux-musl-0.13.23",
-    "closure": {
-      "fromPath": "/nix/store/xaz87mi11blx8lic786lm2m8m4kcpny3-mithril-client-x86_64-unknown-linux-musl-0.13.23",
-      "toPath": "/nix/store/195wx05vpdnsp903jlfafh9ss31bb8zh-mithril-client-x86_64-unknown-linux-musl-0.13.23",
-      "fromStore": "https://cache.iog.io"
-    },
-    "pname": "mithril-client",
-    "system": "x86_64-linux"
-  },
-  "github:input-output-hk/mithril/e07de338d59365185fe23450818d1380dd10ed01#mithril-signer": {
-    "name": "github:input-output-hk/mithril/${tag}#mithril-signer",
-    "version": "unstable",
-    "commit": "e07de338d59365185fe23450818d1380dd10ed01",
-    "org_name": "input-output-hk",
-    "repo_name": "mithril",
-    "meta": {
-      "available": true,
-      "broken": false,
-      "identifiers": {
-        "cpeParts": {
-          "edition": "*",
-          "language": "*",
-          "other": "*",
-          "part": "a",
-          "product": "mithril-signer",
-          "sw_edition": "*",
-          "target_hw": "*",
-          "target_sw": "*"
-        },
-        "possibleCPEs": [],
-        "purlParts": {},
-        "purls": [],
-        "v1": {
-          "cpeParts": {
-            "edition": "*",
-            "language": "*",
-            "other": "*",
-            "part": "a",
-            "product": "mithril-signer",
-            "sw_edition": "*",
-            "target_hw": "*",
-            "target_sw": "*"
-          },
-          "possibleCPEs": [],
-          "purls": []
-        }
-      },
-      "insecure": false,
-      "maintainers": [],
-      "name": "mithril-signer-1.2.1",
-      "nonTeamMaintainers": [],
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/dkvrj701phahim7b6z0zgwqas0xqn4vw-source/lib/mkCargoDerivation.nix:95",
-      "problems": {},
-      "unfree": false,
-      "unsupported": false
-    },
-    "output": "/nix/store/pjsc56ka29f8jlks61x58vb8vs138h56-mithril-signer-x86_64-unknown-linux-musl-1.2.1",
-    "closure": {
-      "fromPath": "/nix/store/pjsc56ka29f8jlks61x58vb8vs138h56-mithril-signer-x86_64-unknown-linux-musl-1.2.1",
-      "toPath": "/nix/store/l0br16n4fn0mmwgbzbhil7m49q2w4igw-mithril-signer-x86_64-unknown-linux-musl-1.2.1",
       "fromStore": "https://cache.iog.io"
     },
     "pname": "mithril-signer",
