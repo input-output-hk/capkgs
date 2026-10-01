@@ -18,9 +18,12 @@ let
     ;
 
   # x86-64-linux
+  # Input-addressed on purpose: busybox references itself, and the CA
+  # rewrite of self-referential paths differs between Nix 2.17-2.34
+  # (r4nhqzdi…) and 2.35+ (xrzn2l5y…), so no toPath works for both.
   busybox = fetchClosure {
     fromPath = "/nix/store/62z5dklpfq7n0wi5fdasf4y0ymy12nxg-busybox-1.36.1";
-    toPath = "/nix/store/r4nhqzdi024kqw6riwpghidhyp2kdvfw-busybox-1.36.1";
+    inputAddressed = true;
     fromStore = "https://cache.nixos.org";
   };
 
