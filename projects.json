@@ -34,6 +34,15 @@
     }
   },
   "input-output-hk": {
+    "cardano-census": {
+      "github_releases": true,
+      "packages": [
+        "github:input-output-hk/cardano-census/${tag}#cardano-census"
+      ],
+      "refs": [
+        "^refs/heads/main$"
+      ]
+    },
     "cardano-cli": {
       "github_releases": true,
       "packages": [
