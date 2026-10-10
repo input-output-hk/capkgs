@@ -57,12 +57,12 @@
   "github:IntersectMBO/cardano-db-sync/ba77cf22ae86974482e4eabc0dadb8af5f2e891a#packages.x86_64-linux.\"cardano-db-tool:exe:cardano-db-tool\"": "Missing zw3rk artifact",
   "github:IntersectMBO/cardano-db-sync/ba77cf22ae86974482e4eabc0dadb8af5f2e891a#packages.x86_64-linux.\"cardano-smash-server:exe:cardano-smash-server\"": "Missing zw3rk artifact",
   "github:IntersectMBO/cardano-db-sync/ba77cf22ae86974482e4eabc0dadb8af5f2e891a#packages.x86_64-linux.cardano-smash-server-no-basic-auth": "Missing zw3rk artifact",
-  "github:IntersectMBO/cardano-db-sync/d249be066beb22a918ed60b4952a2370aca5a28a#packages.x86_64-linux.cardano-db-sync:exe:cardano-db-sync": "Failed dependency",
-  "github:IntersectMBO/cardano-db-sync/d249be066beb22a918ed60b4952a2370aca5a28a#packages.x86_64-linux.cardano-db-tool:exe:cardano-db-tool": "Failed dependency",
-  "github:IntersectMBO/cardano-db-sync/d249be066beb22a918ed60b4952a2370aca5a28a#packages.x86_64-linux.cardano-smash-server:exe:cardano-smash-server": "Failed dependency",
+  "github:IntersectMBO/cardano-db-sync/d249be066beb22a918ed60b4952a2370aca5a28a#packages.x86_64-linux.\"cardano-db-sync:exe:cardano-db-sync\"": "Failed dependency",
+  "github:IntersectMBO/cardano-db-sync/d249be066beb22a918ed60b4952a2370aca5a28a#packages.x86_64-linux.\"cardano-db-tool:exe:cardano-db-tool\"": "Failed dependency",
+  "github:IntersectMBO/cardano-db-sync/d249be066beb22a918ed60b4952a2370aca5a28a#packages.x86_64-linux.\"cardano-smash-server:exe:cardano-smash-server\"": "Failed dependency",
   "github:IntersectMBO/cardano-db-sync/d249be066beb22a918ed60b4952a2370aca5a28a#packages.x86_64-linux.cardano-smash-server-no-basic-auth": "Failed dependency",
-  "github:IntersectMBO/cardano-db-sync/ed3dc8bbb79f07c26ec43f10bad661b0bef3b915#packages.x86_64-linux.cardano-db-sync:exe:cardano-db-sync": "Failed dependency",
-  "github:IntersectMBO/cardano-db-sync/ed3dc8bbb79f07c26ec43f10bad661b0bef3b915#packages.x86_64-linux.cardano-db-tool:exe:cardano-db-tool": "Failed dependency",
-  "github:IntersectMBO/cardano-db-sync/ed3dc8bbb79f07c26ec43f10bad661b0bef3b915#packages.x86_64-linux.cardano-smash-server:exe:cardano-smash-server": "Failed dependency",
+  "github:IntersectMBO/cardano-db-sync/ed3dc8bbb79f07c26ec43f10bad661b0bef3b915#packages.x86_64-linux.\"cardano-db-sync:exe:cardano-db-sync\"": "Failed dependency",
+  "github:IntersectMBO/cardano-db-sync/ed3dc8bbb79f07c26ec43f10bad661b0bef3b915#packages.x86_64-linux.\"cardano-db-tool:exe:cardano-db-tool\"": "Failed dependency",
+  "github:IntersectMBO/cardano-db-sync/ed3dc8bbb79f07c26ec43f10bad661b0bef3b915#packages.x86_64-linux.\"cardano-smash-server:exe:cardano-smash-server\"": "Failed dependency",
   "github:IntersectMBO/cardano-db-sync/ed3dc8bbb79f07c26ec43f10bad661b0bef3b915#packages.x86_64-linux.cardano-smash-server-no-basic-auth": "Failed dependency"
 }
