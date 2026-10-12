@@ -140,6 +140,15 @@
       "packages": [
         "github:IntersectMBO/cardano-addresses/${tag}#packages.${system}.\"cardano-addresses:exe:cardano-address\""
       ]
+    },
+    "cardano-config": {
+      "github_releases": false,
+      "packages": [
+        "github:IntersectMBO/cardano-config/${tag}#packages.${system}.cardano-config-exe"
+      ],
+      "refs": [
+        "^refs/tags/cardano-config-2\\.2\\.1\\.0$"
+      ]
     }
   },
   "isd-project": {
