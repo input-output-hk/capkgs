@@ -147,7 +147,7 @@
         "github:IntersectMBO/cardano-config/${tag}#packages.${system}.cardano-config-exe"
       ],
       "refs": [
-        "^refs/tags/cardano-config-2\\.2\\.1\\.0$"
+        "^refs/tags/cardano-config-2\\.2\\.2\\.0$"
       ]
     }
   },
