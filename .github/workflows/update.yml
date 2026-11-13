@@ -3,63 +3,45 @@ run-name: ${{github.actor}} is updating capkgs
 
 on:
   workflow_dispatch:
-    inputs:
-      pr_number:
-        description: Optional PR number, for maintainer use
-        required: false
 
   push:
     branches:
       - main
 
-  pull_request:
-
   schedule:
     - cron: "14 14 * * 1-5"
 
 permissions:
-  contents: write
-  pull-requests: read
+  contents: read
+
+# Publishing must not restore state written by less trusted Actions jobs.
+cache-mode: none
 
 concurrency:
-  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
-  cancel-in-progress: true
+  group: capkgs-publish
+  cancel-in-progress: false
 
 jobs:
-  detect-pr:
-    runs-on: ubuntu-latest
-    outputs:
-      is_trusted: ${{ steps.detect-pr.outputs.is_trusted }}
-      base_ref: ${{ steps.detect-pr.outputs.base_ref }}
-      head_ref: ${{ steps.detect-pr.outputs.head_ref }}
-      pr_number: ${{ steps.detect-pr.outputs.pr_number }}
-    steps:
-      - name: Checkout base
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
-        with:
-          ref: ${{ github.event.pull_request.base.sha || github.sha }}
-          persist-credentials: false
-
-      # This step allows for maintainer workflow dispatch of forked PRs with a
-      # declared PR input number.
-      - name: Detect PR context
-        id: detect-pr
-        uses: ./.github/actions/detect-pr
-
   update:
-    needs: detect-pr
-    if: needs.detect-pr.outputs.is_trusted == 'true'
+    # This workflow has no PR trigger or PR checkout. Protect main and review
+    # workflow changes in repository settings; this condition limits dispatches.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
-
-      - name: Checkout and merge PR
-        uses: ./.github/actions/checkout-merge
         with:
-          base_ref: ${{ needs.detect-pr.outputs.base_ref }}
-          head_ref: ${{ needs.detect-pr.outputs.head_ref }}
-          pr_number: ${{ needs.detect-pr.outputs.pr_number }}
+          ref: ${{ github.sha }}
+          # packages.cr commits packages.json and pushes to main.
+          persist-credentials: true
+
+      - name: Prepare main branch at the triggering commit
+        run: |
+          git checkout -B main "$GITHUB_SHA"
+          git config branch.main.remote origin
+          git config branch.main.merge refs/heads/main
 
       - name: Free up disk space
         run: |
@@ -88,13 +70,15 @@ jobs:
 
       - name: CI eval, build, cache push and commit
         run: |
-          set -e
+          set -euo pipefail
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
-          echo "$NIX_SIGNING_KEY" > hydra_key
-          echo "$IOHK_DEVOPS_NETRC_FILE" > .netrc
-          chmod 600 .netrc
-          export NETRC_FILE="$(pwd)/.netrc"
+          umask 077
+          trap 'rm -f hydra_key .netrc' EXIT
+          printf '%s\n' "$NIX_SIGNING_KEY" > hydra_key
+          printf '%s\n' "$IOHK_DEVOPS_NETRC_FILE" > .netrc
+          NETRC_FILE="$PWD/.netrc"
+          export NETRC_FILE
           echo "Current api rate limit status:"
           curl --netrc -s https://api.github.com/rate_limit | jq .rate
           nix develop \

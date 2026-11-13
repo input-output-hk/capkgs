@@ -54,6 +54,21 @@ Ideally a repository follows a sensible release process, and we can just use
 that as basis for our versioning, but when that is not the case, there are other
 strategies, based on tag patterns or bare branch names.
 
+## GitHub Actions
+
+`PR checks` validates JSON metadata, type-checks the Crystal updater, and checks
+Nix syntax without publishing credentials. Fork PRs run with a read-only token;
+configure GitHub's fork-workflow approval settings if maintainer approval is
+required. For manual PR checks, dispatch this workflow from reviewed `main` code
+with both `pr_number` and its full reviewed `head_sha`. A changed PR head is
+rejected. These checks do not run the complete package build and upload cycle.
+
+`Update` publishes cache contents and commits package metadata only on `main`,
+through pushes, scheduled runs, or manual dispatch without PR inputs. Protect
+`main` with required review, including workflow changes, and restrict bypass
+permissions in repository settings. Merge reviewed changes before publishing;
+do not run the updater with publishing credentials against fork code.
+
 ## TODO
 
 - [ ] Provide more statically compiled `musl` packages and nuke their references to the Nix store to allow even smaller closures.

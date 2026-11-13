@@ -443,7 +443,6 @@ class CAPkgs
     def nix_eval
       process(eval_file_path, true,
         "nix", "eval", flake_url,
-        "--accept-flake-config",
         "--no-write-lock-file",
         "--json",
         "--apply", CODE,
@@ -458,7 +457,6 @@ class CAPkgs
     def nix_build
       process(build_file_path, true,
         "nix", "build", flake_url,
-        "--accept-flake-config",
         "--no-write-lock-file",
         "--no-link",
         "--json",
@@ -471,7 +469,6 @@ class CAPkgs
       process(copy_original_file_path, false,
         "nix", "copy", flake_url,
         "--to", config.to,
-        "--accept-flake-config",
         "--no-write-lock-file",
       ) do |stdout|
         true
@@ -483,7 +480,6 @@ class CAPkgs
       process(closure_file_path, true,
         "nix", "store", "make-content-addressed", flake_url, "--json",
         "--to", config.to,
-        "--accept-flake-config",
         "--no-write-lock-file",
       ) do |stdout|
         stdout.dig?("rewrites", path).try { |to_path|
@@ -496,7 +492,6 @@ class CAPkgs
       process(copy_closure_file_path, false,
         "nix", "copy", closure.not_nil![:toPath],
         "--to", config.to,
-        "--accept-flake-config",
         "--no-write-lock-file",
       ) do |stdout|
         true
