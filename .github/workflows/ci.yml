@@ -1,0 +1,60 @@
+name: PR checks
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Optional PR number; also supply its reviewed head_sha
+        required: false
+        type: string
+      head_sha:
+        description: Full reviewed PR head SHA; required with pr_number
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: read
+
+# Manual fork tests must not write into the dispatch branch's cache scope.
+cache-mode: none
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.number || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Checkout reviewed PR for manual testing
+        if: github.event_name == 'workflow_dispatch'
+        uses: ./.github/actions/checkout-merge
+        with:
+          pr_number: ${{ inputs.pr_number }}
+          head_sha: ${{ inputs.head_sha }}
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@08dcb3a5e62fa31e2da3d490afc4176ef55ecd72 # v30
+        with:
+          extra_nix_config: |
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+            substituters = https://cache.iog.io https://cache.nixos.org/
+            experimental-features = fetch-closure flakes nix-command
+
+      - name: Validate metadata and updater
+        run: |
+          set -euo pipefail
+          for file in projects.json packages.json exclusions.json; do
+            jq -e 'type == "object"' "$file" > /dev/null
+          done
+          nix develop --ignore-environment --keep CI \
+            --command crystal build --no-codegen packages.cr
+          nix-instantiate --parse flake.nix > /dev/null
+          nix-instantiate --parse lib.nix > /dev/null
