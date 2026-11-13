@@ -69,6 +69,11 @@ through pushes, scheduled runs, or manual dispatch without PR inputs. Protect
 permissions in repository settings. Merge reviewed changes before publishing;
 do not run the updater with publishing credentials against fork code.
 
+Publishing runs are serialized. A queued run skips building and uploading if
+`main` has advanced beyond its triggering commit. A concurrent change to `main`
+during an active build can still cause the final Git push to be rejected; rerun
+the update from current `main` in that case.
+
 ## TODO
 
 - [ ] Provide more statically compiled `musl` packages and nuke their references to the Nix store to allow even smaller closures.

@@ -38,12 +38,25 @@ jobs:
           persist-credentials: true
 
       - name: Prepare main branch at the triggering commit
+        id: prepare
         run: |
+          set -euo pipefail
+          # A previous queued publisher may have advanced main with metadata.
+          # Keep code and workflow at the triggering revision; skip stale runs.
+          git fetch --no-tags --depth=1 origin refs/heads/main
+          latest_sha=$(git rev-parse FETCH_HEAD)
+          if [ "$latest_sha" != "$GITHUB_SHA" ]; then
+            echo "::notice::Skipping superseded publish: main is now $latest_sha (run commit $GITHUB_SHA)."
+            echo "current=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           git checkout -B main "$GITHUB_SHA"
           git config branch.main.remote origin
           git config branch.main.merge refs/heads/main
+          echo "current=true" >> "$GITHUB_OUTPUT"
 
       - name: Free up disk space
+        if: steps.prepare.outputs.current == 'true'
         run: |
           pwd
           df -h
@@ -58,6 +71,7 @@ jobs:
           df -h
 
       - name: Install Nix
+        if: steps.prepare.outputs.current == 'true'
         uses: cachix/install-nix-action@08dcb3a5e62fa31e2da3d490afc4176ef55ecd72 # v30
         with:
           extra_nix_config: |
@@ -69,6 +83,7 @@ jobs:
             experimental-features = fetch-closure flakes nix-command
 
       - name: CI eval, build, cache push and commit
+        if: steps.prepare.outputs.current == 'true'
         run: |
           set -euo pipefail
           git config --local user.name "GitHub Actions"
